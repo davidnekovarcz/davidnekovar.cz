@@ -25,14 +25,14 @@ const contactMethods = [
     icon: Phone,
     label: "Phone",
     value: "+420 728 234 648",
-    href: "tel:+420728234648",
+    href: "https://signal.me/#eu/+420728234648",
     primary: true
   },
   {
     icon: MapPin,
     label: "Location",
     value: "Prague, Czech Republic",
-    href: null,
+    href: "https://www.google.com/maps/search/?api=1&query=Prague,+Czech+Republic",
     primary: false
   }
 ];
@@ -48,8 +48,8 @@ const socialLinks = [
   {
     icon: Github,
     label: "GitHub",
-    username: "daveNekovar",
-    href: "https://github.com/daveNekovar",
+    username: "davidnekovarcz",
+    href: "https://github.com/davidnekovarcz",
     color: "text-gray-800"
   }
 ];
@@ -105,22 +105,19 @@ const Contact = () => {
                   {/* Contact Methods */}
                   <div className="space-y-4">
                     {contactMethods.map((contact, index) => (
-                      <div key={index} className="flex items-center gap-4 p-4 bg-muted/50 rounded-lg hover:bg-muted/70 transition-colors">
-                        <contact.icon className={`w-5 h-5 ${contact.primary ? 'text-primary' : 'text-muted-foreground'}`} />
+                      <a
+                        key={index}
+                        href={contact.href}
+                        target={contact.href?.startsWith('http') ? '_blank' : undefined}
+                        rel={contact.href?.startsWith('http') ? 'noopener noreferrer' : undefined}
+                        className="flex items-center gap-4 p-4 bg-muted/50 rounded-lg hover:bg-muted/70 transition-colors group cursor-pointer"
+                      >
+                        <contact.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
                         <div className="flex-1">
                           <div className="text-sm text-muted-foreground">{contact.label}</div>
-                          {contact.href ? (
-                            <a 
-                              href={contact.href}
-                              className="font-medium text-foreground hover:text-primary transition-colors"
-                            >
-                              {contact.value}
-                            </a>
-                          ) : (
-                            <div className="font-medium text-foreground">{contact.value}</div>
-                          )}
+                          <div className="font-medium text-foreground group-hover:text-primary transition-colors">{contact.value}</div>
                         </div>
-                      </div>
+                      </a>
                     ))}
                   </div>
 
@@ -136,7 +133,7 @@ const Contact = () => {
                           rel="noopener noreferrer"
                           className="flex items-center gap-4 p-3 bg-muted/50 rounded-lg hover:bg-muted/70 transition-colors group"
                         >
-                          <social.icon className={`w-5 h-5 ${social.color}`} />
+                          <social.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
                           <div className="flex-1">
                             <div className="font-medium text-foreground group-hover:text-primary transition-colors">
                               {social.label}
@@ -151,25 +148,7 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  {/* CTA Buttons */}
-                  <div className="pt-6 border-t border-border space-y-3 no-print">
-                    <Button 
-                      className="w-full btn-hero group"
-                      onClick={() => window.location.href = 'mailto:nekovar.david@gmail.com'}
-                    >
-                      <Mail className="mr-2 w-5 h-5" />
-                      Send Email
-                      <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                    <Button 
-                      variant="outline" 
-                      className="w-full group"
-                      onClick={printCV}
-                    >
-                      <Download className="mr-2 w-5 h-5" />
-                      Download CV (PDF)
-                    </Button>
-                  </div>
+
                 </CardContent>
               </Card>
             </div>
@@ -199,10 +178,10 @@ const Contact = () => {
                       >
                         <div className="flex items-start justify-between gap-4">
                           <div className="flex-1">
-                            <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors mb-1">
+                            <h4 className="font-semibold text-foreground mb-1">
                               {project.name}
                             </h4>
-                            <p className="text-sm text-primary font-medium mb-2 italic">
+                            <p className="text-sm text-muted-foreground group-hover:text-primary transition-colors font-medium mb-2 italic">
                               "{project.tagline}"
                             </p>
                             <p className="text-sm text-muted-foreground">

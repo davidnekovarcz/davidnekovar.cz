@@ -25,7 +25,8 @@ const CVHero = () => {
             <div className="animate-fade-in">
               {/* Badge */}
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
-                <span className="text-primary font-medium">Available for New Opportunities 🚀</span>
+                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse mr-2" />
+                <span className="text-muted-foreground font-medium">Available for New Opportunities</span>
               </div>
 
               {/* Name & Title */}
@@ -106,49 +107,18 @@ const CVHero = () => {
                   </div>
                 </div>
 
-                {/* Key Skills */}
-                <div className="space-y-4">
-                  <h4 className="font-medium text-foreground">Core Technologies</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {['Ruby on Rails', 'Vue.js', 'React', 'TypeScript', 'PostgreSQL', 'Docker'].map((skill) => (
-                      <span key={skill} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Social Links */}
-                <div className="flex items-center gap-4 mt-8 pt-6 border-t border-border">
-                  <Button 
-                    variant="ghost" 
-                    size="sm" 
-                    className="p-2 no-print"
-                    onClick={() => window.open('https://linkedin.com/in/dave-nekovar', '_blank', 'noopener,noreferrer')}
-                  >
-                    <Linkedin className="w-5 h-5" />
-                  </Button>
-                  <Button 
-                    variant="ghost" 
-                    size="sm" 
-                    className="p-2 no-print"
-                    onClick={() => window.open('https://github.com/daveNekovar', '_blank', 'noopener,noreferrer')}
-                  >
-                    <Github className="w-5 h-5" />
-                  </Button>
-                  <Button 
-                    variant="ghost" 
-                    size="sm" 
-                    className="p-2 no-print"
-                    onClick={() => window.location.href = 'mailto:nekovar.david@gmail.com'}
-                  >
-                    <Mail className="w-5 h-5" />
-                  </Button>
-                  {/* Print-friendly contact info */}
-                  <div className="hidden text-sm print-contact-info">
-                    <div>📧 nekovar.david@gmail.com</div>
-                    <div>📱 +420 728 234 648</div>
-                    <div>💼 linkedin.com/in/dave-nekovar</div>
+                {/* Divider */}
+                <div className="border-t border-border mt-8 pt-6">
+                  {/* Key Skills */}
+                  <div className="space-y-4">
+                    <h4 className="font-medium text-foreground">Core Technologies</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {['Ruby on Rails', 'Vue.js', 'React', 'TypeScript', 'PostgreSQL'].map((skill) => (
+                        <span key={skill} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>

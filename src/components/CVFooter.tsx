@@ -62,7 +62,7 @@ const CVFooter = () => {
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a 
-                  href="https://github.com/daveNekovar" 
+                  href="https://github.com/davidnekovarcz" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
