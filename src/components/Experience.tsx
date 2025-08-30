@@ -99,29 +99,10 @@ const Experience = () => {
             <div className="space-y-8">
               {experiences.map((exp, index) => (
                 <div key={index} className="relative animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                  {/* Timeline Dot with Logo */}
+                  {/* Timeline Dot */}
                   <div className={`absolute left-4 w-8 h-8 rounded-full border-4 border-background timeline-dot ${
                     exp.current ? 'bg-primary' : 'bg-secondary'
-                  } shadow-lg flex items-center justify-center`}>
-                    {exp.logoUrl ? (
-                      <img 
-                        src={exp.logoUrl} 
-                        alt={`${exp.company} logo`}
-                        className="w-4 h-4 rounded object-contain"
-                        onError={(e) => {
-                          // Fallback to emoji if logo fails to load
-                          e.currentTarget.style.display = 'none';
-                          e.currentTarget.nextElementSibling.style.display = 'block';
-                        }}
-                      />
-                    ) : null}
-                    <span 
-                      className={`text-xs ${exp.logoUrl ? 'hidden' : 'block'}`}
-                      style={{ display: exp.logoUrl ? 'none' : 'block' }}
-                    >
-                      {exp.logo}
-                    </span>
-                  </div>
+                  } shadow-lg`} />
                   
                   {/* Company Logo */}
                   {exp.companyLogo && (
