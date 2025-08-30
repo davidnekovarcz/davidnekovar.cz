@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar, MapPin, ExternalLink } from "lucide-react";
+import { YEARS_OF_EXPERIENCE_STRING } from "@/utils/experience";
 
 const experiences = [
   {
@@ -19,7 +20,7 @@ const experiences = [
     company: "Designeo Creative s.r.o.",
     type: "Lead Developer & Project Manager",
     period: "2012/07 - 2025/01",
-    duration: "12+ years, external / part-time / on demand",
+    duration: `${YEARS_OF_EXPERIENCE_STRING} years, external / part-time / on demand`,
     location: "Prague, Czech Republic",
     description: "Together we've built high-tech web/mobile/HW solutions for global brands like Yves Saint-Laurent, Dior, British American Tobacco, as well as complex internal task management system based on Redmine.",
     skills: ["Vue.js", "Ruby on Rails", "Project Management", "Mobile Development"],

@@ -1,5 +1,6 @@
 import { Separator } from "@/components/ui/separator";
 import { Mail, Phone, MapPin, Linkedin, Github, Heart } from "lucide-react";
+import { YEARS_OF_EXPERIENCE_STRING, CURRENT_YEAR } from "@/utils/experience";
 
 const CVFooter = () => {
   return (
@@ -16,7 +17,7 @@ const CVFooter = () => {
             </div>
             
             <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">
-              Full Stack Developer & Product Owner with 12+ years of experience building innovative solutions for global brands.
+              Full Stack Developer & Product Owner with {YEARS_OF_EXPERIENCE_STRING} years of experience building innovative solutions for global brands.
             </p>
             
 
@@ -102,7 +103,7 @@ const CVFooter = () => {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-sm text-muted-foreground">
-            © 2025 David Nekovář. All rights reserved.
+            © {CURRENT_YEAR} David Nekovář. All rights reserved.
           </div>
           
           <div className="text-sm text-muted-foreground italic">

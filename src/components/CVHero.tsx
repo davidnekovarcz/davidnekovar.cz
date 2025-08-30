@@ -3,6 +3,7 @@ import { ArrowRight, Download, Mail, Phone, MapPin, Linkedin, Github } from "luc
 import PrintInstructions from "./PrintInstructions";
 import { printCV } from "@/utils/print";
 import { scrollToSection } from "@/utils/scroll";
+import { YEARS_OF_EXPERIENCE_STRING } from "@/utils/experience";
 
 const CVHero = () => {
   return (
@@ -41,7 +42,7 @@ const CVHero = () => {
 
               {/* Tagline */}
               <p className="text-base text-muted-foreground mb-8 leading-relaxed max-w-lg">
-                Building innovative solutions for global brands with 12+ years of experience in Ruby on Rails, Vue.js, and React.
+                Building innovative solutions for global brands with {YEARS_OF_EXPERIENCE_STRING} years of experience in Ruby on Rails, Vue.js, and React.
               </p>
 
               {/* CTA Buttons */}
@@ -88,7 +89,7 @@ const CVHero = () => {
                 {/* Stats Grid */}
                 <div className="grid grid-cols-2 gap-6 mb-8">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-primary mb-2">12+</div>
+                    <div className="text-2xl font-bold text-primary mb-2">{YEARS_OF_EXPERIENCE_STRING}</div>
                     <div className="text-sm text-muted-foreground">Years Experience</div>
                   </div>
                   <div className="text-center">
