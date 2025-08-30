@@ -4,7 +4,7 @@ import { YEARS_OF_EXPERIENCE_STRING, CURRENT_YEAR } from "@/utils/experience";
 
 const CVFooter = () => {
   return (
-    <footer className="bg-card border-t border-border">
+    <footer className="bg-card/50 border-t border-border backdrop-blur-sm">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Brand Section */}

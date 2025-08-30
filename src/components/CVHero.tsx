@@ -9,12 +9,7 @@ const CVHero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-muted/50" />
-      
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-20 w-20 h-20 bg-gradient-primary rounded-full opacity-20 animate-float no-print" />
-      <div className="absolute bottom-20 right-20 w-16 h-16 bg-gradient-ocean rounded-full opacity-20 animate-float no-print" style={{ animationDelay: '1s' }} />
-      <div className="absolute top-40 right-40 w-12 h-12 bg-gradient-sunset rounded-full opacity-20 animate-float no-print" style={{ animationDelay: '2s' }} />
+      <div className="absolute inset-0 bg-gradient-to-br from-background/50 via-background/30 to-muted/20" />
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4">

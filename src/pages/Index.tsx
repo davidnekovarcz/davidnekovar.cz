@@ -5,11 +5,15 @@ import Skills from "@/components/Skills";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import CVFooter from "@/components/CVFooter";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 const Index = () => {
   return (
-    <main className="min-h-screen">
-      <CVHeader />
+    <main className="min-h-screen relative">
+      <AnimatedBackground />
+      <div className="animated-bg-overlay fixed inset-0 pointer-events-none z-0" />
+      <div className="relative z-10">
+        <CVHeader />
       <section id="hero">
         <CVHero />
       </section>
@@ -26,6 +30,7 @@ const Index = () => {
         <Contact />
       </section>
       <CVFooter />
+      </div>
     </main>
   );
 };

@@ -134,6 +134,32 @@ All colors MUST be HSL.
 }
 
 @layer components {
+  /* Animated Background Enhancement */
+  .animated-bg-overlay {
+    background: radial-gradient(circle at 20% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
+    animation: morphing 20s ease-in-out infinite;
+  }
+
+  @keyframes morphing {
+    0%, 100% { 
+      background: radial-gradient(circle at 20% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 40% 40%, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
+    }
+    33% { 
+      background: radial-gradient(circle at 70% 30%, rgba(236, 72, 153, 0.15) 0%, transparent 50%),
+                  radial-gradient(circle at 30% 70%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 60% 60%, rgba(245, 158, 11, 0.08) 0%, transparent 50%);
+    }
+    66% { 
+      background: radial-gradient(circle at 40% 20%, rgba(236, 72, 153, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 60% 80%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
+                  radial-gradient(circle at 20% 30%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+    }
+  }
+
   /* Custom Button Variants */
   .btn-hero {
     @apply bg-gradient-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg shadow-luxury hover:shadow-ocean transition-all duration-300 hover:scale-105;

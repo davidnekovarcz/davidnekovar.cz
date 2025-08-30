@@ -77,7 +77,7 @@ const projects = [
 
 const Contact = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-background/30">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
