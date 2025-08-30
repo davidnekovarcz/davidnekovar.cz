@@ -27,7 +27,8 @@ const experiences = [
     skills: ["Vue.js", "Ruby on Rails", "Project Management", "Mobile Development"],
     current: true,
     logo: "🎨",
-    logoUrl: "https://logo.clearbit.com/designeo.cz"
+    logoUrl: "https://logo.clearbit.com/designeo.cz",
+    companyLogo: "https://logo.clearbit.com/designeo.cz"
   },
   {
     title: "Co-Founder & Product Owner & Lead Rails/Vue.js Developer",
@@ -40,7 +41,8 @@ const experiences = [
     skills: ["Product Management", "Ruby on Rails", "Vue.js", "Startup Development"],
     current: false,
     logo: "📈",
-    logoUrl: "https://logo.clearbit.com/improvee.io"
+    logoUrl: "https://logo.clearbit.com/improvee.io",
+    companyLogo: "https://logo.clearbit.com/improvee.io"
   },
   {
     title: "Product Owner & React Native Developer & English Teacher",
@@ -53,7 +55,8 @@ const experiences = [
     skills: ["React Native", "Product Design", "Japanese Market", "Retail Solutions"],
     current: false,
     logo: "🏯",
-    logoUrl: "https://logo.clearbit.com/dreamarts.co.jp"
+    logoUrl: "https://logo.clearbit.com/dreamarts.co.jp",
+    companyLogo: "https://logo.clearbit.com/dreamarts.co.jp"
   },
   {
     title: "Founder & CTO & Ruby on Rails Developer & Scrum Master",
@@ -66,7 +69,8 @@ const experiences = [
     skills: ["Ruby on Rails", "Scrum", "Startup Development", "MVP Development"],
     current: false,
     logo: "🚀",
-    logoUrl: "https://logo.clearbit.com/smarlify.co"
+    logoUrl: "https://logo.clearbit.com/smarlify.co",
+    companyLogo: "https://logo.clearbit.com/smarlify.co"
   }
 ];
 
@@ -118,6 +122,20 @@ const Experience = () => {
                       {exp.logo}
                     </span>
                   </div>
+                  
+                  {/* Company Logo */}
+                  {exp.companyLogo && (
+                    <div className="absolute left-16 top-4 w-16 h-16 bg-white rounded-lg shadow-md border border-border flex items-center justify-center">
+                      <img 
+                        src={exp.companyLogo} 
+                        alt={`${exp.company} logo`}
+                        className="w-12 h-12 object-contain"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                        }}
+                      />
+                    </div>
+                  )}
                   
                   {/* Content Card */}
                   <div className="ml-20">
