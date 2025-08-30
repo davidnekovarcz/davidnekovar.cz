@@ -57,28 +57,6 @@ const experiences = [
     description: "Smarlify: \"Our customers believe that having a sustainable online business is the way to freedom in their lives. We believe that too. Therefore we help startupers solve the right problem, find & validate their MVP, design a prototype, build & launch the right product - and constantly grow & improve their businesses.\"",
     skills: ["Ruby on Rails", "Scrum", "Startup Development", "MVP Development"],
     current: false
-  },
-  {
-    title: "Full-Stack Developer & Happy Customer",
-    company: "Scuk.cz",
-    type: "Full-Stack Developer",
-    period: "2021/09 - 2022/01",
-    duration: "½ year, full-time on-site/remote",
-    location: "Praha, Czech Republic",
-    description: "Local, seasonal, organic food - available at your doorstep. Responsible for the online store's continuous UX/UI improvements.",
-    skills: ["Full-Stack Development", "UX/UI", "E-commerce", "Organic Food"],
-    current: false
-  },
-  {
-    title: "Product Owner & Scrum Master",
-    company: "FakturaOnline.cz",
-    type: "Product Owner",
-    period: "2014/09 - 2015/08",
-    duration: "1 year, fully on-site",
-    location: "Prague, Czech Republic",
-    description: "Together we have improved UX/UI to make the application much easier to use and added features which our users missed the most. As a result we have doubled our customer base, tripled our revenue and built a stable base for a continuous long-term growth.",
-    skills: ["Product Management", "Scrum", "UX/UI", "Revenue Growth"],
-    current: false
   }
 ];
 
