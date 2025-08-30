@@ -41,8 +41,6 @@ const CVHero = () => {
 
               {/* Tagline */}
               <p className="text-base text-muted-foreground mb-8 leading-relaxed max-w-lg">
-                <span className="text-primary font-semibold">Intrapreneur・Investor・Minimalist</span>
-                <br />
                 Building innovative solutions for global brands with 12+ years of experience in Ruby on Rails, Vue.js, and React.
               </p>
 
