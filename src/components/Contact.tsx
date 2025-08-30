@@ -86,7 +86,7 @@ const Contact = () => {
               Let's
               <span className="text-gradient mx-3">Connect</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Ready to discuss your next project or explore collaboration opportunities? I'd love to hear from you.
             </p>
           </div>
@@ -202,7 +202,7 @@ const Contact = () => {
 
           {/* Bottom Quote */}
           <div className="text-center mt-16 animate-fade-in">
-            <blockquote className="text-2xl md:text-3xl font-display text-muted-foreground italic max-w-2xl mx-auto mb-4">
+            <blockquote className="text-2xl font-display text-muted-foreground italic max-w-2xl mx-auto mb-4">
               "Live smarter, invest wiser, be free"
             </blockquote>
             <p className="text-muted-foreground">

@@ -23,24 +23,18 @@ const CVHero = () => {
             
             {/* Left Column - Main Info */}
             <div className="animate-fade-in">
-              {/* Badge */}
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse mr-2" />
-                <span className="text-muted-foreground font-medium">Available for New Opportunities</span>
-              </div>
-
               {/* Name & Title */}
               <h1 className="text-5xl md:text-6xl font-display font-bold text-foreground mb-4 leading-tight">
                 David
                 <span className="text-gradient mx-3">Nekovář</span>
               </h1>
               
-              <h2 className="text-2xl md:text-3xl text-muted-foreground mb-6 leading-relaxed">
+              <h2 className="text-2xl text-muted-foreground mb-6 leading-relaxed">
                 Full Stack Developer & Product Owner
               </h2>
 
               {/* Tagline */}
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-lg">
+              <p className="text-base text-muted-foreground mb-8 leading-relaxed max-w-lg">
                 <span className="text-primary font-semibold">Intrapreneur・Investor・Minimalist</span>
                 <br />
                 Building innovative solutions for global brands with 12+ years of experience in Ruby on Rails, Vue.js, and React.
@@ -85,24 +79,24 @@ const CVHero = () => {
             {/* Right Column - Stats & Skills Preview */}
             <div className="animate-slide-up">
               <div className="luxury-card p-8">
-                <h3 className="text-xl font-semibold mb-6 text-foreground">Professional Highlights</h3>
+                <h3 className="text-2xl font-semibold mb-6 text-foreground">Professional Highlights</h3>
                 
                 {/* Stats Grid */}
                 <div className="grid grid-cols-2 gap-6 mb-8">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-2">12+</div>
+                    <div className="text-2xl font-bold text-primary mb-2">12+</div>
                     <div className="text-sm text-muted-foreground">Years Experience</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-2">50+</div>
+                    <div className="text-2xl font-bold text-primary mb-2">50+</div>
                     <div className="text-sm text-muted-foreground">Projects Delivered</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-2">6</div>
+                    <div className="text-2xl font-bold text-primary mb-2">6</div>
                     <div className="text-sm text-muted-foreground">Languages Spoken</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-2">11+</div>
+                    <div className="text-2xl font-bold text-primary mb-2">11+</div>
                     <div className="text-sm text-muted-foreground">Years Investing</div>
                   </div>
                 </div>

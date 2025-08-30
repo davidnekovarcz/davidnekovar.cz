@@ -80,7 +80,6 @@ const CVFooter = () => {
               <li><a href="#hero" className="text-muted-foreground hover:text-primary transition-colors text-sm">Home</a></li>
               <li><a href="#experience" className="text-muted-foreground hover:text-primary transition-colors text-sm">Experience</a></li>
               <li><a href="#skills" className="text-muted-foreground hover:text-primary transition-colors text-sm">Skills</a></li>
-              <li><a href="#education" className="text-muted-foreground hover:text-primary transition-colors text-sm">Education</a></li>
               <li><a href="#contact" className="text-muted-foreground hover:text-primary transition-colors text-sm">Contact</a></li>
             </ul>
 

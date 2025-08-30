@@ -71,7 +71,7 @@ const Experience = () => {
               Professional
               <span className="text-gradient mx-3">Experience</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Over a decade of building innovative solutions, leading teams, and creating value across multiple industries and markets.
             </p>
           </div>
@@ -96,7 +96,7 @@ const Experience = () => {
                       <CardHeader>
                         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                           <div className="flex-1">
-                            <CardTitle className="text-xl font-semibold text-foreground mb-2">
+                            <CardTitle className="text-2xl font-semibold text-foreground mb-2">
                               {exp.title}
                             </CardTitle>
                             <div className="flex items-center gap-2 text-primary font-medium mb-2">

@@ -93,7 +93,7 @@ const Skills = () => {
               Skills &
               <span className="text-gradient mx-3">Expertise</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               A comprehensive overview of my technical skills, languages, and personal approach to work and life.
             </p>
           </div>
@@ -105,7 +105,7 @@ const Skills = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3">
                     <category.icon className={`w-6 h-6 ${category.color}`} />
-                    <span className="text-lg">{category.title}</span>
+                    <span className="text-base">{category.title}</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -132,7 +132,7 @@ const Skills = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-3">
                   <Languages className="w-6 h-6 text-primary" />
-                  <span className="text-lg">Languages</span>
+                  <span className="text-base">Languages</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -157,7 +157,7 @@ const Skills = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-3">
                   <Users className="w-6 h-6 text-secondary" />
-                  <span className="text-lg">Personality</span>
+                  <span className="text-base">Personality</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -174,14 +174,13 @@ const Skills = () => {
             </Card>
           </div>
 
-          {/* Values & Hobbies */}
-          <div className="grid lg:grid-cols-2 gap-8">
-            {/* Values */}
+          {/* Values & Hobbies - Hidden for now */}
+          {/* <div className="grid lg:grid-cols-2 gap-8">
             <Card className="luxury-card animate-slide-up" style={{ animationDelay: '1s' }}>
               <CardHeader>
                 <CardTitle className="flex items-center gap-3">
                   <Heart className="w-6 h-6 text-accent" />
-                  <span className="text-lg">Values</span>
+                  <span className="text-base">Values</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -203,12 +202,11 @@ const Skills = () => {
               </CardContent>
             </Card>
 
-            {/* Hobbies */}
             <Card className="luxury-card animate-slide-up" style={{ animationDelay: '1.2s' }}>
               <CardHeader>
                 <CardTitle className="flex items-center gap-3">
                   <Globe className="w-6 h-6 text-primary" />
-                  <span className="text-lg">Hobbies & Interests</span>
+                  <span className="text-base">Hobbies & Interests</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -221,7 +219,7 @@ const Skills = () => {
                 </div>
               </CardContent>
             </Card>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
