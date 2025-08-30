@@ -12,7 +12,9 @@ const experiences = [
     location: "Global",
     description: "I have a solid experience with investment portfolio management & strategy, risk management, crypto-trading, crypto-accounting, startup funding & (startup) product development etc.",
     skills: ["Portfolio Management", "Risk Management", "Crypto Trading", "Startup Funding"],
-    current: true
+    current: true,
+    logo: "💼",
+    logoUrl: null
   },
   {
     title: "Lead Vue.js & Ruby on Rails Developer & Project Manager",
@@ -23,7 +25,9 @@ const experiences = [
     location: "Prague, Czech Republic",
     description: "Together we've built high-tech web/mobile/HW solutions for global brands like Yves Saint-Laurent, Dior, British American Tobacco, as well as complex internal task management system based on Redmine.",
     skills: ["Vue.js", "Ruby on Rails", "Project Management", "Mobile Development"],
-    current: true
+    current: true,
+    logo: "🎨",
+    logoUrl: "https://logo.clearbit.com/designeo.cz"
   },
   {
     title: "Co-Founder & Product Owner & Lead Rails/Vue.js Developer",
@@ -34,7 +38,9 @@ const experiences = [
     location: "Online / Global",
     description: "\"People over-estimate what they can do in a single day and under-estimate what they can do in their whole lives.\" That is why we help people unleash their true potential and let them grow, following the principles of 改善 (kaizen).",
     skills: ["Product Management", "Ruby on Rails", "Vue.js", "Startup Development"],
-    current: false
+    current: false,
+    logo: "📈",
+    logoUrl: "https://logo.clearbit.com/improvee.io"
   },
   {
     title: "Product Owner & React Native Developer & English Teacher",
@@ -45,7 +51,9 @@ const experiences = [
     location: "Hiroshima, Japan",
     description: "Responsible for the design & development of a new online product (JP market, retail). \"Accelerate your business with digitalization.\"",
     skills: ["React Native", "Product Design", "Japanese Market", "Retail Solutions"],
-    current: false
+    current: false,
+    logo: "🏯",
+    logoUrl: "https://logo.clearbit.com/dreamarts.co.jp"
   },
   {
     title: "Founder & CTO & Ruby on Rails Developer & Scrum Master",
@@ -56,7 +64,9 @@ const experiences = [
     location: "Online / Global",
     description: "Smarlify: \"Our customers believe that having a sustainable online business is the way to freedom in their lives. We believe that too. Therefore we help startupers solve the right problem, find & validate their MVP, design a prototype, build & launch the right product - and constantly grow & improve their businesses.\"",
     skills: ["Ruby on Rails", "Scrum", "Startup Development", "MVP Development"],
-    current: false
+    current: false,
+    logo: "🚀",
+    logoUrl: "https://logo.clearbit.com/smarlify.co"
   }
 ];
 
@@ -85,10 +95,29 @@ const Experience = () => {
             <div className="space-y-8">
               {experiences.map((exp, index) => (
                 <div key={index} className="relative animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                  {/* Timeline Dot */}
-                  <div className={`absolute left-6 w-4 h-4 rounded-full border-4 border-background timeline-dot ${
+                  {/* Timeline Dot with Logo */}
+                  <div className={`absolute left-4 w-8 h-8 rounded-full border-4 border-background timeline-dot ${
                     exp.current ? 'bg-primary' : 'bg-secondary'
-                  } shadow-lg`} />
+                  } shadow-lg flex items-center justify-center`}>
+                    {exp.logoUrl ? (
+                      <img 
+                        src={exp.logoUrl} 
+                        alt={`${exp.company} logo`}
+                        className="w-4 h-4 rounded object-contain"
+                        onError={(e) => {
+                          // Fallback to emoji if logo fails to load
+                          e.currentTarget.style.display = 'none';
+                          e.currentTarget.nextElementSibling.style.display = 'block';
+                        }}
+                      />
+                    ) : null}
+                    <span 
+                      className={`text-xs ${exp.logoUrl ? 'hidden' : 'block'}`}
+                      style={{ display: exp.logoUrl ? 'none' : 'block' }}
+                    >
+                      {exp.logo}
+                    </span>
+                  </div>
                   
                   {/* Content Card */}
                   <div className="ml-20">
