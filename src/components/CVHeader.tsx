@@ -45,12 +45,6 @@ const CVHeader = () => {
               Skills
             </button>
             <button 
-              onClick={() => scrollToSection('education')}
-              className="text-muted-foreground hover:text-primary transition-colors"
-            >
-              Education
-            </button>
-            <button 
               onClick={() => scrollToSection('contact')}
               className="text-muted-foreground hover:text-primary transition-colors"
             >
@@ -110,12 +104,6 @@ const CVHeader = () => {
                 className="text-left text-muted-foreground hover:text-primary transition-colors py-2"
               >
                 Skills
-              </button>
-              <button 
-                onClick={() => scrollToSection('education')}
-                className="text-left text-muted-foreground hover:text-primary transition-colors py-2"
-              >
-                Education
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
