@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Download, Mail, Menu } from "lucide-react";
+import { Mail, Menu } from "lucide-react";
 import { useState } from "react";
-import { printCV } from "@/utils/print";
 import { scrollToSection } from "@/utils/scroll";
 import ThemeToggle from "./ThemeToggle";
 
@@ -64,14 +63,6 @@ const CVHeader = () => {
               <Mail className="w-4 h-4 mr-2" />
               Contact
             </Button>
-            <Button 
-              size="sm" 
-              className="bg-gradient-primary"
-              onClick={printCV}
-            >
-              <Download className="w-4 h-4 mr-2" />
-              CV
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -118,25 +109,15 @@ const CVHeader = () => {
                   <span className="text-sm text-muted-foreground">Theme</span>
                   <ThemeToggle />
                 </div>
-                <div className="flex space-x-3">
-                  <Button 
-                    variant="ghost" 
-                    size="sm" 
-                    className="flex-1"
-                    onClick={() => scrollToSection('contact')}
-                  >
-                    <Mail className="w-4 h-4 mr-2" />
-                    Contact
-                  </Button>
-                  <Button 
-                    size="sm" 
-                    className="flex-1 bg-gradient-primary"
-                    onClick={printCV}
-                  >
-                    <Download className="w-4 h-4 mr-2" />
-                    CV
-                  </Button>
-                </div>
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  className="w-full"
+                  onClick={() => scrollToSection('contact')}
+                >
+                  <Mail className="w-4 h-4 mr-2" />
+                  Contact
+                </Button>
               </div>
             </nav>
           </div>
