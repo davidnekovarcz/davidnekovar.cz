@@ -23,6 +23,12 @@ const CVHero = () => {
             
             {/* Left Column - Main Info */}
             <div className="animate-fade-in">
+              {/* Badge */}
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse mr-2" />
+                <span className="text-muted-foreground font-medium">Available for New Opportunities</span>
+              </div>
+
               {/* Name & Title */}
               <h1 className="text-5xl md:text-6xl font-display font-bold text-foreground mb-4 leading-tight">
                 David

@@ -19,12 +19,7 @@ const CVFooter = () => {
               Full Stack Developer & Product Owner with 12+ years of experience building innovative solutions for global brands.
             </p>
             
-            <div className="text-sm text-muted-foreground">
-              <div className="flex items-center gap-2 mb-2">
-                <Heart className="w-4 h-4 text-primary" />
-                <span>Available for new opportunities</span>
-              </div>
-            </div>
+
           </div>
 
           {/* Contact Info */}
