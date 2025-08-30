@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useState } from "react";
 import { scrollToSection } from "@/utils/scroll";
 import ThemeToggle from "./ThemeToggle";
@@ -28,41 +28,33 @@ const CVHeader = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('hero')}
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="px-3 py-2 rounded-lg font-medium text-muted-foreground hover:text-white hover:bg-primary transition-all duration-200"
             >
               Overview
             </button>
             <button 
               onClick={() => scrollToSection('experience')}
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="px-3 py-2 rounded-lg font-medium text-muted-foreground hover:text-white hover:bg-primary transition-all duration-200"
             >
               Experience
             </button>
             <button 
               onClick={() => scrollToSection('skills')}
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="px-3 py-2 rounded-lg font-medium text-muted-foreground hover:text-white hover:bg-primary transition-all duration-200"
             >
               Skills
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-muted-foreground hover:text-primary transition-colors"
+              className="px-3 py-2 rounded-lg font-medium text-muted-foreground hover:text-white hover:bg-primary transition-all duration-200"
             >
               Contact
             </button>
           </nav>
 
           {/* Desktop CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center">
             <ThemeToggle />
-            <Button 
-              variant="ghost" 
-              size="sm"
-              onClick={() => scrollToSection('contact')}
-            >
-              <Mail className="w-4 h-4 mr-2" />
-              Contact
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -79,45 +71,38 @@ const CVHeader = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-md">
-            <nav className="flex flex-col space-y-3">
+            <nav className="flex flex-col space-y-2">
               <button 
                 onClick={() => scrollToSection('hero')}
-                className="text-left text-muted-foreground hover:text-primary transition-colors py-2"
+                className="text-left font-medium text-muted-foreground hover:text-white hover:bg-primary transition-all duration-200 py-3 px-3 rounded-lg"
               >
                 Overview
               </button>
               <button 
                 onClick={() => scrollToSection('experience')}
-                className="text-left text-muted-foreground hover:text-primary transition-colors py-2"
+                className="text-left font-medium text-muted-foreground hover:text-white hover:bg-primary transition-all duration-200 py-3 px-3 rounded-lg"
               >
                 Experience
               </button>
               <button 
                 onClick={() => scrollToSection('skills')}
-                className="text-left text-muted-foreground hover:text-primary transition-colors py-2"
+                className="text-left font-medium text-muted-foreground hover:text-white hover:bg-primary transition-all duration-200 py-3 px-3 rounded-lg"
               >
                 Skills
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="text-left text-muted-foreground hover:text-primary transition-colors py-2"
+                className="text-left font-medium text-muted-foreground hover:text-white hover:bg-primary transition-all duration-200 py-3 px-3 rounded-lg"
               >
                 Contact
               </button>
-              <div className="pt-3 border-t border-border space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-muted-foreground">Theme</span>
+              <div className="pt-3 border-t border-border">
+                <div className="flex items-center justify-between py-2 px-3">
+                  <span className="text-sm text-muted-foreground">
+                    Theme
+                  </span>
                   <ThemeToggle />
                 </div>
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
-                  className="w-full"
-                  onClick={() => scrollToSection('contact')}
-                >
-                  <Mail className="w-4 h-4 mr-2" />
-                  Contact
-                </Button>
               </div>
             </nav>
           </div>
