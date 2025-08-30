@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Download, Mail, Menu } from "lucide-react";
 import { useState } from "react";
 import { printCV } from "@/utils/print";
+import { scrollToSection } from "@/utils/scroll";
 
 const CVHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -59,7 +60,11 @@ const CVHeader = () => {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="sm">
+            <Button 
+              variant="ghost" 
+              size="sm"
+              onClick={() => scrollToSection('contact')}
+            >
               <Mail className="w-4 h-4 mr-2" />
               Contact
             </Button>
@@ -119,7 +124,12 @@ const CVHeader = () => {
                 Contact
               </button>
               <div className="flex space-x-3 pt-3 border-t border-border">
-                <Button variant="ghost" size="sm" className="flex-1">
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  className="flex-1"
+                  onClick={() => scrollToSection('contact')}
+                >
                   <Mail className="w-4 h-4 mr-2" />
                   Contact
                 </Button>

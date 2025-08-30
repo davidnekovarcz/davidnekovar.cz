@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
 import PrintInstructions from "./PrintInstructions";
 import { printCV } from "@/utils/print";
+import { scrollToSection } from "@/utils/scroll";
 
 const CVHero = () => {
   return (
@@ -58,7 +59,7 @@ const CVHero = () => {
                 <Button 
                   variant="outline" 
                   className="group"
-                  onClick={() => window.location.href = 'mailto:nekovar.david@gmail.com'}
+                  onClick={() => scrollToSection('contact')}
                 >
                   <Mail className="mr-2 w-5 h-5" />
                   Get in Touch
@@ -73,7 +74,9 @@ const CVHero = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="w-4 h-4 text-primary" />
-                  <span>+420 728 234 648</span>
+                  <a href="tel:+420728234648" className="hover:text-primary transition-colors">
+                    +420 728 234 648
+                  </a>
                 </div>
               </div>
             </div>
@@ -117,13 +120,28 @@ const CVHero = () => {
 
                 {/* Social Links */}
                 <div className="flex items-center gap-4 mt-8 pt-6 border-t border-border">
-                  <Button variant="ghost" size="sm" className="p-2 no-print">
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="p-2 no-print"
+                    onClick={() => window.open('https://linkedin.com/in/dave-nekovar', '_blank', 'noopener,noreferrer')}
+                  >
                     <Linkedin className="w-5 h-5" />
                   </Button>
-                  <Button variant="ghost" size="sm" className="p-2 no-print">
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="p-2 no-print"
+                    onClick={() => window.open('https://github.com/daveNekovar', '_blank', 'noopener,noreferrer')}
+                  >
                     <Github className="w-5 h-5" />
                   </Button>
-                  <Button variant="ghost" size="sm" className="p-2 no-print">
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="p-2 no-print"
+                    onClick={() => window.location.href = 'mailto:nekovar.david@gmail.com'}
+                  >
                     <Mail className="w-5 h-5" />
                   </Button>
                   {/* Print-friendly contact info */}

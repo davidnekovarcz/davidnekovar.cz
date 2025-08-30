@@ -58,19 +58,19 @@ const projects = [
   {
     name: "Smarlify.co",
     tagline: "Live smarter, invest wiser, be free",
-    url: "https://www.smarlify.co",
+    url: "https://www.smarlify.co/?utm_source=website&utm_medium=external&utm_campaign=dave",
     description: "Smart lifestyle and investment platform"
   },
   {
     name: "Improvee.io",
     tagline: "Become the designer of your life",
-    url: "https://app.improvee.io",
+    url: "https://app.improvee.io/?utm_source=website&utm_medium=external&utm_campaign=dave",
     description: "Personal development and kaizen platform"
   },
   {
     name: "Koinly.io",
     tagline: "Make crypto less taxing",
-    url: "https://koinly.io/?via=B2E92FE3&utm_source=affiliate",
+    url: "https://koinly.io/?via=B2E92FE3&utm_source=website&utm_medium=external&utm_campaign=dave",
     description: "Crypto tax and accounting solution"
   }
 ];
