@@ -12,9 +12,7 @@ const experiences = [
     location: "Global",
     description: "I have a solid experience with investment portfolio management & strategy, risk management, crypto-trading, crypto-accounting, startup funding & (startup) product development etc.",
     skills: ["Portfolio Management", "Risk Management", "Crypto Trading", "Startup Funding"],
-    current: true,
-    logo: "💼",
-    logoUrl: null
+    current: false
   },
   {
     title: "Lead Vue.js & Ruby on Rails Developer & Project Manager",
@@ -25,10 +23,7 @@ const experiences = [
     location: "Prague, Czech Republic",
     description: "Together we've built high-tech web/mobile/HW solutions for global brands like Yves Saint-Laurent, Dior, British American Tobacco, as well as complex internal task management system based on Redmine.",
     skills: ["Vue.js", "Ruby on Rails", "Project Management", "Mobile Development"],
-    current: true,
-    logo: "🎨",
-    logoUrl: "https://logo.clearbit.com/designeo.cz",
-    companyLogo: "https://www.google.com/s2/favicons?domain=designeo.cz&sz=64"
+    current: false
   },
   {
     title: "Co-Founder & Product Owner & Lead Rails/Vue.js Developer",
@@ -39,10 +34,7 @@ const experiences = [
     location: "Online / Global",
     description: "\"People over-estimate what they can do in a single day and under-estimate what they can do in their whole lives.\" That is why we help people unleash their true potential and let them grow, following the principles of 改善 (kaizen).",
     skills: ["Product Management", "Ruby on Rails", "Vue.js", "Startup Development"],
-    current: false,
-    logo: "📈",
-    logoUrl: "https://logo.clearbit.com/improvee.io",
-    companyLogo: "https://www.google.com/s2/favicons?domain=improvee.io&sz=64"
+    current: false
   },
   {
     title: "Product Owner & React Native Developer & English Teacher",
@@ -53,10 +45,7 @@ const experiences = [
     location: "Hiroshima, Japan",
     description: "Responsible for the design & development of a new online product (JP market, retail). \"Accelerate your business with digitalization.\"",
     skills: ["React Native", "Product Design", "Japanese Market", "Retail Solutions"],
-    current: false,
-    logo: "🏯",
-    logoUrl: "https://logo.clearbit.com/dreamarts.co.jp",
-    companyLogo: "https://www.google.com/s2/favicons?domain=dreamarts.co.jp&sz=64"
+    current: false
   },
   {
     title: "Founder & CTO & Ruby on Rails Developer & Scrum Master",
@@ -67,10 +56,7 @@ const experiences = [
     location: "Online / Global",
     description: "Smarlify: \"Our customers believe that having a sustainable online business is the way to freedom in their lives. We believe that too. Therefore we help startupers solve the right problem, find & validate their MVP, design a prototype, build & launch the right product - and constantly grow & improve their businesses.\"",
     skills: ["Ruby on Rails", "Scrum", "Startup Development", "MVP Development"],
-    current: false,
-    logo: "🚀",
-    logoUrl: "https://logo.clearbit.com/smarlify.co",
-    companyLogo: "https://www.google.com/s2/favicons?domain=smarlify.co&sz=64"
+    current: false
   }
 ];
 
@@ -100,27 +86,9 @@ const Experience = () => {
               {experiences.map((exp, index) => (
                 <div key={index} className="relative animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
                   {/* Timeline Dot */}
-                  <div className={`absolute left-4 w-8 h-8 rounded-full border-4 border-background timeline-dot ${
+                  <div className={`absolute left-6 w-4 h-4 rounded-full border-4 border-background timeline-dot ${
                     exp.current ? 'bg-primary' : 'bg-secondary'
                   } shadow-lg`} />
-                  
-                  {/* Company Logo */}
-                  {exp.companyLogo && (
-                    <div className="absolute left-16 top-4 w-16 h-16 bg-white rounded-lg shadow-lg border-2 border-primary/20 flex items-center justify-center">
-                      <img 
-                        src={exp.companyLogo} 
-                        alt={`${exp.company} logo`}
-                        className="w-12 h-12 object-contain"
-                        onError={(e) => {
-                          console.log(`Failed to load logo for ${exp.company}:`, exp.companyLogo);
-                          e.currentTarget.style.display = 'none';
-                        }}
-                        onLoad={(e) => {
-                          console.log(`Successfully loaded logo for ${exp.company}`);
-                        }}
-                      />
-                    </div>
-                  )}
                   
                   {/* Content Card */}
                   <div className="ml-20">
