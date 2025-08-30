@@ -20,9 +20,12 @@ const CVHeader = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Name */}
-          <div className="font-display font-bold text-xl text-foreground">
+          <button 
+            onClick={() => scrollToSection('hero')}
+            className="font-display font-bold text-xl text-foreground hover:opacity-80 transition-opacity cursor-pointer"
+          >
             David <span className="text-gradient">Nekovář</span>
-          </div>
+          </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
