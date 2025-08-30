@@ -73,7 +73,7 @@ const CVFooter = () => {
           <div>
             <h3 className="font-semibold text-foreground mb-4">Navigation</h3>
             <ul className="space-y-3">
-              <li><a href="#hero" className="text-muted-foreground hover:text-primary transition-colors text-sm">Home</a></li>
+              <li><a href="#hero" className="text-muted-foreground hover:text-primary transition-colors text-sm">Overview</a></li>
               <li><a href="#experience" className="text-muted-foreground hover:text-primary transition-colors text-sm">Experience</a></li>
               <li><a href="#skills" className="text-muted-foreground hover:text-primary transition-colors text-sm">Skills</a></li>
               <li><a href="#contact" className="text-muted-foreground hover:text-primary transition-colors text-sm">Contact</a></li>
@@ -107,7 +107,7 @@ const CVFooter = () => {
           </div>
           
           <div className="text-sm text-muted-foreground italic">
-            "Live smarter, invest wiser, be free"
+"Live smarter, invest wiser, be free"
           </div>
         </div>
       </div>

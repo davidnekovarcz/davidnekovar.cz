@@ -203,7 +203,7 @@ const Contact = () => {
           {/* Bottom Quote */}
           <div className="text-center mt-16 animate-fade-in">
             <blockquote className="text-2xl font-display text-muted-foreground italic max-w-2xl mx-auto mb-4">
-              "Live smarter, invest wiser, be free"
+"Live smarter, invest wiser, be free"
             </blockquote>
             <p className="text-muted-foreground">
               — My personal philosophy and approach to life and work

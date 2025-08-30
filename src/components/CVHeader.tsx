@@ -30,7 +30,7 @@ const CVHeader = () => {
               onClick={() => scrollToSection('hero')}
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              Home
+              Overview
             </button>
             <button 
               onClick={() => scrollToSection('experience')}
@@ -91,7 +91,7 @@ const CVHeader = () => {
                 onClick={() => scrollToSection('hero')}
                 className="text-left text-muted-foreground hover:text-primary transition-colors py-2"
               >
-                Home
+                Overview
               </button>
               <button 
                 onClick={() => scrollToSection('experience')}
