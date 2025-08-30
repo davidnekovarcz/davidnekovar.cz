@@ -215,30 +215,7 @@ const Contact = () => {
                     ))}
                   </div>
 
-                  {/* Availability Status */}
-                  <div className="pt-6 border-t border-border">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                      <span className="font-medium text-foreground">Available for New Opportunities</span>
-                    </div>
-                    <div className="space-y-2 text-sm text-muted-foreground">
-                      <div>✅ Full-time positions</div>
-                      <div>✅ Part-time / Contract work</div>
-                      <div>✅ Consulting & Advisory roles</div>
-                      <div>✅ Investment opportunities</div>
-                    </div>
-                  </div>
 
-                  {/* Response Time */}
-                  <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 no-print">
-                    <div className="flex items-center gap-2 mb-2">
-                      <MessageCircle className="w-4 h-4 text-primary" />
-                      <span className="font-medium text-primary">Quick Response</span>
-                    </div>
-                    <p className="text-sm text-muted-foreground">
-                      I typically respond to emails within 24 hours. For urgent matters, feel free to call directly.
-                    </p>
-                  </div>
                 </CardContent>
               </Card>
             </div>
