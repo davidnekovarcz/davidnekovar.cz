@@ -5,6 +5,7 @@ import Skills from "@/components/Skills";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import CVFooter from "@/components/CVFooter";
+import PrintTest from "@/components/PrintTest";
 
 const Index = () => {
   return (
@@ -26,6 +27,7 @@ const Index = () => {
         <Contact />
       </section>
       <CVFooter />
+      <PrintTest />
     </main>
   );
 };

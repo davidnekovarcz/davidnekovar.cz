@@ -101,14 +101,14 @@ const Experience = () => {
           {/* Timeline */}
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent opacity-30" />
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent opacity-30 timeline-line" />
 
             {/* Experience Items */}
             <div className="space-y-8">
               {experiences.map((exp, index) => (
                 <div key={index} className="relative animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
                   {/* Timeline Dot */}
-                  <div className={`absolute left-6 w-4 h-4 rounded-full border-4 border-background ${
+                  <div className={`absolute left-6 w-4 h-4 rounded-full border-4 border-background timeline-dot ${
                     exp.current ? 'bg-primary' : 'bg-secondary'
                   } shadow-lg`} />
                   

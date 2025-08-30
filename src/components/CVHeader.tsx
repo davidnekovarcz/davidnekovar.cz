@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Download, Mail, Menu } from "lucide-react";
 import { useState } from "react";
+import { printCV } from "@/utils/print";
 
 const CVHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +15,7 @@ const CVHeader = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border no-print">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Name */}
@@ -62,7 +63,11 @@ const CVHeader = () => {
               <Mail className="w-4 h-4 mr-2" />
               Contact
             </Button>
-            <Button size="sm" className="bg-gradient-primary">
+            <Button 
+              size="sm" 
+              className="bg-gradient-primary"
+              onClick={printCV}
+            >
               <Download className="w-4 h-4 mr-2" />
               CV
             </Button>
@@ -118,7 +123,11 @@ const CVHeader = () => {
                   <Mail className="w-4 h-4 mr-2" />
                   Contact
                 </Button>
-                <Button size="sm" className="flex-1 bg-gradient-primary">
+                <Button 
+                  size="sm" 
+                  className="flex-1 bg-gradient-primary"
+                  onClick={printCV}
+                >
                   <Download className="w-4 h-4 mr-2" />
                   CV
                 </Button>

@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
+import PrintInstructions from "./PrintInstructions";
+import { printCV } from "@/utils/print";
 
 const CVHero = () => {
   return (
@@ -8,13 +10,14 @@ const CVHero = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-muted/50" />
       
       {/* Floating Elements */}
-      <div className="absolute top-20 left-20 w-20 h-20 bg-gradient-primary rounded-full opacity-20 animate-float" />
-      <div className="absolute bottom-20 right-20 w-16 h-16 bg-gradient-ocean rounded-full opacity-20 animate-float" style={{ animationDelay: '1s' }} />
-      <div className="absolute top-40 right-40 w-12 h-12 bg-gradient-sunset rounded-full opacity-20 animate-float" style={{ animationDelay: '2s' }} />
+      <div className="absolute top-20 left-20 w-20 h-20 bg-gradient-primary rounded-full opacity-20 animate-float no-print" />
+      <div className="absolute bottom-20 right-20 w-16 h-16 bg-gradient-ocean rounded-full opacity-20 animate-float no-print" style={{ animationDelay: '1s' }} />
+      <div className="absolute top-40 right-40 w-12 h-12 bg-gradient-sunset rounded-full opacity-20 animate-float no-print" style={{ animationDelay: '2s' }} />
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
+          <PrintInstructions />
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             
             {/* Left Column - Main Info */}
@@ -42,14 +45,21 @@ const CVHero = () => {
               </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row items-start gap-4 mb-8">
-                <Button className="btn-hero group">
+              <div className="flex flex-col sm:flex-row items-start gap-4 mb-8 no-print">
+                <Button 
+                  className="btn-hero group"
+                  onClick={printCV}
+                >
                   <Download className="mr-2 w-5 h-5" />
                   Download CV
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 
-                <Button variant="outline" className="group">
+                <Button 
+                  variant="outline" 
+                  className="group"
+                  onClick={() => window.location.href = 'mailto:nekovar.david@gmail.com'}
+                >
                   <Mail className="mr-2 w-5 h-5" />
                   Get in Touch
                 </Button>
@@ -107,15 +117,21 @@ const CVHero = () => {
 
                 {/* Social Links */}
                 <div className="flex items-center gap-4 mt-8 pt-6 border-t border-border">
-                  <Button variant="ghost" size="sm" className="p-2">
+                  <Button variant="ghost" size="sm" className="p-2 no-print">
                     <Linkedin className="w-5 h-5" />
                   </Button>
-                  <Button variant="ghost" size="sm" className="p-2">
+                  <Button variant="ghost" size="sm" className="p-2 no-print">
                     <Github className="w-5 h-5" />
                   </Button>
-                  <Button variant="ghost" size="sm" className="p-2">
+                  <Button variant="ghost" size="sm" className="p-2 no-print">
                     <Mail className="w-5 h-5" />
                   </Button>
+                  {/* Print-friendly contact info */}
+                  <div className="hidden text-sm print-contact-info">
+                    <div>📧 nekovar.david@gmail.com</div>
+                    <div>📱 +420 728 234 648</div>
+                    <div>💼 linkedin.com/in/dave-nekovar</div>
+                  </div>
                 </div>
               </div>
             </div>

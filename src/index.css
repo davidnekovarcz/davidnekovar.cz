@@ -162,3 +162,218 @@ All colors MUST be HSL.
     @apply text-white/90 leading-relaxed;
   }
 }
+
+/* Print Styles */
+@media print {
+  /* Hide elements that shouldn't appear in PDF */
+  .no-print,
+  header[class*="fixed"],
+  .fixed,
+  button,
+  .btn-hero,
+  .btn-luxury,
+  [role="button"],
+  .animate-float,
+  .floating-elements,
+  .newsletter-section,
+  nav {
+    display: none !important;
+  }
+  
+  /* Ensure print styles are applied */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Reset page margins and setup */
+  @page {
+    margin: 0.75in;
+    size: A4;
+  }
+
+  /* Body adjustments for print */
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 11pt;
+    line-height: 1.4;
+  }
+
+  /* Remove animations and transitions */
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+
+  /* Ensure proper page breaks */
+  section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .luxury-card {
+    background: white !important;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: none !important;
+    margin-bottom: 1rem;
+    page-break-inside: avoid;
+  }
+
+  /* Typography adjustments */
+  h1 { 
+    font-size: 24pt !important; 
+    color: black !important;
+    margin-bottom: 0.5rem;
+  }
+  
+  h2 { 
+    font-size: 18pt !important; 
+    color: black !important;
+    margin-bottom: 0.5rem;
+    page-break-after: avoid;
+  }
+  
+  h3 { 
+    font-size: 14pt !important; 
+    color: black !important;
+    margin-bottom: 0.3rem;
+  }
+
+  h4 { 
+    font-size: 12pt !important; 
+    color: black !important;
+    margin-bottom: 0.3rem;
+  }
+
+  /* Remove gradients and make text readable */
+  .text-gradient {
+    background: none !important;
+    color: #e91e63 !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+  }
+
+  /* Contact information styling */
+  .contact-info {
+    border: 1px solid #e5e7eb;
+    padding: 1rem;
+    margin: 1rem 0;
+    background: #f9fafb;
+  }
+
+  /* Skills and badges */
+  .badge,
+  [class*="badge"] {
+    border: 1px solid #d1d5db !important;
+    background: #f3f4f6 !important;
+    color: black !important;
+    padding: 0.2rem 0.5rem;
+    margin: 0.1rem;
+    display: inline-block;
+  }
+
+  /* Progress bars for print */
+  .progress-bar {
+    border: 1px solid #d1d5db;
+    height: 8px;
+    background: #f3f4f6;
+  }
+
+  .progress-fill {
+    background: #e91e63 !important;
+    height: 100%;
+  }
+
+  /* Timeline adjustments */
+  .timeline-dot {
+    background: #e91e63 !important;
+    border: 2px solid white !important;
+  }
+
+  .timeline-line {
+    background: #d1d5db !important;
+  }
+
+  /* Links styling for print */
+  a {
+    color: black !important;
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #666;
+  }
+
+  /* Hide external link icons in print */
+  .no-print svg,
+  button svg,
+  a[href] svg {
+    display: none !important;
+  }
+
+  /* Compact spacing for print */
+  .container {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  section {
+    padding: 1rem 0 !important;
+  }
+
+  /* Footer adjustments */
+  footer {
+    border-top: 1px solid #e5e7eb !important;
+    background: white !important;
+    padding: 1rem 0 !important;
+  }
+
+  /* Ensure proper text contrast */
+  .text-muted-foreground,
+  .text-white\/70,
+  .text-white\/80 {
+    color: #4b5563 !important;
+  }
+
+  .text-foreground,
+  .text-white {
+    color: black !important;
+  }
+
+  .text-primary {
+    color: #e91e63 !important;
+  }
+
+  /* Grid adjustments for print */
+  .grid {
+    display: block !important;
+  }
+
+  .grid > * {
+    margin-bottom: 1rem;
+  }
+
+  /* Stats section */
+  .stats-grid {
+    display: flex !important;
+    justify-content: space-around;
+    margin: 1rem 0;
+  }
+
+  .stats-grid > * {
+    text-align: center;
+    flex: 1;
+  }
+
+  /* Print-specific contact info */
+  .print-contact-info {
+    display: block !important;
+  }
+}

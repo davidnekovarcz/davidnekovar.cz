@@ -11,6 +11,7 @@ import {
   Download,
   MessageCircle
 } from "lucide-react";
+import { printCV } from "@/utils/print";
 
 const contactMethods = [
   {
@@ -151,13 +152,20 @@ const Contact = () => {
                   </div>
 
                   {/* CTA Buttons */}
-                  <div className="pt-6 border-t border-border space-y-3">
-                    <Button className="w-full btn-hero group">
+                  <div className="pt-6 border-t border-border space-y-3 no-print">
+                    <Button 
+                      className="w-full btn-hero group"
+                      onClick={() => window.location.href = 'mailto:nekovar.david@gmail.com'}
+                    >
                       <Mail className="mr-2 w-5 h-5" />
                       Send Email
                       <ExternalLink className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
-                    <Button variant="outline" className="w-full group">
+                    <Button 
+                      variant="outline" 
+                      className="w-full group"
+                      onClick={printCV}
+                    >
                       <Download className="mr-2 w-5 h-5" />
                       Download CV (PDF)
                     </Button>
@@ -222,7 +230,7 @@ const Contact = () => {
                   </div>
 
                   {/* Response Time */}
-                  <div className="bg-primary/10 border border-primary/20 rounded-lg p-4">
+                  <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 no-print">
                     <div className="flex items-center gap-2 mb-2">
                       <MessageCircle className="w-4 h-4 text-primary" />
                       <span className="font-medium text-primary">Quick Response</span>
