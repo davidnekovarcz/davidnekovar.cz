@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Smarlify Brand Colors - Beach & Luxury Theme */
+    --background: 198 100% 98%;
+    --foreground: 221 84% 5%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 221 84% 5%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 221 84% 5%;
+
+    /* Signature Pink Brand */
+    --primary: 330 91% 65%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Tropical Ocean Blues */
+    --secondary: 193 82% 31%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Soft Beach Tones */
+    --muted: 43 47% 94%;
+    --muted-foreground: 221 39% 41%;
+
+    /* Luxury Gold Accent */
+    --accent: 45 93% 58%;
+    --accent-foreground: 221 84% 5%;
+
+    /* Success Green for Investments */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 330 91% 65%;
+
+    --radius: 0.75rem;
+
+    /* Custom Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(330 91% 65%), hsl(340 82% 52%));
+    --gradient-ocean: linear-gradient(135deg, hsl(193 82% 31%), hsl(199 89% 48%));
+    --gradient-sunset: linear-gradient(135deg, hsl(45 93% 58%), hsl(330 91% 65%));
+    --gradient-luxury: linear-gradient(135deg, hsl(221 84% 5% / 0.95), hsl(221 84% 5% / 0.8));
+
+    /* Shadows */
+    --shadow-luxury: 0 25px 50px -12px hsl(330 91% 65% / 0.25);
+    --shadow-ocean: 0 25px 50px -12px hsl(193 82% 31% / 0.25);
+    --shadow-elegant: 0 10px 30px -5px hsl(221 84% 5% / 0.1);
+
+    /* Animation Variables */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Theme - Luxury Night Vibes */
+    --background: 221 84% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 221 39% 11%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 221 39% 11%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 330 91% 65%;
+    --primary-foreground: 221 84% 5%;
+
+    --secondary: 193 82% 31%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 221 39% 11%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 45 93% 58%;
+    --accent-foreground: 221 84% 5%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 221 39% 11%;
+    --input: 221 39% 11%;
+    --ring: 330 91% 65%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Custom Button Variants */
+  .btn-hero {
+    @apply bg-gradient-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg shadow-luxury hover:shadow-ocean transition-all duration-300 hover:scale-105;
+  }
+  
+  .btn-luxury {
+    @apply bg-gradient-luxury text-white border border-white/20 px-6 py-3 rounded-lg font-medium backdrop-blur-sm hover:bg-white/10 transition-all duration-300;
+  }
+
+  /* Hero Section Styles */
+  .hero-bg {
+    background: linear-gradient(135deg, hsl(221 84% 5% / 0.7), hsl(221 84% 5% / 0.4)), 
+                linear-gradient(45deg, hsl(330 91% 65% / 0.1), transparent);
+  }
+
+  /* Card Styles */
+  .luxury-card {
+    @apply bg-card/80 backdrop-blur-md border border-white/10 rounded-2xl shadow-elegant hover:shadow-luxury transition-all duration-500 hover:-translate-y-2;
+  }
+
+  /* Text Effects */
+  .text-gradient {
+    @apply bg-gradient-primary bg-clip-text text-transparent;
+  }
+
+  .text-luxury {
+    @apply text-white/90 leading-relaxed;
+  }
+}
