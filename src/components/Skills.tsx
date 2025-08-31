@@ -11,7 +11,8 @@ import {
   Globe,
   Briefcase,
   Languages,
-  Heart
+  Heart,
+  ExternalLink
 } from "lucide-react";
 
 const skillCategories = [
@@ -183,11 +184,22 @@ const Skills = () => {
                       href={trait.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block p-3 bg-muted/50 rounded-lg hover:bg-muted/70 transition-colors group cursor-pointer"
+                      className="block p-4 bg-muted/50 rounded-lg hover:bg-muted/70 transition-colors group"
                     >
-                      <div className="font-medium text-foreground mb-1">{trait.type}</div>
-                      <div className="text-muted-foreground group-hover:text-primary transition-colors font-semibold mb-2">{trait.result}</div>
-                      <div className="text-sm text-muted-foreground">{trait.description}</div>
+                      <div className="flex items-start justify-between gap-4">
+                        <div className="flex-1">
+                          <h4 className="font-semibold text-foreground mb-1">
+                            {trait.type}
+                          </h4>
+                          <p className="text-sm text-muted-foreground group-hover:text-primary transition-colors font-medium mb-2 italic">
+                            {trait.result}
+                          </p>
+                          <p className="text-sm text-muted-foreground">
+                            {trait.description}
+                          </p>
+                        </div>
+                        <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 mt-1" />
+                      </div>
                     </a>
                   ))}
                 </div>
