@@ -104,35 +104,35 @@ const Skills = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
+          <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
               Skills &
-              <span className="text-gradient mx-3">Expertise</span>
+              <span className="text-gradient mx-2 sm:mx-3">Expertise</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
               A comprehensive overview of my technical skills, languages, and personal approach to work and life.
             </p>
           </div>
 
           {/* Technical Skills */}
-          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
             {skillCategories.map((category, index) => (
               <Card key={index} className="luxury-card animate-slide-up" style={{ animationDelay: `${index * 0.2}s` }}>
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-3">
-                    <category.icon className={`w-6 h-6 ${category.color}`} />
-                    <span className="text-base">{category.title}</span>
+                  <CardTitle className="flex items-center gap-2 sm:gap-3">
+                    <category.icon className={`w-5 h-5 sm:w-6 sm:h-6 ${category.color}`} />
+                    <span className="text-sm sm:text-base">{category.title}</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-4">
+                  <div className="space-y-3 sm:space-y-4">
                     {category.skills.map((skill, skillIndex) => (
-                      <div key={skillIndex} className="space-y-2">
-                        <div className="flex justify-between items-center text-sm">
-                          <span className="font-medium text-foreground">{skill.name}</span>
-                          <span className="text-muted-foreground text-xs">({skill.years})</span>
+                      <div key={skillIndex} className="space-y-1.5 sm:space-y-2">
+                        <div className="flex justify-between items-center text-xs sm:text-sm">
+                          <span className="font-medium text-foreground text-xs sm:text-sm leading-tight">{skill.name}</span>
+                          <span className="text-muted-foreground text-xs flex-shrink-0 ml-2">({skill.years})</span>
                         </div>
-                        <Progress value={skill.level} className="h-2" />
+                        <Progress value={skill.level} className="h-1.5 sm:h-2" />
                       </div>
                     ))}
                   </div>
@@ -142,24 +142,24 @@ const Skills = () => {
           </div>
 
           {/* Languages & Personality */}
-          <div className="grid lg:grid-cols-2 gap-8 mb-16">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16">
             {/* Languages */}
             <Card className="luxury-card animate-slide-up" style={{ animationDelay: '0.6s' }}>
               <CardHeader>
-                <CardTitle className="flex items-center gap-3">
-                  <Languages className="w-6 h-6 text-primary" />
-                  <span className="text-base">Languages</span>
+                <CardTitle className="flex items-center gap-2 sm:gap-3">
+                  <Languages className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                  <span className="text-sm sm:text-base">Languages</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   {languages.map((lang, index) => (
-                    <div key={index} className="flex items-center justify-between p-3 bg-muted/50 rounded-lg">
-                      <div className="flex items-center gap-3">
-                        <span className="text-2xl">{lang.flag}</span>
-                        <span className="font-medium text-foreground">{lang.name}</span>
+                    <div key={index} className="flex items-center justify-between p-2.5 sm:p-3 bg-muted/50 rounded-lg">
+                      <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+                        <span className="text-xl sm:text-2xl flex-shrink-0">{lang.flag}</span>
+                        <span className="font-medium text-foreground text-sm sm:text-base">{lang.name}</span>
                       </div>
-                      <Badge variant="outline" className="text-xs">
+                      <Badge variant="outline" className="text-xs flex-shrink-0 ml-2">
                         {lang.level}
                       </Badge>
                     </div>
@@ -171,34 +171,34 @@ const Skills = () => {
             {/* Personality */}
             <Card className="luxury-card animate-slide-up" style={{ animationDelay: '0.8s' }}>
               <CardHeader>
-                <CardTitle className="flex items-center gap-3">
-                  <Users className="w-6 h-6 text-secondary" />
-                  <span className="text-base">Personality</span>
+                <CardTitle className="flex items-center gap-2 sm:gap-3">
+                  <Users className="w-5 h-5 sm:w-6 sm:h-6 text-secondary" />
+                  <span className="text-sm sm:text-base">Personality</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   {personalityTraits.map((trait, index) => (
                     <a 
                       key={index} 
                       href={trait.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block p-4 bg-muted/50 rounded-lg hover:bg-muted/70 transition-colors group"
+                      className="block p-3 sm:p-4 bg-muted/50 rounded-lg hover:bg-muted/70 transition-colors group"
                     >
-                      <div className="flex items-start justify-between gap-4">
-                        <div className="flex-1">
-                          <h4 className="font-semibold text-foreground mb-1">
+                      <div className="flex items-start justify-between gap-3 sm:gap-4">
+                        <div className="flex-1 min-w-0">
+                          <h4 className="font-semibold text-foreground mb-1 text-sm sm:text-base">
                             {trait.type}
                           </h4>
-                          <p className="text-sm text-muted-foreground group-hover:text-primary transition-colors font-medium mb-2 italic">
+                          <p className="text-xs sm:text-sm text-muted-foreground group-hover:text-primary transition-colors font-medium mb-2 italic">
                             {trait.result}
                           </p>
-                          <p className="text-sm text-muted-foreground">
+                          <p className="text-xs sm:text-sm text-muted-foreground">
                             {trait.description}
                           </p>
                         </div>
-                        <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 mt-1" />
+                        <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 mt-1" />
                       </div>
                     </a>
                   ))}

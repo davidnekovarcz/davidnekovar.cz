@@ -37,39 +37,39 @@ const CVHeader = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 bg-background/80 dark:bg-gray-900/70 backdrop-blur-md border-b border-border no-print transition-transform duration-300 ease-in-out ${
       isVisible ? 'translate-y-0' : '-translate-y-full'
     }`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+      <div className="container mx-auto px-3 sm:px-4">
+        <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo/Name */}
           <button 
             onClick={() => scrollToSection('hero')}
-            className="font-display font-bold text-xl text-foreground hover:opacity-80 transition-opacity cursor-pointer"
+            className="font-display font-bold text-lg sm:text-xl text-foreground hover:opacity-80 transition-opacity cursor-pointer"
           >
             David <span className="text-gradient">Nekovář</span>
           </button>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-4 lg:space-x-8">
             <button 
               onClick={() => scrollToSection('hero')}
-              className="px-3 py-2 rounded-lg font-medium text-muted-foreground hover:text-white hover:bg-primary transition-all duration-200"
+              className="px-2 lg:px-3 py-2 rounded-lg font-medium text-sm lg:text-base text-muted-foreground hover:text-white hover:bg-primary transition-all duration-200"
             >
               Overview
             </button>
             <button 
               onClick={() => scrollToSection('experience')}
-              className="px-3 py-2 rounded-lg font-medium text-muted-foreground hover:text-white hover:bg-primary transition-all duration-200"
+              className="px-2 lg:px-3 py-2 rounded-lg font-medium text-sm lg:text-base text-muted-foreground hover:text-white hover:bg-primary transition-all duration-200"
             >
               Experience
             </button>
             <button 
               onClick={() => scrollToSection('skills')}
-              className="px-3 py-2 rounded-lg font-medium text-muted-foreground hover:text-white hover:bg-primary transition-all duration-200"
+              className="px-2 lg:px-3 py-2 rounded-lg font-medium text-sm lg:text-base text-muted-foreground hover:text-white hover:bg-primary transition-all duration-200"
             >
               Skills
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="px-3 py-2 rounded-lg font-medium text-muted-foreground hover:text-white hover:bg-primary transition-all duration-200"
+              className="px-2 lg:px-3 py-2 rounded-lg font-medium text-sm lg:text-base text-muted-foreground hover:text-white hover:bg-primary transition-all duration-200"
             >
               Contact
             </button>
@@ -80,21 +80,23 @@ const CVHeader = () => {
             <ThemeToggle />
           </div>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="sm"
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <Menu className="w-5 h-5" />
-          </Button>
+          {/* Mobile Menu Button & Theme Toggle */}
+          <div className="flex items-center gap-2 md:hidden">
+            <ThemeToggle />
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              <Menu className="w-5 h-5" />
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border bg-background/95 dark:bg-gray-900/85 backdrop-blur-md">
-            <nav className="flex flex-col space-y-2">
+          <div className="md:hidden py-3 border-t border-border bg-background/95 dark:bg-gray-900/85 backdrop-blur-md">
+            <nav className="flex flex-col space-y-1">
               <button 
                 onClick={() => scrollToSection('hero')}
                 className="text-left font-medium text-muted-foreground hover:text-white hover:bg-primary transition-all duration-200 py-3 px-3 rounded-lg"
@@ -119,14 +121,6 @@ const CVHeader = () => {
               >
                 Contact
               </button>
-              <div className="pt-3 border-t border-border">
-                <div className="flex items-center justify-between py-2 px-3">
-                  <span className="text-sm text-muted-foreground">
-                    Theme
-                  </span>
-                  <ThemeToggle />
-                </div>
-              </div>
             </nav>
           </div>
         )}

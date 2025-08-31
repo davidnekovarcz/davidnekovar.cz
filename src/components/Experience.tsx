@@ -73,11 +73,11 @@ const Experience = () => {
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
               Professional
-              <span className="text-gradient mx-3">Experience</span>
+              <span className="text-gradient mx-2 sm:mx-3">Experience</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
               Over a decade of building innovative solutions, leading teams, and creating value across multiple industries and markets.
             </p>
           </div>
@@ -85,19 +85,19 @@ const Experience = () => {
           {/* Timeline */}
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent opacity-30 timeline-line" />
+            <div className="absolute left-6 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent opacity-30 timeline-line" />
 
             {/* Experience Items */}
             <div className="space-y-8">
               {experiences.map((exp, index) => (
                 <div key={index} className="relative animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
                   {/* Timeline Dot */}
-                  <div className={`absolute left-6 w-4 h-4 rounded-full border-4 border-background timeline-dot ${
+                  <div className={`absolute left-4 sm:left-6 w-3 h-3 sm:w-4 sm:h-4 rounded-full border-2 sm:border-4 border-background timeline-dot ${
                     exp.current ? 'bg-primary' : 'bg-secondary'
                   } shadow-lg`} />
                   
                   {/* Content Card */}
-                  <div className="ml-20">
+                  <div className="ml-12 sm:ml-20">
                     {exp.url ? (
                       <a 
                         href={exp.url} 
@@ -105,11 +105,11 @@ const Experience = () => {
                         rel="noopener noreferrer"
                         className="block"
                       >
-                        <Card className="luxury-card hover:translate-x-2 transition-all duration-300 group cursor-pointer">
-                          <CardHeader>
+                        <Card className="luxury-card hover:translate-x-1 sm:hover:translate-x-2 transition-all duration-300 group cursor-pointer">
+                          <CardHeader className="p-4 sm:p-6">
                             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                               <div className="flex-1">
-                                <CardTitle className="text-2xl font-semibold text-primary mb-2 transition-colors">
+                                <CardTitle className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-primary mb-2 transition-colors leading-tight">
                                   {exp.type}
                                 </CardTitle>
                                 <div className="flex items-center gap-2 text-foreground font-medium mb-2">
@@ -166,7 +166,7 @@ const Experience = () => {
                         <CardHeader>
                           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                             <div className="flex-1">
-                              <CardTitle className="text-2xl font-semibold text-primary mb-2">
+                              <CardTitle className="text-lg sm:text-xl md:text-2xl font-semibold text-primary mb-2 leading-tight">
                                 {exp.type}
                               </CardTitle>
                               <div className="flex items-center gap-2 text-foreground font-medium mb-2">
@@ -215,17 +215,17 @@ const Experience = () => {
           </div>
 
           {/* Bottom CTA */}
-          <div className="text-center mt-16 animate-fade-in">
-            <p className="text-muted-foreground mb-4">
+          <div className="text-center mt-12 sm:mt-16 animate-fade-in px-4">
+            <p className="text-sm sm:text-base text-muted-foreground mb-4">
               Want to know more about my experience?
             </p>
             <a 
               href="https://www.linkedin.com/in/dave-nekovar/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 text-primary"
+              className="inline-flex items-center justify-center gap-2 text-primary"
             >
-              <span className="font-medium">View Full LinkedIn Profile</span>
+              <span className="font-medium text-sm sm:text-base">View Full LinkedIn Profile</span>
               <ExternalLink className="w-4 h-4" />
             </a>
           </div>

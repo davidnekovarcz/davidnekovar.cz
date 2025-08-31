@@ -1,24 +1,30 @@
 # David Nekovář - CV Website 🚀
 
-A modern, responsive CV website built with React, TypeScript, and Tailwind CSS, showcasing David Nekovář's professional experience as a Full Stack Developer and Product Owner.
+A modern, responsive CV website built with React, TypeScript, and Tailwind CSS, showcasing David Nekovář's professional experience as a Full Stack Developer and Product Owner. Features a beautiful animated background, dark/light theme support, and professional print-to-PDF functionality.
 
 ## ✨ Features
 
-- **Modern Design**: Clean, professional design inspired by Smarlify.co
-- **Responsive Layout**: Optimized for all screen sizes (mobile, tablet, desktop)
-- **Interactive Sections**: Smooth scrolling navigation and animations
-- **Professional Timeline**: Detailed experience section with visual timeline
-- **Skills Showcase**: Comprehensive display of technical and soft skills
-- **Contact Integration**: Direct links to email, phone, and social profiles
-- **Performance Optimized**: Built with Vite for fast loading and development
+- **Modern Design**: Elegant design with animated background and luxury card components
+- **Theme Support**: Light/dark/system theme toggle with persistent preferences
+- **Responsive Layout**: Fully optimized for all screen sizes (mobile, tablet, desktop, large screens)
+- **Interactive Sections**: Smooth scrolling navigation with animated transitions
+- **Professional Timeline**: Detailed experience section with visual timeline and company highlights
+- **Skills Showcase**: Comprehensive display of technical skills, languages, and personal values
+- **Print-Optimized**: Professional PDF generation with print-specific styling and instructions
+- **Contact Integration**: Direct links to email, phone, LinkedIn, and project portfolios
+- **Performance Optimized**: Built with Vite, lazy loading, and modern React patterns
+- **Accessibility**: WCAG compliant with proper focus management and screen reader support
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React 18 + TypeScript
-- **Styling**: Tailwind CSS + shadcn/ui components
-- **Build Tool**: Vite
-- **Icons**: Lucide React
-- **Deployment**: Ready for Vercel, Netlify, or any static hosting
+- **Frontend**: React 18 + TypeScript + React Router
+- **Styling**: Tailwind CSS + shadcn/ui components + Custom CSS animations
+- **Build Tool**: Vite with SWC for fast compilation
+- **State Management**: React Context (Theme) + TanStack Query
+- **Icons**: Lucide React (tree-shaken for performance)
+- **UI Components**: Radix UI primitives with custom styling
+- **Server**: Express.js for production hosting
+- **Deployment**: Heroku-ready with Node.js buildpack
 
 ## 🚀 Getting Started
 
@@ -58,12 +64,34 @@ yarn build
 # or
 bun run build
 
-# Preview the build
+# Preview the build locally
 npm run preview
 # or
 yarn preview
 # or
 bun run preview
+
+# Start production server (for Heroku deployment)
+npm start
+```
+
+### Development Scripts
+
+```bash
+# Development server with hot reload
+npm run dev
+
+# Production build
+npm run build
+
+# Development build (for testing)
+npm run build:dev
+
+# Lint code
+npm run lint
+
+# Production server
+npm start
 ```
 
 ## 📱 Responsive Design
