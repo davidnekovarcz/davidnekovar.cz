@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { scrollToSection } from "@/utils/scroll";
 import ThemeToggle from "./ThemeToggle";
 
 const CVHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -15,8 +16,27 @@ const CVHeader = () => {
     setIsMenuOpen(false);
   };
 
+  // Show header when user scrolls to Professional Experience section
+  useEffect(() => {
+    const handleScroll = () => {
+      const experienceSection = document.getElementById('experience');
+      if (experienceSection) {
+        const rect = experienceSection.getBoundingClientRect();
+        const isExperienceVisible = rect.top <= window.innerHeight * 0.5;
+        setIsVisible(isExperienceVisible);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial position
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 dark:bg-gray-900/70 backdrop-blur-md border-b border-border no-print">
+    <header className={`fixed top-0 left-0 right-0 z-50 bg-background/80 dark:bg-gray-900/70 backdrop-blur-md border-b border-border no-print transition-transform duration-300 ease-in-out ${
+      isVisible ? 'translate-y-0' : '-translate-y-full'
+    }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Name */}
