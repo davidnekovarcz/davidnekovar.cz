@@ -6,8 +6,8 @@ import { YEARS_OF_EXPERIENCE_STRING } from "@/utils/experience";
 const experiences = [
   {
     title: "Investment Portfolio Manager",
-    company: "Bitcoin",
-    type: "Portfolio Manager & Value Investor & Crypto-Trader",
+    company: "Bitcoin, Cryptocurrencies, Precious Metals & Startups",
+    type: "Portfolio Manager & Value Investor & Trader",
     period: "2014/01 - now",
     duration: "11+ years, part time / seasonal",
     location: "Online / Global",
