@@ -19,8 +19,6 @@ const CVFooter = () => {
             <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">
               Full Stack Developer & Product Owner with {YEARS_OF_EXPERIENCE_STRING} years of experience building innovative solutions for global brands.
             </p>
-            
-
           </div>
 
           {/* Contact Info */}
@@ -106,8 +104,37 @@ const CVFooter = () => {
             © {CURRENT_YEAR} David Nekovář. All rights reserved.
           </div>
           
-          <div className="text-sm text-muted-foreground italic">
-"Live smarter, invest wiser, be free"
+          <div className="flex flex-wrap items-center justify-center gap-1 text-sm text-muted-foreground">
+            <span>Designed by</span>
+            <a 
+              href="https://lovable.dev?via=david-nekovar" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center gap-1 mr-3 px-2 py-1 bg-muted dark:bg-gray-700/50 dark:hover:bg-gray-700/70 hover:bg-muted/30 rounded-full transition-colors group"
+            >
+              <img src="/lovable-logo.ico" alt="Lovable" className="w-4 h-4" />
+              <span className="group-hover:text-primary transition-colors">Lovable</span>
+            </a>
+            <span>Fine-tuned with</span>
+            <a 
+              href="https://cursor.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center gap-1 mr-3 px-2 py-1 bg-muted dark:bg-gray-700/50 dark:hover:bg-gray-700/70 hover:bg-muted/30 rounded-full transition-colors group"
+            >
+              <img src="/cursor-logo.ico" alt="Cursor" className="w-4 h-4" />
+              <span className="group-hover:text-primary transition-colors">Cursor</span>
+            </a>
+            <span>Powered by</span>
+            <a 
+              href="https://heroku.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center gap-1 px-2 py-1 bg-muted dark:bg-gray-700/50 dark:hover:bg-gray-700/70 hover:bg-muted/30 rounded-full transition-colors group"
+            >
+              <img src="/heroku-logo.svg" alt="Heroku" className="w-4 h-4" />
+              <span className="group-hover:text-primary transition-colors">Heroku</span>
+            </a>
           </div>
         </div>
       </div>
