@@ -98,7 +98,7 @@ const Experience = () => {
                         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                           <div className="flex-1">
                             <CardTitle className="text-2xl font-semibold text-foreground mb-2">
-                              {exp.title}
+                              {exp.type}
                             </CardTitle>
                             <div className="flex items-center gap-2 text-primary font-medium mb-2">
                               <span>{exp.company}</span>
@@ -107,9 +107,6 @@ const Experience = () => {
                                   Current
                                 </Badge>
                               )}
-                            </div>
-                            <div className="text-sm text-muted-foreground italic mb-3">
-                              {exp.type}
                             </div>
                           </div>
                           
