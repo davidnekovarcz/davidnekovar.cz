@@ -16,7 +16,7 @@ const CVHeader = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border no-print">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 dark:bg-gray-900/70 backdrop-blur-md border-b border-border no-print">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Name */}
@@ -73,7 +73,7 @@ const CVHeader = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-md">
+          <div className="md:hidden py-4 border-t border-border bg-background/95 dark:bg-gray-900/85 backdrop-blur-md">
             <nav className="flex flex-col space-y-2">
               <button 
                 onClick={() => scrollToSection('hero')}
