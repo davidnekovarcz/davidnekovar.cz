@@ -24,7 +24,7 @@ const experiences = [
     duration: "12+ years, external / on demand",
     location: "Prague, Czech Republic",
     description: "Together we've built high-tech web/mobile/HW solutions for global brands like Yves Saint-Laurent, Dior, British American Tobacco, as well as complex internal task management system based on Redmine.",
-    skills: ["Vue.js", "Ruby on Rails", "Project Management", "Mobile Development"],
+    skills: ["Vue.js", "Nuxt.js", "PWA", "Ruby on Rails", "Project Management", "Mobile Development"],
     current: false,
     url: "https://www.designeo.cz/?utm_source=website&utm_medium=external&utm_campaign=dave"
   },
@@ -36,7 +36,7 @@ const experiences = [
     duration: "5 years, part time / on demand",
     location: "Online / Global",
     description: "\"People over-estimate what they can do in a single day and under-estimate what they can do in their whole lives.\" That is why we help people unleash their true potential and let them grow, following the principles of 改善 (kaizen).",
-    skills: ["Product Management", "Ruby on Rails", "Vue.js", "Startup Development"],
+    skills: ["Product Management", "Product Launch", "Marketing", "Ruby on Rails", "Vue.js", "Startup Development"],
     current: false,
     url: "https://app.improvee.io/?utm_source=website&utm_medium=external&utm_campaign=dave"
   },
@@ -60,7 +60,7 @@ const experiences = [
     duration: "6+ years, part time / remote",
     location: "Online / Global",
     description: "Smarlify: \"Our customers believe that having a sustainable online business is the way to freedom in their lives. We believe that too. Therefore we help startupers solve the right problem, find & validate their MVP, design a prototype, build & launch the right product - and constantly grow & improve their businesses.\"",
-    skills: ["Ruby on Rails", "Scrum", "Startup Development", "MVP Development"],
+    skills: ["Product Launch", "Startup Development", "MVP Development", "Ruby on Rails", "Scrum"],
     current: false,
     url: "https://www.smarlify.co/?utm_source=website&utm_medium=external&utm_campaign=dave"
   }
