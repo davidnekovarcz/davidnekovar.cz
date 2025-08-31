@@ -13,18 +13,20 @@ const experiences = [
     location: "Online / Global",
     description: "I have a solid experience with investment portfolio management & strategy, risk management, crypto-trading, crypto-accounting, startup funding & (startup) product development etc.",
     skills: ["Portfolio Management", "Risk Management", "Crypto Trading", "Startup Funding"],
-    current: false
+    current: false,
+    url: "https://koinly.io/?via=B2E92FE3&utm_source=website&utm_medium=external&utm_campaign=dave"
   },
   {
     title: "Lead Vue.js & Ruby on Rails Developer & Project Manager",
     company: "Designeo Creative s.r.o.",
     type: "Lead Developer & Project Manager",
     period: "2012/07 - 2025/01",
-    duration: "12+ years, external / part-time / on demand",
+    duration: "12+ years, external / on demand",
     location: "Prague, Czech Republic",
     description: "Together we've built high-tech web/mobile/HW solutions for global brands like Yves Saint-Laurent, Dior, British American Tobacco, as well as complex internal task management system based on Redmine.",
     skills: ["Vue.js", "Ruby on Rails", "Project Management", "Mobile Development"],
-    current: false
+    current: false,
+    url: "https://www.designeo.cz/?utm_source=website&utm_medium=external&utm_campaign=dave"
   },
   {
     title: "Co-Founder & Product Owner & Lead Rails/Vue.js Developer",
@@ -35,29 +37,32 @@ const experiences = [
     location: "Online / Global",
     description: "\"People over-estimate what they can do in a single day and under-estimate what they can do in their whole lives.\" That is why we help people unleash their true potential and let them grow, following the principles of 改善 (kaizen).",
     skills: ["Product Management", "Ruby on Rails", "Vue.js", "Startup Development"],
-    current: false
+    current: false,
+    url: "https://app.improvee.io/?utm_source=website&utm_medium=external&utm_campaign=dave"
   },
   {
     title: "Product Owner & React Native Developer & English Teacher",
     company: "DreamArts / 株式会社 ドリーム・アーツ",
     type: "Product Owner & Developer",
     period: "2021/01 - 2021/09",
-    duration: "9 months, fully on-site",
+    duration: "9 months, full-time / on-site",
     location: "Hiroshima, Japan",
     description: "Responsible for the design & development of a new online product (JP market, retail). \"Accelerate your business with digitalization.\"",
     skills: ["React Native", "Product Design", "Japanese Market", "Retail Solutions"],
-    current: false
+    current: false,
+    url: "https://www.dreamarts.co.jp/?utm_source=website&utm_medium=external&utm_campaign=dave"
   },
   {
     title: "Founder & CTO & Ruby on Rails Developer & Scrum Master",
     company: "Smarlify.co",
     type: "Founder & CTO",
     period: "2014/01 - 2020/03",
-    duration: "6+ years, part time",
+    duration: "6+ years, part time / remote",
     location: "Online / Global",
     description: "Smarlify: \"Our customers believe that having a sustainable online business is the way to freedom in their lives. We believe that too. Therefore we help startupers solve the right problem, find & validate their MVP, design a prototype, build & launch the right product - and constantly grow & improve their businesses.\"",
     skills: ["Ruby on Rails", "Scrum", "Startup Development", "MVP Development"],
-    current: false
+    current: false,
+    url: "https://www.smarlify.co/?utm_source=website&utm_medium=external&utm_campaign=dave"
   }
 ];
 
@@ -93,54 +98,116 @@ const Experience = () => {
                   
                   {/* Content Card */}
                   <div className="ml-20">
-                    <Card className="luxury-card">
-                      <CardHeader>
-                        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-                          <div className="flex-1">
-                            <CardTitle className="text-2xl font-semibold text-foreground mb-2">
-                              {exp.type}
-                            </CardTitle>
-                            <div className="flex items-center gap-2 text-primary font-medium mb-2">
-                              <span>{exp.company}</span>
-                              {exp.current && (
-                                <Badge variant="secondary" className="bg-primary/10 text-primary">
-                                  Current
-                                </Badge>
-                              )}
+                    {exp.url ? (
+                      <a 
+                        href={exp.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="block"
+                      >
+                        <Card className="luxury-card hover:translate-x-2 transition-all duration-300 group cursor-pointer">
+                          <CardHeader>
+                            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                              <div className="flex-1">
+                                <CardTitle className="text-2xl font-semibold text-primary mb-2 transition-colors">
+                                  {exp.type}
+                                </CardTitle>
+                                <div className="flex items-center gap-2 text-foreground font-medium mb-2">
+                                  <span>{exp.company}</span>
+                                  <span className="text-muted-foreground text-sm">• {exp.location}</span>
+                                  {exp.current && (
+                                    <Badge variant="secondary" className="bg-primary/10 text-primary">
+                                      Current
+                                    </Badge>
+                                  )}
+                                  <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                </div>
+                              </div>
+                              
+                              <div className="text-right text-sm text-muted-foreground">
+                                <div className="flex items-center gap-1 mb-1">
+                                  <Calendar className="w-4 h-4" />
+                                  <div className="flex items-center gap-2">
+                                    <span className={exp.period.includes("now") ? "font-bold" : ""}>
+                                      {exp.period.replace(" - now", "")}
+                                    </span>
+                                    {exp.period.includes("now") && (
+                                      <Badge variant="secondary" className="bg-primary/10 text-primary text-xs pointer-events-none">
+                                        CURRENT
+                                      </Badge>
+                                    )}
+                                  </div>
+                                </div>
+                                <div className="text-xs">
+                                  {exp.duration}
+                                </div>
+                              </div>
                             </div>
-                          </div>
+                          </CardHeader>
                           
-                          <div className="text-right text-sm text-muted-foreground">
-                            <div className="flex items-center gap-1 mb-1">
-                              <Calendar className="w-4 h-4" />
-                              <span>{exp.period}</span>
+                          <CardContent>
+                            <p className="text-muted-foreground mb-4 leading-relaxed">
+                              {exp.description}
+                            </p>
+                            
+                            {/* Skills */}
+                            <div className="flex flex-wrap gap-2">
+                              {exp.skills.map((skill, skillIndex) => (
+                                <Badge key={skillIndex} variant="outline" className="text-xs">
+                                  {skill}
+                                </Badge>
+                              ))}
                             </div>
-                            <div className="flex items-center gap-1 mb-1">
-                              <MapPin className="w-4 h-4" />
-                              <span>{exp.location}</span>
+                          </CardContent>
+                        </Card>
+                      </a>
+                    ) : (
+                      <Card className="luxury-card">
+                        <CardHeader>
+                          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                            <div className="flex-1">
+                              <CardTitle className="text-2xl font-semibold text-primary mb-2">
+                                {exp.type}
+                              </CardTitle>
+                              <div className="flex items-center gap-2 text-foreground font-medium mb-2">
+                                <span>{exp.company}</span>
+                                <span className="text-muted-foreground text-sm">• {exp.location}</span>
+                                {exp.current && (
+                                  <Badge variant="secondary" className="bg-primary/10 text-primary">
+                                    Current
+                                  </Badge>
+                                )}
+                              </div>
                             </div>
-                            <div className="text-xs opacity-75">
-                              {exp.duration}
+                            
+                            <div className="text-right text-sm text-muted-foreground">
+                              <div className="flex items-center gap-1 mb-1">
+                                <Calendar className="w-4 h-4" />
+                                <span className={exp.period.includes("now") ? "font-bold" : ""}>{exp.period}</span>
+                              </div>
+                              <div className="text-xs">
+                                {exp.duration}
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </CardHeader>
-                      
-                      <CardContent>
-                        <p className="text-muted-foreground mb-4 leading-relaxed">
-                          {exp.description}
-                        </p>
+                        </CardHeader>
                         
-                        {/* Skills */}
-                        <div className="flex flex-wrap gap-2">
-                          {exp.skills.map((skill, skillIndex) => (
-                            <Badge key={skillIndex} variant="outline" className="text-xs">
-                              {skill}
-                            </Badge>
-                          ))}
-                        </div>
-                      </CardContent>
-                    </Card>
+                        <CardContent>
+                          <p className="text-muted-foreground mb-4 leading-relaxed">
+                            {exp.description}
+                          </p>
+                          
+                          {/* Skills */}
+                          <div className="flex flex-wrap gap-2">
+                            {exp.skills.map((skill, skillIndex) => (
+                              <Badge key={skillIndex} variant="outline" className="text-xs">
+                                {skill}
+                              </Badge>
+                            ))}
+                          </div>
+                        </CardContent>
+                      </Card>
+                    )}
                   </div>
                 </div>
               ))}
@@ -156,7 +223,7 @@ const Experience = () => {
               href="https://www.linkedin.com/in/dave-nekovar/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 text-primary hover:text-primary/80 transition-colors"
+              className="flex items-center justify-center gap-2 text-primary"
             >
               <span className="font-medium">View Full LinkedIn Profile</span>
               <ExternalLink className="w-4 h-4" />
