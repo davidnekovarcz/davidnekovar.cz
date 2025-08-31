@@ -43,6 +43,7 @@ const CVHero = () => {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row items-start gap-4 mb-8 no-print">
                 <Button 
+                  disabled
                   className="btn-hero group"
                   onClick={printCV}
                 >
