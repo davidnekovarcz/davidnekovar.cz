@@ -68,7 +68,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-12 sm:py-16 lg:py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
@@ -107,26 +107,28 @@ const Experience = () => {
                       >
                         <Card className="luxury-card hover:translate-x-1 sm:hover:translate-x-2 transition-all duration-300 group cursor-pointer">
                           <CardHeader className="p-4 sm:p-6">
-                            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                            <div className="flex flex-col gap-3 sm:gap-4">
                               <div className="flex-1">
-                                <CardTitle className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-primary mb-2 transition-colors leading-tight">
+                                <CardTitle className="text-base sm:text-lg md:text-xl font-semibold text-primary mb-2 transition-colors leading-tight">
                                   {exp.type}
                                 </CardTitle>
-                                <div className="flex items-center gap-2 text-foreground font-medium mb-2">
-                                  <span>{exp.company}</span>
-                                  <span className="text-muted-foreground text-sm">• {exp.location}</span>
+                                <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-foreground font-medium mb-2">
+                                  <div className="flex items-center gap-2">
+                                    <span className="text-sm sm:text-base">{exp.company}</span>
+                                    <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+                                  </div>
+                                  <span className="text-muted-foreground text-xs sm:text-sm">• {exp.location}</span>
                                   {exp.current && (
-                                    <Badge variant="secondary" className="bg-primary/10 text-primary">
+                                    <Badge variant="secondary" className="bg-primary/10 text-primary text-xs w-fit">
                                       Current
                                     </Badge>
                                   )}
-                                  <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                                 </div>
                               </div>
                               
-                              <div className="text-right text-sm text-muted-foreground">
+                              <div className="text-left sm:text-right text-xs sm:text-sm text-muted-foreground">
                                 <div className="flex items-center gap-1 mb-1">
-                                  <Calendar className="w-4 h-4" />
+                                  <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
                                   <div className="flex items-center gap-2">
                                     <span className={exp.period.includes("now") ? "font-bold" : ""}>
                                       {exp.period.replace(" - now", "")}
@@ -145,13 +147,13 @@ const Experience = () => {
                             </div>
                           </CardHeader>
                           
-                          <CardContent>
-                            <p className="text-muted-foreground mb-4 leading-relaxed">
+                          <CardContent className="p-4 sm:p-6 pt-0">
+                            <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4 leading-relaxed">
                               {exp.description}
                             </p>
                             
                             {/* Skills */}
-                            <div className="flex flex-wrap gap-2">
+                            <div className="flex flex-wrap gap-1.5 sm:gap-2">
                               {exp.skills.map((skill, skillIndex) => (
                                 <Badge key={skillIndex} variant="outline" className="text-xs">
                                   {skill}
@@ -163,27 +165,36 @@ const Experience = () => {
                       </a>
                     ) : (
                       <Card className="luxury-card">
-                        <CardHeader>
-                          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                        <CardHeader className="p-4 sm:p-6">
+                          <div className="flex flex-col gap-3 sm:gap-4">
                             <div className="flex-1">
-                              <CardTitle className="text-lg sm:text-xl md:text-2xl font-semibold text-primary mb-2 leading-tight">
+                              <CardTitle className="text-base sm:text-lg md:text-xl font-semibold text-primary mb-2 leading-tight">
                                 {exp.type}
                               </CardTitle>
-                              <div className="flex items-center gap-2 text-foreground font-medium mb-2">
-                                <span>{exp.company}</span>
-                                <span className="text-muted-foreground text-sm">• {exp.location}</span>
+                              <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-foreground font-medium mb-2">
+                                <span className="text-sm sm:text-base">{exp.company}</span>
+                                <span className="text-muted-foreground text-xs sm:text-sm">• {exp.location}</span>
                                 {exp.current && (
-                                  <Badge variant="secondary" className="bg-primary/10 text-primary">
+                                  <Badge variant="secondary" className="bg-primary/10 text-primary text-xs w-fit">
                                     Current
                                   </Badge>
                                 )}
                               </div>
                             </div>
                             
-                            <div className="text-right text-sm text-muted-foreground">
+                            <div className="text-left sm:text-right text-xs sm:text-sm text-muted-foreground">
                               <div className="flex items-center gap-1 mb-1">
-                                <Calendar className="w-4 h-4" />
-                                <span className={exp.period.includes("now") ? "font-bold" : ""}>{exp.period}</span>
+                                <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
+                                <div className="flex items-center gap-2">
+                                  <span className={exp.period.includes("now") ? "font-bold" : ""}>
+                                    {exp.period.replace(" - now", "")}
+                                  </span>
+                                  {exp.period.includes("now") && (
+                                    <Badge variant="secondary" className="bg-primary/10 text-primary text-xs pointer-events-none">
+                                      CURRENT
+                                    </Badge>
+                                  )}
+                                </div>
                               </div>
                               <div className="text-xs">
                                 {exp.duration}
@@ -192,13 +203,13 @@ const Experience = () => {
                           </div>
                         </CardHeader>
                         
-                        <CardContent>
-                          <p className="text-muted-foreground mb-4 leading-relaxed">
+                        <CardContent className="p-4 sm:p-6 pt-0">
+                          <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4 leading-relaxed">
                             {exp.description}
                           </p>
                           
                           {/* Skills */}
-                          <div className="flex flex-wrap gap-2">
+                          <div className="flex flex-wrap gap-1.5 sm:gap-2">
                             {exp.skills.map((skill, skillIndex) => (
                               <Badge key={skillIndex} variant="outline" className="text-xs">
                                 {skill}

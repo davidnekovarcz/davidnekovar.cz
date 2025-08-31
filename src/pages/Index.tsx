@@ -14,7 +14,7 @@ const Index = () => {
       <div className="animated-bg-overlay fixed inset-0 pointer-events-none z-0" />
       <div className="relative z-10">
         <CVHeader />
-      <section id="hero">
+      <section id="hero" className="pt-14 sm:pt-16 md:pt-0">
         <CVHero />
       </section>
       <section id="experience">
