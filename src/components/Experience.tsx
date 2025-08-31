@@ -152,10 +152,15 @@ const Experience = () => {
             <p className="text-muted-foreground mb-4">
               Want to know more about my experience?
             </p>
-            <div className="flex items-center justify-center gap-2 text-primary hover:text-primary/80 transition-colors cursor-pointer">
+            <a 
+              href="https://www.linkedin.com/in/dave-nekovar/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 text-primary hover:text-primary/80 transition-colors"
+            >
               <span className="font-medium">View Full LinkedIn Profile</span>
               <ExternalLink className="w-4 h-4" />
-            </div>
+            </a>
           </div>
         </div>
       </div>
