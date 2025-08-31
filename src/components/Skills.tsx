@@ -50,11 +50,11 @@ const skillCategories = [
 ];
 
 const languages = [
-  { name: "English", level: "Proficient / Fluent", flag: "🇺🇸" },
+  { name: "English", level: "Proficient / Fluent", flag: "🇬🇧" },
   { name: "Czech & Slovak", level: "Native / Bilingual", flag: "🇨🇿" },
   { name: "Japanese", level: "Intermediate", flag: "🇯🇵" },
-  { name: "Russian & Ukrainian", level: "Intermediate", flag: "🇷🇺" },
-  { name: "German & Spanish", level: "Elementary", flag: "🇩🇪" }
+  { name: "Ukrainian", level: "Intermediate", flag: "🇺🇦" },
+  { name: "German", level: "Elementary", flag: "🇩🇪" }
 ];
 
 const personalityTraits = [
