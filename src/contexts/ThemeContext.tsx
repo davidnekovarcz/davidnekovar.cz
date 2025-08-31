@@ -23,7 +23,7 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>('light');
+  const [theme, setTheme] = useState<Theme>('system');
   const [actualTheme, setActualTheme] = useState<'light' | 'dark'>('light');
 
   // Get system theme preference
@@ -53,10 +53,10 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     }
   };
 
-  // Initialize theme from localStorage or default to light
+  // Initialize theme from localStorage or default to system
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') as Theme;
-    const initialTheme = savedTheme || 'light';
+    const initialTheme = savedTheme || 'system';
     setTheme(initialTheme);
     updateActualTheme(initialTheme);
   }, []);
