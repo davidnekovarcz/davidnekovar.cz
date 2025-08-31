@@ -69,7 +69,7 @@ const CVHero = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="w-4 h-4 text-primary" />
-                  <a href="tel:+420728234648" className="hover:text-primary transition-colors">
+                  <a href="https://signal.me/#eu/+420728234648" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                     +420 728 234 648
                   </a>
                 </div>

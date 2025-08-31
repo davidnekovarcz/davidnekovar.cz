@@ -35,7 +35,7 @@ const CVFooter = () => {
               </li>
               <li className="flex items-center gap-2 text-muted-foreground">
                 <Phone className="w-4 h-4 text-primary" />
-                <a href="tel:+420728234648" className="text-sm hover:text-primary transition-colors">
+                <a href="https://signal.me/#eu/+420728234648" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-primary transition-colors">
                   +420 728 234 648
                 </a>
               </li>

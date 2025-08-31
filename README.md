@@ -105,7 +105,7 @@ The website is ready to deploy to:
 ## 📞 Contact David
 
 - **Email**: [nekovar.david@gmail.com](mailto:nekovar.david@gmail.com)
-- **Phone**: [+420 728 234 648](tel:+420728234648)
+- **Phone**: [+420 728 234 648](https://signal.me/#eu/+420728234648)
 - **LinkedIn**: [dave-nekovar](https://www.linkedin.com/in/dave-nekovar/)
 - **Location**: Prague, Czech Republic
 
