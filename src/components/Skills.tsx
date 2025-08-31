@@ -58,9 +58,24 @@ const languages = [
 ];
 
 const personalityTraits = [
-  { type: "16Personalities", result: "INFJ \"Advocate\"", description: "Insightful, creative, and motivated by values" },
-  { type: "Wealth Dynamics", result: "\"Mechanic\"", description: "Systems thinker, detail-oriented problem solver" },
-  { type: "C. G. Jung", result: "King, Explorer, Creator", description: "Leadership, curiosity, and innovation" }
+  { 
+    type: "16Personalities", 
+    result: "INFJ \"Advocate\"", 
+    description: "Insightful, creative, and motivated by values",
+    url: "https://www.16personalities.com/infj-personality?utm_source=website&utm_medium=external&utm_campaign=davidnekovarcz"
+  },
+  { 
+    type: "Wealth Dynamics", 
+    result: "\"Mechanic\"", 
+    description: "Systems thinker, detail-oriented problem solver",
+    url: "https://www.wealthdynamics.com/wealth-profiles/mechanic?utm_source=website&utm_medium=external&utm_campaign=davidnekovarcz"
+  },
+  { 
+    type: "C. G. Jung", 
+    result: "King, Explorer, Creator", 
+    description: "Leadership, curiosity, and innovation",
+    url: "https://jdmeier.com/brand-archetypes/?utm_source=website&utm_medium=external&utm_campaign=davidnekovarcz"
+  }
 ];
 
 const values = [
@@ -163,11 +178,17 @@ const Skills = () => {
               <CardContent>
                 <div className="space-y-4">
                   {personalityTraits.map((trait, index) => (
-                    <div key={index} className="p-3 bg-muted/50 rounded-lg">
+                    <a 
+                      key={index} 
+                      href={trait.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block p-3 bg-muted/50 rounded-lg hover:bg-muted/70 transition-colors group cursor-pointer"
+                    >
                       <div className="font-medium text-foreground mb-1">{trait.type}</div>
-                      <div className="text-primary font-semibold mb-2">{trait.result}</div>
+                      <div className="text-muted-foreground group-hover:text-primary transition-colors font-semibold mb-2">{trait.result}</div>
                       <div className="text-sm text-muted-foreground">{trait.description}</div>
-                    </div>
+                    </a>
                   ))}
                 </div>
               </CardContent>
