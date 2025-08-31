@@ -6,11 +6,11 @@ import { YEARS_OF_EXPERIENCE_STRING } from "@/utils/experience";
 const experiences = [
   {
     title: "Investment Portfolio Manager",
-    company: "Online / Global",
+    company: "Bitcoin",
     type: "Portfolio Manager & Value Investor & Crypto-Trader",
     period: "2014/01 - now",
     duration: "11+ years, part time / seasonal",
-    location: "Global",
+    location: "Online / Global",
     description: "I have a solid experience with investment portfolio management & strategy, risk management, crypto-trading, crypto-accounting, startup funding & (startup) product development etc.",
     skills: ["Portfolio Management", "Risk Management", "Crypto Trading", "Startup Funding"],
     current: false
@@ -20,7 +20,7 @@ const experiences = [
     company: "Designeo Creative s.r.o.",
     type: "Lead Developer & Project Manager",
     period: "2012/07 - 2025/01",
-    duration: `${YEARS_OF_EXPERIENCE_STRING} years, external / part-time / on demand`,
+    duration: "12+ years, external / part-time / on demand",
     location: "Prague, Czech Republic",
     description: "Together we've built high-tech web/mobile/HW solutions for global brands like Yves Saint-Laurent, Dior, British American Tobacco, as well as complex internal task management system based on Redmine.",
     skills: ["Vue.js", "Ruby on Rails", "Project Management", "Mobile Development"],
