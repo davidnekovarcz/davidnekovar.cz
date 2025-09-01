@@ -20,7 +20,7 @@ const CVHero = () => {
             {/* Left Column - Main Info */}
             <div className="animate-fade-in">
               {/* Badge */}
-              <div className="inline-flex items-center px-3 py-2 rounded-full bg-primary/10 border border-primary/20 mb-4 sm:mb-6">
+              <div className="inline-flex items-center px-3 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6 sm:mb-8">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse mr-2" />
                 <span className="text-muted-foreground font-medium text-sm sm:text-base">Available for New Opportunities</span>
               </div>
