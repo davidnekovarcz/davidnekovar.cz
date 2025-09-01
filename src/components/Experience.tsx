@@ -92,7 +92,7 @@ const Experience = () => {
               {experiences.map((exp, index) => (
                 <div key={index} className="relative animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
                   {/* Timeline Dot */}
-                  <div className={`absolute -left-1 top-1/4 sm:left-6 w-3 h-3 sm:w-4 sm:h-4 rounded-full border-2 sm:border-4 border-background timeline-dot ${
+                  <div className={`absolute -left-1 top-10 sm:left-6 w-3 h-3 sm:w-4 sm:h-4 rounded-full border-2 sm:border-4 border-background timeline-dot ${
                     exp.current ? 'bg-primary' : 'bg-secondary'
                   } shadow-lg`} />
                   
