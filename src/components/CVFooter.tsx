@@ -5,7 +5,7 @@ import { YEARS_OF_EXPERIENCE_STRING, CURRENT_YEAR } from "@/utils/experience";
 const CVFooter = () => {
   return (
     <footer className="bg-card/50 border-t border-border backdrop-blur-sm">
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-8 sm:py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Brand Section */}
           <div>
@@ -100,11 +100,11 @@ const CVFooter = () => {
 
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="text-sm text-muted-foreground">
+          <div className="text-xs sm:text-sm text-muted-foreground">
             © {CURRENT_YEAR} David Nekovář. All rights reserved.
           </div>
           
-          <div className="flex flex-wrap items-center justify-center gap-1 text-sm text-muted-foreground">
+          <div className="flex flex-wrap items-center justify-center gap-1 sm:gap-2 text-xs sm:text-sm text-muted-foreground">
             <span>Designed by</span>
             <a 
               href="https://lovable.dev?via=david-nekovar" 
@@ -112,8 +112,8 @@ const CVFooter = () => {
               rel="noopener noreferrer" 
               className="flex items-center gap-1 mr-3 px-2 py-1 bg-muted dark:bg-gray-700/50 dark:hover:bg-gray-700/70 hover:bg-muted/30 rounded-full transition-colors group"
             >
-              <img src="/lovable-logo.ico" alt="Lovable" className="w-4 h-4" />
-              <span className="group-hover:text-primary transition-colors">Lovable</span>
+              <img src="/lovable-logo.ico" alt="Lovable" className="w-3 h-3 sm:w-4 sm:h-4" />
+              <span className="group-hover:text-primary transition-colors text-xs sm:text-sm">Lovable</span>
             </a>
             <span>Fine-tuned with</span>
             <a 
@@ -122,8 +122,8 @@ const CVFooter = () => {
               rel="noopener noreferrer" 
               className="flex items-center gap-1 mr-3 px-2 py-1 bg-muted dark:bg-gray-700/50 dark:hover:bg-gray-700/70 hover:bg-muted/30 rounded-full transition-colors group"
             >
-              <img src="/cursor-logo.ico" alt="Cursor" className="w-4 h-4" />
-              <span className="group-hover:text-primary transition-colors">Cursor</span>
+              <img src="/cursor-logo.ico" alt="Cursor" className="w-3 h-3 sm:w-4 sm:h-4" />
+              <span className="group-hover:text-primary transition-colors text-xs sm:text-sm">Cursor</span>
             </a>
             <span>Powered by</span>
             <a 
@@ -132,8 +132,8 @@ const CVFooter = () => {
               rel="noopener noreferrer" 
               className="flex items-center gap-1 px-2 py-1 bg-muted dark:bg-gray-700/50 dark:hover:bg-gray-700/70 hover:bg-muted/30 rounded-full transition-colors group"
             >
-              <img src="/heroku-logo.svg" alt="Heroku" className="w-4 h-4" />
-              <span className="group-hover:text-primary transition-colors">Heroku</span>
+              <img src="/heroku-logo.svg" alt="Heroku" className="w-3 h-3 sm:w-4 sm:h-4" />
+              <span className="group-hover:text-primary transition-colors text-xs sm:text-sm">Heroku</span>
             </a>
           </div>
         </div>

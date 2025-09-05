@@ -6,7 +6,7 @@ import { YEARS_OF_EXPERIENCE_STRING } from "@/utils/experience";
 const experiences = [
   {
     title: "Investment Portfolio Manager",
-    company: "Bitcoin, Cryptocurrencies, Precious Metals & Startups",
+    company: "Cryptocurrencies, Precious Metals & Startups",
     type: "Portfolio Manager & Value Investor & Trader",
     period: "2014/01 - now",
     duration: "11+ years, part time / seasonal",
@@ -68,16 +68,16 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-12 sm:py-16 lg:py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
               Professional
-              <span className="text-gradient mx-3">Experience</span>
+              <span className="text-gradient mx-2 sm:mx-3">Experience</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
               Over a decade of building innovative solutions, leading teams, and creating value across multiple industries and markets.
             </p>
           </div>
@@ -85,19 +85,19 @@ const Experience = () => {
           {/* Timeline */}
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent opacity-30 timeline-line" />
+            <div className="absolute left-0 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent opacity-30 timeline-line" />
 
             {/* Experience Items */}
             <div className="space-y-8">
               {experiences.map((exp, index) => (
                 <div key={index} className="relative animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
                   {/* Timeline Dot */}
-                  <div className={`absolute left-6 w-4 h-4 rounded-full border-4 border-background timeline-dot ${
+                  <div className={`absolute -left-1 top-10 sm:left-6 w-3 h-3 sm:w-4 sm:h-4 rounded-full border-2 sm:border-4 border-background timeline-dot ${
                     exp.current ? 'bg-primary' : 'bg-secondary'
                   } shadow-lg`} />
                   
                   {/* Content Card */}
-                  <div className="ml-20">
+                  <div className="ml-5  sm:ml-20">
                     {exp.url ? (
                       <a 
                         href={exp.url} 
@@ -105,28 +105,30 @@ const Experience = () => {
                         rel="noopener noreferrer"
                         className="block"
                       >
-                        <Card className="luxury-card hover:translate-x-2 transition-all duration-300 group cursor-pointer">
-                          <CardHeader>
-                            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-                              <div className="flex-1">
-                                <CardTitle className="text-2xl font-semibold text-primary mb-2 transition-colors">
+                        <Card className="luxury-card hover:translate-x-1 sm:hover:translate-x-2 transition-all duration-300 group cursor-pointer">
+                          <CardHeader className="p-4 sm:p-6 pb-2 sm:pb-0">
+                            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 md:gap-4">
+                              <div className="flex-1 order-2 md:order-1">
+                                <CardTitle className="text-base sm:text-lg md:text-xl font-semibold text-primary mb-2 transition-colors leading-tight">
                                   {exp.type}
                                 </CardTitle>
-                                <div className="flex items-center gap-2 text-foreground font-medium mb-2">
-                                  <span>{exp.company}</span>
-                                  <span className="text-muted-foreground text-sm">• {exp.location}</span>
+                                <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-foreground font-medium mb-2">
+                                  <div className="flex items-center gap-2">
+                                    <span className="text-sm sm:text-base">{exp.company}</span>
+                                    <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 opacity-30 group-hover:opacity-100 group-hover:text-primary transition-all flex-shrink-0" />
+                                  </div>
+                                  <span className="hidden sm:block text-muted-foreground text-xs sm:text-sm">• {exp.location}</span>
                                   {exp.current && (
-                                    <Badge variant="secondary" className="bg-primary/10 text-primary">
+                                    <Badge variant="secondary" className="bg-primary/10 text-primary text-xs w-fit">
                                       Current
                                     </Badge>
                                   )}
-                                  <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                                 </div>
                               </div>
                               
-                              <div className="text-right text-sm text-muted-foreground">
+                              <div className="p-3 -mt-1 bg-muted/50 rounded-md text-left md:text-right text-xs sm:text-sm text-muted-foreground order-1 md:order-2">
                                 <div className="flex items-center gap-1 mb-1">
-                                  <Calendar className="w-4 h-4" />
+                                  <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
                                   <div className="flex items-center gap-2">
                                     <span className={exp.period.includes("now") ? "font-bold" : ""}>
                                       {exp.period.replace(" - now", "")}
@@ -145,13 +147,13 @@ const Experience = () => {
                             </div>
                           </CardHeader>
                           
-                          <CardContent>
-                            <p className="text-muted-foreground mb-4 leading-relaxed">
+                          <CardContent className="p-4 sm:p-6 pt-2 sm:pt-2">
+                            <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-4 leading-relaxed">
                               {exp.description}
                             </p>
                             
                             {/* Skills */}
-                            <div className="flex flex-wrap gap-2">
+                            <div className="flex flex-wrap gap-1.5 sm:gap-2">
                               {exp.skills.map((skill, skillIndex) => (
                                 <Badge key={skillIndex} variant="outline" className="text-xs">
                                   {skill}
@@ -163,27 +165,36 @@ const Experience = () => {
                       </a>
                     ) : (
                       <Card className="luxury-card">
-                        <CardHeader>
+                        <CardHeader className="p-4 sm:p-6">
                           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-                            <div className="flex-1">
-                              <CardTitle className="text-2xl font-semibold text-primary mb-2">
+                            <div className="flex-1 order-2 md:order-1">
+                              <CardTitle className="text-base sm:text-lg md:text-xl font-semibold text-primary mb-2 leading-tight">
                                 {exp.type}
                               </CardTitle>
-                              <div className="flex items-center gap-2 text-foreground font-medium mb-2">
-                                <span>{exp.company}</span>
-                                <span className="text-muted-foreground text-sm">• {exp.location}</span>
+                              <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-foreground font-medium mb-2">
+                                <span className="text-sm sm:text-base">{exp.company}</span>
+                                <span className="text-muted-foreground text-xs sm:text-sm">• {exp.location}</span>
                                 {exp.current && (
-                                  <Badge variant="secondary" className="bg-primary/10 text-primary">
+                                  <Badge variant="secondary" className="bg-primary/10 text-primary text-xs w-fit">
                                     Current
                                   </Badge>
                                 )}
                               </div>
                             </div>
                             
-                            <div className="text-right text-sm text-muted-foreground">
+                            <div className="text-left md:text-right text-xs sm:text-sm text-muted-foreground order-1 md:order-2">
                               <div className="flex items-center gap-1 mb-1">
-                                <Calendar className="w-4 h-4" />
-                                <span className={exp.period.includes("now") ? "font-bold" : ""}>{exp.period}</span>
+                                <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
+                                <div className="flex items-center gap-2">
+                                  <span className={exp.period.includes("now") ? "font-bold" : ""}>
+                                    {exp.period.replace(" - now", "")}
+                                  </span>
+                                  {exp.period.includes("now") && (
+                                    <Badge variant="secondary" className="bg-primary/10 text-primary text-xs pointer-events-none">
+                                      CURRENT
+                                    </Badge>
+                                  )}
+                                </div>
                               </div>
                               <div className="text-xs">
                                 {exp.duration}
@@ -192,13 +203,13 @@ const Experience = () => {
                           </div>
                         </CardHeader>
                         
-                        <CardContent>
-                          <p className="text-muted-foreground mb-4 leading-relaxed">
+                        <CardContent className="p-4 sm:p-6 pt-2 sm:pt-4">
+                          <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4 leading-relaxed">
                             {exp.description}
                           </p>
                           
                           {/* Skills */}
-                          <div className="flex flex-wrap gap-2">
+                          <div className="flex flex-wrap gap-1.5 sm:gap-2">
                             {exp.skills.map((skill, skillIndex) => (
                               <Badge key={skillIndex} variant="outline" className="text-xs">
                                 {skill}
@@ -215,17 +226,17 @@ const Experience = () => {
           </div>
 
           {/* Bottom CTA */}
-          <div className="text-center mt-16 animate-fade-in">
-            <p className="text-muted-foreground mb-4">
+          <div className="text-center mt-12 sm:mt-16 animate-fade-in px-4">
+            <p className="text-sm sm:text-base text-muted-foreground mb-4">
               Want to know more about my experience?
             </p>
             <a 
               href="https://www.linkedin.com/in/dave-nekovar/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 text-primary"
+              className="inline-flex items-center justify-center gap-2 text-primary"
             >
-              <span className="font-medium">View Full LinkedIn Profile</span>
+              <span className="font-medium text-sm sm:text-base">View Full LinkedIn Profile</span>
               <ExternalLink className="w-4 h-4" />
             </a>
           </div>
