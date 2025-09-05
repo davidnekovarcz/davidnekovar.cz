@@ -5,32 +5,36 @@ import { printCV } from "@/utils/print";
 import { scrollToSection } from "@/utils/scroll";
 import { YEARS_OF_EXPERIENCE_STRING } from "@/utils/experience";
 
+const availableForHire = false;
+
 const CVHero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background/50 via-background/30 to-muted/20" />
-      
+
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <PrintInstructions />
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            
+
             {/* Left Column - Main Info */}
             <div className="animate-fade-in">
               {/* Badge */}
-              <div className="inline-flex items-center px-3 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6 sm:mb-8">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse mr-2" />
-                <span className="text-muted-foreground font-medium text-sm sm:text-base">Available for New Opportunities</span>
-              </div>
+              { availableForHire && (
+                <div className="inline-flex items-center px-3 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6 sm:mb-8">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse mr-2" />
+                  <span className="text-muted-foreground font-medium text-sm sm:text-base">Available for New Opportunities</span>
+                </div>
+              ) }
 
               {/* Name & Title */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-3 sm:mb-4 leading-tight">
                 David
                 <span className="text-gradient mx-2 sm:mx-3">Nekovář</span>
               </h1>
-              
+
               <h2 className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
                 Full Stack Developer & Product Owner
               </h2>
@@ -42,7 +46,7 @@ const CVHero = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4 mb-6 sm:mb-8 no-print">
-                <Button 
+                <Button
                   className="btn-hero group w-full sm:w-auto"
                   onClick={() => scrollToSection('contact')}
                 >
@@ -71,7 +75,7 @@ const CVHero = () => {
             <div className="animate-slide-up mt-8 lg:mt-0">
               <div className="luxury-card p-4 sm:p-6 lg:p-8">
                 <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-foreground">Professional Highlights</h3>
-                
+
                 {/* Stats Grid */}
                 <div className="grid grid-cols-2 gap-3 sm:gap-6 mb-6 sm:mb-8">
                   <div className="text-center">
