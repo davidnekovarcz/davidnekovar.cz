@@ -5,7 +5,7 @@ import { printCV } from "@/utils/print";
 import { scrollToSection } from "@/utils/scroll";
 import { YEARS_OF_EXPERIENCE_STRING } from "@/utils/experience";
 
-const availableForHire = false;
+const availableForHire = true;
 
 const CVHero = () => {
   return (
