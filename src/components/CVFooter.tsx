@@ -77,22 +77,6 @@ const CVFooter = () => {
               <li><a href="#contact" className="text-muted-foreground hover:text-primary transition-colors text-sm">Contact</a></li>
             </ul>
 
-            {/* My Projects */}
-            <div className="mt-6">
-              <h4 className="font-medium text-foreground mb-3">My Projects</h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <a href="https://www.smarlify.co/?utm_source=website&utm_medium=external&utm_campaign=dave" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                    Smarlify.co
-                  </a>
-                </li>
-                <li>
-                  <a href="https://app.improvee.io/?utm_source=website&utm_medium=external&utm_campaign=dave" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                    Improvee.io
-                  </a>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
 
