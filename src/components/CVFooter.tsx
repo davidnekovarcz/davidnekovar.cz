@@ -1,5 +1,5 @@
 import { Separator } from "@/components/ui/separator";
-import { Mail, Phone, MapPin, Linkedin, Github, Heart } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Github, Heart, Facebook } from "lucide-react";
 import { YEARS_OF_EXPERIENCE_STRING, CURRENT_YEAR } from "@/utils/experience";
 
 const CVFooter = () => {
@@ -62,6 +62,14 @@ const CVFooter = () => {
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Github className="w-5 h-5" />
+                </a>
+                <a 
+                  href="https://www.facebook.com/dave.nekovar" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <Facebook className="w-5 h-5" />
                 </a>
               </div>
             </div>
