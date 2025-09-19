@@ -23,9 +23,10 @@ const skillCategories = [
     skills: [
       { name: "Ruby / Ruby on Rails / Sinatra", level: 95, years: "2012+" },
       { name: "JavaScript / TypeScript / Coffee", level: 90, years: "2010+" },
-      { name: "Vue.js / Nuxt.js / React / Node.js", level: 88, years: "2017+" },
+      { name: "Vue.js & Nuxt.js / React.js & Next.js", level: 88, years: "2017+" },
+      { name: "Node.js / Nest.js / Sails / Fastify", level: 85, years: "2017+" },
       { name: "HTML5 / (S)CSS / BEM / Tailwind", level: 92, years: "2006+" },
-      { name: "PWA / React Native / Ionic", level: 80, years: "2018+" }
+      { name: "PWA / React Native / Ionic / Capacitor", level: 80, years: "2018+" }
     ]
   },
   {
@@ -34,6 +35,7 @@ const skillCategories = [
     color: "text-secondary",
     skills: [
       { name: "PostgreSQL / MySQL / NoSQL", level: 85, years: "2009+" },
+      { name: "Real-time databases / Firebase", level: 82, years: "2018+" },
       { name: "Git & CI / Heroku / GCP / Docker", level: 88, years: "2012+" },
       { name: "MacOS / Ubuntu / Debian", level: 90, years: "2012+" }
     ]
@@ -45,7 +47,8 @@ const skillCategories = [
     skills: [
       { name: "Product Owner / Co-Founder", level: 92, years: "2012+" },
       { name: "Lean Startup / SaaS / Scrum(ban)", level: 88, years: "2013+" },
-      { name: "Investment Portfolio Management", level: 85, years: "2014+" }
+      { name: "Investment Portfolio Management", level: 85, years: "2014+" },
+      { name: "AI Solutions Architect", level: 87, years: "2023+" }
     ]
   }
 ];
