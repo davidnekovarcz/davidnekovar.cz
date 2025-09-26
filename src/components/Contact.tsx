@@ -66,7 +66,7 @@ const projects = [
   {
     name: "Smarlify.co",
     tagline: "Live smarter, invest wiser, be free",
-    url: "https://www.smarlify.co/?utm_source=website&utm_medium=external&utm_campaign=dave",
+    url: "https://smarlify.co/?utm_source=website&utm_medium=external&utm_campaign=dave",
     description: "Smart lifestyle and investment platform"
   },
   {

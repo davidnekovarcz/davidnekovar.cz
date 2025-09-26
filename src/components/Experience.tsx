@@ -62,7 +62,7 @@ const experiences = [
     description: "Smarlify: \"Our customers believe that having a sustainable online business is the way to freedom in their lives. We believe that too. Therefore we help startupers solve the right problem, find & validate their MVP, design a prototype, build & launch the right product - and constantly grow & improve their businesses.\"",
     skills: ["Product Launch", "Startup Development", "MVP Development", "Ruby on Rails", "Scrum"],
     current: false,
-    url: "https://www.smarlify.co/?utm_source=website&utm_medium=external&utm_campaign=dave"
+    url: "https://smarlify.co/?utm_source=website&utm_medium=external&utm_campaign=dave"
   }
 ];
 
