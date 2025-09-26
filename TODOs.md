@@ -12,7 +12,6 @@ This document collects gaps and action items to move the CV website from MVP to 
   - Smarlify: https://smarlify.co/?utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave ✅
   - Improvee: https://app.improvee.io/onboarding?utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave ✅
   - Koinly: keep affiliate plus utm ✅
-  - Designeo, DreamArts, Lovable: all have UTM params ✅
 - Skills: optionally add small tech logos (Rails, Vue, React, TS, Tailwind, Postgres, Docker)
 - Contact block for print: keep concise single-line variants
 
