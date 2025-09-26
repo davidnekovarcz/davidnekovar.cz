@@ -36,7 +36,7 @@ const CVHero = () => {
               </h1>
 
               <h2 className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
-                Full Stack Developer & Product Owner
+                Product Owner & Full Stack Developer
               </h2>
 
               {/* Tagline */}
@@ -77,22 +77,22 @@ const CVHero = () => {
                 <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-foreground">Professional Highlights</h3>
 
                 {/* Stats Grid */}
-                <div className="grid grid-cols-2 gap-3 sm:gap-6 mb-6 sm:mb-8 max-w-lg">
-                  <div className="text-center">
+                <div className="grid grid-cols-2 gap-3 sm:gap-6 mb-6 sm:mb-8 max-w-lg ">
+                  <div className="text-center bg-muted/50 rounded-lg p-5">
                     <div className="text-xl sm:text-2xl font-bold text-primary mb-1 sm:mb-2">{YEARS_OF_EXPERIENCE_STRING}</div>
-                    <div className="text-xs sm:text-sm text-muted-foreground">Years Experience</div>
+                    <div className="text-xs sm:text-sm text-muted-foreground font-semibold">Years Experience</div>
                   </div>
-                  <div className="text-center">
+                  <div className="text-center bg-muted/50 rounded-lg p-5">
                     <div className="text-xl sm:text-2xl font-bold text-primary mb-1 sm:mb-2">50+</div>
-                    <div className="text-xs sm:text-sm text-muted-foreground">Projects Delivered</div>
+                    <div className="text-xs sm:text-sm text-muted-foreground font-semibold">Projects Delivered</div>
                   </div>
-                  <div className="text-center">
+                  <div className="text-center bg-muted/50 rounded-lg p-5">
                     <div className="text-xl sm:text-2xl font-bold text-primary mb-1 sm:mb-2">5</div>
-                    <div className="text-xs sm:text-sm text-muted-foreground">Languages Spoken</div>
+                    <div className="text-xs sm:text-sm text-muted-foreground font-semibold">Languages Spoken</div>
                   </div>
-                  <div className="text-center">
+                  <div className="text-center bg-muted/50 rounded-lg p-5">
                     <div className="text-xl sm:text-2xl font-bold text-primary mb-1 sm:mb-2">11+</div>
-                    <div className="text-xs sm:text-sm text-muted-foreground">Years Investing</div>
+                    <div className="text-xs sm:text-sm text-muted-foreground font-semibold">Years Investing</div>
                   </div>
                 </div>
 

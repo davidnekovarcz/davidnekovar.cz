@@ -117,7 +117,7 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   {/* Contact Methods */}
-                  <div className="space-y md:space-y-2">
+                  <div className="space-y-2 sm:space-y-3">
                     {contactMethods.map((contact, index) => (
                       <a
                         key={index}
