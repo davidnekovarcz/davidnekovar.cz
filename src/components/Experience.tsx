@@ -234,7 +234,7 @@ const Experience = () => {
               href="https://www.linkedin.com/in/dave-nekovar/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 text-primary"
+              className="inline-flex items-center justify-center gap-2 text-primary hover:text-primary/80 transition-all duration-200 hover:scale-105"
             >
               <span className="font-medium text-sm sm:text-base">View Full LinkedIn Profile</span>
               <ExternalLink className="w-4 h-4" />
