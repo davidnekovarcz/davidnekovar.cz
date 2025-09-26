@@ -3,6 +3,7 @@ import { Menu } from "lucide-react";
 import { useState, useEffect } from "react";
 import { scrollToSection } from "@/utils/scroll";
 import ThemeToggle from "./ThemeToggle";
+import CVDownload from "./CVDownload";
 
 const CVHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -76,12 +77,14 @@ const CVHeader = () => {
           </nav>
 
           {/* Desktop CTA Buttons */}
-          <div className="hidden md:flex items-center">
+          <div className="hidden md:flex items-center gap-3">
+            <CVDownload variant="header" />
             <ThemeToggle />
           </div>
 
           {/* Mobile Menu Button & Theme Toggle */}
           <div className="flex items-center gap-2 md:hidden">
+            <CVDownload variant="header" />
             <ThemeToggle />
             <Button
               variant="ghost"

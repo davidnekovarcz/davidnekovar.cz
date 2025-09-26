@@ -4,6 +4,7 @@ import PrintInstructions from "./PrintInstructions";
 import { printCV } from "@/utils/print";
 import { scrollToSection } from "@/utils/scroll";
 import { YEARS_OF_EXPERIENCE_STRING } from "@/utils/experience";
+import CVDownload from "./CVDownload";
 
 const availableForHire = true;
 
@@ -54,6 +55,7 @@ const CVHero = () => {
                   Get in Touch
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
+                <CVDownload variant="hero" />
               </div>
 
               {/* Quick Contact */}
