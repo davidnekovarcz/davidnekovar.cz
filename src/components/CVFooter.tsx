@@ -16,7 +16,7 @@ const CVFooter = () => {
               <span className="font-display font-bold text-xl text-foreground">David Nekovář</span>
             </div>
             
-            <p className="text-muted-foreground mb-6 leading-relaxed">
+            <p className="text-muted-foreground mb-6 leading-relaxed max-w-xl">
               Full Stack Developer & Product Owner with {YEARS_OF_EXPERIENCE_STRING} years of experience building innovative solutions for global brands.
             </p>
           </div>

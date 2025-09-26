@@ -145,7 +145,7 @@ const Skills = () => {
           </div>
 
           {/* Languages & Personality */}
-          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16">
             {/* Languages */}
             <Card className="luxury-card animate-slide-up" style={{ animationDelay: '0.6s' }}>
               <CardHeader>
@@ -211,7 +211,7 @@ const Skills = () => {
           </div>
 
           {/* Values & Hobbies - Hidden for now */}
-          {/* <div className="grid lg:grid-cols-2 gap-8">
+          {/* <div className="grid md:grid-cols-2 gap-8">
             <Card className="luxury-card animate-slide-up" style={{ animationDelay: '1s' }}>
               <CardHeader>
                 <CardTitle className="flex items-center gap-3">

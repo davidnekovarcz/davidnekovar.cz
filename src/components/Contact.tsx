@@ -105,7 +105,7 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
             {/* Contact Information */}
             <div className="animate-slide-up">
               <Card className="luxury-card">
@@ -117,7 +117,7 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   {/* Contact Methods */}
-                  <div className="space-y-4">
+                  <div className="space-y md:space-y-2">
                     {contactMethods.map((contact, index) => (
                       <a
                         key={index}

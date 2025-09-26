@@ -17,7 +17,7 @@ const CVHero = () => {
       <div className="relative z-10 container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <PrintInstructions />
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center px-3">
 
             {/* Left Column - Main Info */}
             <div className="animate-fade-in">
@@ -77,7 +77,7 @@ const CVHero = () => {
                 <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-foreground">Professional Highlights</h3>
 
                 {/* Stats Grid */}
-                <div className="grid grid-cols-2 gap-3 sm:gap-6 mb-6 sm:mb-8">
+                <div className="grid grid-cols-2 gap-3 sm:gap-6 mb-6 sm:mb-8 max-w-lg">
                   <div className="text-center">
                     <div className="text-xl sm:text-2xl font-bold text-primary mb-1 sm:mb-2">{YEARS_OF_EXPERIENCE_STRING}</div>
                     <div className="text-xs sm:text-sm text-muted-foreground">Years Experience</div>
