@@ -7,7 +7,7 @@ import {
   MapPin, 
   Linkedin, 
   Github, 
-  Facebook,
+  Code,
   ExternalLink,
   Download,
   MessageCircle
@@ -54,11 +54,11 @@ const socialLinks = [
     color: "text-gray-800"
   },
   {
-    icon: Facebook,
-    label: "Facebook",
-    username: "dave.nekovar",
-    href: "https://www.facebook.com/dave.nekovar",
-    color: "text-blue-600"
+    icon: Code,
+    label: "Codewars",
+    username: "davidnekovarcz",
+    href: "https://www.codewars.com/users/davidnekovarcz",
+    color: "text-red-600"
   }
 ];
 
