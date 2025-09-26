@@ -10,7 +10,7 @@ This document collects gaps and action items to move the CV website from MVP to 
 - Social links: verify targets and add 
 - Project links: add UTM params
   - Smarlify: https://www.smarlify.co/?utm_source=website&utm_medium=external&utm_campaign=dave
-  - Improvee: https://app.improvee.io/?utm_source=website&utm_medium=external&utm_campaign=dave
+  - Improvee: https://app.improvee.io/onboarding?utm_source=website&utm_medium=external&utm_campaign=dave
   - Koinly: keep affiliate plus utm ()
 - Skills: optionally add small tech logos (Rails, Vue, React, TS, Tailwind, Postgres, Docker)
 - Contact block for print: keep concise single-line variants
@@ -110,6 +110,6 @@ Current: 18 A4 pages due to full-website layout being printed. Strategy: provide
 
 Example:
 - Smarlify: https://www.smarlify.co/?utm_source=website&utm_medium=external&utm_campaign=dave
-- Improvee: https://app.improvee.io/?utm_source=website&utm_medium=external&utm_campaign=dave
+- Improvee: https://app.improvee.io/onboarding?utm_source=website&utm_medium=external&utm_campaign=dave
 - Koinly: https://koinly.io/?via=B2E92FE3
 

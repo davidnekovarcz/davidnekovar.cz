@@ -179,7 +179,7 @@ app.get('*', (req, res) => {
 ## 🚀 Project Portfolio
 
 - **Smarlify**: [smarlify.co](https://www.smarlify.co) - Financial wellness platform
-- **Improvee**: [app.improvee.io](https://app.improvee.io) - Personal development app
+- **Improvee**: [app.improvee.io](https://app.improvee.io/onboarding) - Personal development app
 - **Koinly**: Crypto tax software (affiliate partner)
 
 ## 🎯 Personal Philosophy

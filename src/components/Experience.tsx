@@ -38,7 +38,7 @@ const experiences = [
     description: "\"People over-estimate what they can do in a single day and under-estimate what they can do in their whole lives.\" That is why we help people unleash their true potential and let them grow, following the principles of 改善 (kaizen).",
     skills: ["Product Management", "Product Launch", "Marketing", "Ruby on Rails", "Vue.js", "Startup Development"],
     current: false,
-    url: "https://app.improvee.io/?utm_source=website&utm_medium=external&utm_campaign=dave"
+    url: "https://app.improvee.io/onboarding?utm_source=website&utm_medium=external&utm_campaign=dave"
   },
   {
     title: "Product Owner & React Native Developer & English Teacher",

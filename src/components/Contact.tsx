@@ -72,7 +72,7 @@ const projects = [
   {
     name: "Improvee.io",
     tagline: "Become the designer of your life",
-    url: "https://app.improvee.io/?utm_source=website&utm_medium=external&utm_campaign=dave",
+    url: "https://app.improvee.io/onboarding?utm_source=website&utm_medium=external&utm_campaign=dave",
     description: "Personal development and kaizen platform"
   },
   {
