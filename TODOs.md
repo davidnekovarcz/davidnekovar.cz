@@ -119,16 +119,3 @@ Current: 18 A4 pages due to full-website layout being printed. Strategy: provide
 7. QA & Deploy
    - Multi-device manual QA including print to 1 A4
    - Tag release; deploy; set up uptime monitoring
-
----
-
-# Notes for UTM parameters
-- 
-- 
-- 
-
-Example:
-- Smarlify: https://smarlify.co/?utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave
-- Improvee: https://app.improvee.io/onboarding?utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave
-- Koinly: https://koinly.io/?via=B2E92FE3&utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave
-
