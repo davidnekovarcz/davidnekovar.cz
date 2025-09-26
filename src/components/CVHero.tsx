@@ -80,19 +80,19 @@ const CVHero = () => {
 
                 {/* Stats Grid */}
                 <div className="grid grid-cols-2 gap-3 sm:gap-6 mb-6 sm:mb-8 max-w-lg ">
-                  <div className="text-center bg-muted/50 rounded-lg p-5">
+                  <div className="text-center bg-muted/50 rounded-lg p-5 dark:p-3">
                     <div className="text-xl sm:text-2xl font-bold text-primary mb-1 sm:mb-2">{YEARS_OF_EXPERIENCE_STRING}</div>
                     <div className="text-xs sm:text-sm text-muted-foreground font-semibold">Years Experience</div>
                   </div>
-                  <div className="text-center bg-muted/50 rounded-lg p-5">
+                  <div className="text-center bg-muted/50 rounded-lg p-5 dark:p-3">
                     <div className="text-xl sm:text-2xl font-bold text-primary mb-1 sm:mb-2">50+</div>
                     <div className="text-xs sm:text-sm text-muted-foreground font-semibold">Projects Delivered</div>
                   </div>
-                  <div className="text-center bg-muted/50 rounded-lg p-5">
+                  <div className="text-center bg-muted/50 rounded-lg p-5 dark:p-3">
                     <div className="text-xl sm:text-2xl font-bold text-primary mb-1 sm:mb-2">5</div>
                     <div className="text-xs sm:text-sm text-muted-foreground font-semibold">Languages Spoken</div>
                   </div>
-                  <div className="text-center bg-muted/50 rounded-lg p-5">
+                  <div className="text-center bg-muted/50 rounded-lg p-5 dark:p-3">
                     <div className="text-xl sm:text-2xl font-bold text-primary mb-1 sm:mb-2">11+</div>
                     <div className="text-xs sm:text-sm text-muted-foreground font-semibold">Years Investing</div>
                   </div>

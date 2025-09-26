@@ -162,7 +162,6 @@ const Contact = () => {
                     </div>
                   </div>
 
-
                 </CardContent>
               </Card>
             </div>
