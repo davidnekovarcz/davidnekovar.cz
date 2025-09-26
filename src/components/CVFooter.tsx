@@ -6,9 +6,9 @@ const CVFooter = () => {
   return (
     <footer className="bg-card/50 border-t border-border backdrop-blur-sm">
       <div className="container mx-auto px-4 py-8 sm:py-12 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-12">
           {/* Brand Section */}
-          <div>
+          <div className="md:w-80 lg:w-96">
             <div className="flex items-center gap-2 mb-6">
               <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">DN</span>
@@ -16,13 +16,13 @@ const CVFooter = () => {
               <span className="font-display font-bold text-xl text-foreground">David Nekovář</span>
             </div>
             
-            <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">
+            <p className="text-muted-foreground mb-6 leading-relaxed">
               Full Stack Developer & Product Owner with {YEARS_OF_EXPERIENCE_STRING} years of experience building innovative solutions for global brands.
             </p>
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="md:w-64 lg:w-72">
             <h3 className="font-semibold text-foreground mb-4">Contact Information</h3>
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-muted-foreground">
@@ -75,8 +75,8 @@ const CVFooter = () => {
             </div>
           </div>
 
-          {/* Quick Navigation */}
-          <div>
+          {/* Quick Navigation - Hidden on mobile */}
+          <div className="hidden md:block md:w-32 lg:w-36">
             <h3 className="font-semibold text-foreground mb-4">Navigation</h3>
             <ul className="space-y-3">
               <li><a href="#hero" className="text-muted-foreground hover:text-primary transition-colors text-sm">Overview</a></li>
@@ -84,7 +84,6 @@ const CVFooter = () => {
               <li><a href="#skills" className="text-muted-foreground hover:text-primary transition-colors text-sm">Skills</a></li>
               <li><a href="#contact" className="text-muted-foreground hover:text-primary transition-colors text-sm">Contact</a></li>
             </ul>
-
           </div>
         </div>
 
