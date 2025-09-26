@@ -14,7 +14,7 @@ const experiences = [
     description: "I have a solid experience with investment portfolio management & strategy, risk management, crypto-trading, crypto-accounting, startup funding & (startup) product development etc.",
     skills: ["Portfolio Management", "Risk Management", "Crypto Trading", "Startup Funding"],
     current: false,
-    url: "https://koinly.io/?via=B2E92FE3&utm_source=website&utm_medium=external&utm_campaign=dave"
+    url: "https://koinly.io/?via=B2E92FE3&utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave"
   },
   {
     title: "Lead Vue.js & Ruby on Rails Developer & Project Manager",
@@ -26,7 +26,7 @@ const experiences = [
     description: "Together we've built high-tech web/mobile/HW solutions for global brands like Yves Saint-Laurent, Dior, British American Tobacco, as well as complex internal task management system based on Redmine.",
     skills: ["Vue.js", "Nuxt.js", "PWA", "Ruby on Rails", "Project Management", "Mobile Development"],
     current: false,
-    url: "https://www.designeo.cz/?utm_source=website&utm_medium=external&utm_campaign=dave"
+    url: "https://www.designeo.cz/?utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave"
   },
   {
     title: "Co-Founder & Product Owner & Lead Rails/Vue.js Developer",
@@ -38,7 +38,7 @@ const experiences = [
     description: "\"People over-estimate what they can do in a single day and under-estimate what they can do in their whole lives.\" That is why we help people unleash their true potential and let them grow, following the principles of 改善 (kaizen).",
     skills: ["Product Management", "Product Launch", "Marketing", "Ruby on Rails", "Vue.js", "Startup Development"],
     current: false,
-    url: "https://app.improvee.io/onboarding?utm_source=website&utm_medium=external&utm_campaign=dave"
+    url: "https://app.improvee.io/onboarding?utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave"
   },
   {
     title: "Product Owner & React Native Developer & English Teacher",
@@ -50,7 +50,7 @@ const experiences = [
     description: "Responsible for the design & development of a new online product (JP market, retail). \"Accelerate your business with digitalization.\"",
     skills: ["React Native", "Product Design", "Japanese Market", "Retail Solutions"],
     current: false,
-    url: "https://www.dreamarts.co.jp/?utm_source=website&utm_medium=external&utm_campaign=dave"
+    url: "https://www.dreamarts.co.jp/?utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave"
   },
   {
     title: "Founder & CTO & Ruby on Rails Developer & Scrum Master",
@@ -62,7 +62,7 @@ const experiences = [
     description: "Smarlify: \"Our customers believe that having a sustainable online business is the way to freedom in their lives. We believe that too. Therefore we help startupers solve the right problem, find & validate their MVP, design a prototype, build & launch the right product - and constantly grow & improve their businesses.\"",
     skills: ["Product Launch", "Startup Development", "MVP Development", "Ruby on Rails", "Scrum"],
     current: false,
-    url: "https://smarlify.co/?utm_source=website&utm_medium=external&utm_campaign=dave"
+    url: "https://smarlify.co/?utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave"
   }
 ];
 

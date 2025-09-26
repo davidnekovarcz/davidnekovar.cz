@@ -9,8 +9,8 @@ This document collects gaps and action items to move the CV website from MVP to 
   - Contact: Email, Phone already link; verify tel/mailto open correctly on mobile ✅
 - Social links: verify targets and add ✅
 - Project links: add UTM params ✅
-  - Smarlify: https://smarlify.co/?utm_source=website&utm_medium=external&utm_campaign=dave ✅
-  - Improvee: https://app.improvee.io/onboarding?utm_source=website&utm_medium=external&utm_campaign=dave ✅
+  - Smarlify: https://smarlify.co/?utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave ✅
+  - Improvee: https://app.improvee.io/onboarding?utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave ✅
   - Koinly: keep affiliate plus utm ✅
   - Designeo, DreamArts, Lovable: all have UTM params ✅
 - Skills: optionally add small tech logos (Rails, Vue, React, TS, Tailwind, Postgres, Docker)
@@ -128,7 +128,7 @@ Current: 18 A4 pages due to full-website layout being printed. Strategy: provide
 - 
 
 Example:
-- Smarlify: https://www.smarlify.co/?utm_source=website&utm_medium=external&utm_campaign=dave
-- Improvee: https://app.improvee.io/onboarding?utm_source=website&utm_medium=external&utm_campaign=dave
-- Koinly: https://koinly.io/?via=B2E92FE3
+- Smarlify: https://smarlify.co/?utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave
+- Improvee: https://app.improvee.io/onboarding?utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave
+- Koinly: https://koinly.io/?via=B2E92FE3&utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave
 

@@ -66,19 +66,19 @@ const personalityTraits = [
     type: "16Personalities", 
     result: "INFJ \"Advocate\"", 
     description: "Insightful, creative, and motivated by values",
-    url: "https://www.16personalities.com/infj-personality?utm_source=website&utm_medium=external&utm_campaign=davidnekovarcz"
+    url: "https://www.16personalities.com/infj-personality?utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=davidnekovarcz"
   },
   { 
     type: "Wealth Dynamics", 
     result: "\"Mechanic\"", 
     description: "Systems thinker, detail-oriented problem solver",
-    url: "https://www.wealthdynamics.com/wealth-profiles/mechanic?utm_source=website&utm_medium=external&utm_campaign=davidnekovarcz"
+    url: "https://www.wealthdynamics.com/wealth-profiles/mechanic?utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=davidnekovarcz"
   },
   { 
     type: "C. G. Jung", 
     result: "King, Explorer, Creator", 
     description: "Leadership, curiosity, and innovation",
-    url: "https://jdmeier.com/brand-archetypes/?utm_source=website&utm_medium=external&utm_campaign=davidnekovarcz"
+    url: "https://jdmeier.com/brand-archetypes/?utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=davidnekovarcz"
   }
 ];
 
