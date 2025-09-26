@@ -130,8 +130,8 @@ const Experience = () => {
                                 <div className="flex items-center gap-1 mb-1">
                                   <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
                                   <div className="flex items-center gap-2">
-                                    <span className={exp.period.includes("now") ? "font-bold" : ""}>
-                                      {exp.period.replace(" - now", "")}
+                                    <span className={"font-bold -mr-1"}>
+                                      {exp.period.replace(" - now", "+")}
                                     </span>
                                     {exp.period.includes("now") && (
                                       <Badge variant="secondary" className="bg-primary/10 text-primary text-xs pointer-events-none">
