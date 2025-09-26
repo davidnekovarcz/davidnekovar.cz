@@ -17,7 +17,7 @@ const CVHero = () => {
       <div className="relative z-10 container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <PrintInstructions />
-          <div className="grid md:grid-cols-2 gap-12 items-center px-3">
+          <div className="grid md:grid-cols-2 gap-12 items-center px-3 justify-items-center md:justify-items-start">
 
             {/* Left Column - Main Info */}
             <div className="animate-fade-in">
