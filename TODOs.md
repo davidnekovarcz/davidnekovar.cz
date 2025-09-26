@@ -15,6 +15,18 @@ This document collects gaps and action items to move the CV website from MVP to 
 - Skills: optionally add small tech logos (Rails, Vue, React, TS, Tailwind, Postgres, Docker)
 - Contact block for print: keep concise single-line variants
 
+## 1.1) Enhanced CTAs & Business Features
+- **Download CV Button**: Auto-generate PDF with print styles
+  - Implement proper print CSS for single-page CV layout
+  - Add "Download CV" button with automatic PDF generation
+  - Ensure professional formatting and proper margins
+- **"Hire Me" Button**: Advanced business integration
+  - Create popup/modal with service offerings and pricing
+  - Calendar integration (Calendly/Google Calendar) for consultation booking
+  - Auto-invoice generation system for proposals and contracts
+  - Project scope questionnaire and automated quote generation
+  - Payment integration for deposits and milestone payments
+
 ## 2) UX polish
 - Smooth-scroll offset: account for fixed header height
 - Reduce on-page animations on low-power devices or 
@@ -75,29 +87,34 @@ Current: 18 A4 pages due to full-website layout being printed. Strategy: provide
 
 # Action Plan (prioritized)
 
-1. Print‑only 1‑page layout
+1. **Enhanced Business Features**
+   - Download CV Button: Auto-generate PDF with print styles
+   - "Hire Me" Button: Popup with calendar integration and auto-invoice generation
+   - Service offerings modal with pricing and project scope questionnaire
+
+2. Print‑only 1‑page layout
    - Add  container with condensed CV content
    - Tighten spacing + type scale for print
    - Hide full site in print
    - Button: "Download 1‑page PDF" → toggles  + 
 
-2. Link hygiene
+3. Link hygiene
    - Add UTMs to Smarlify / Improvee / Koinly
    - Ensure all CTAs are wired (mailto/tel/scroll/print)
 
-3. Visual polish
+4. Visual polish
    - Optional tech logos row (monochrome SVGs) in skills header
    - Reduce animation intensity + add reduced-motion support
 
-4. SEO & Meta
+5. SEO & Meta
    - Add JSON‑LD Person schema (name, sameAs, jobTitle, url)
    - Confirm OG image (1200×630) hosted and referenced
 
-5. Perf & A11y
+6. Perf & A11y
    - Tree-shake icons, preload fonts, AVIF/WebP for images
    - Keyboard focus styles; aria labels for icon-only buttons
 
-6. QA & Deploy
+7. QA & Deploy
    - Multi-device manual QA including print to 1 A4
    - Tag release; deploy; set up uptime monitoring
 
