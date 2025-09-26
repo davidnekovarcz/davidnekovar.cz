@@ -1,6 +1,6 @@
 # David Nekovář - CV Website 🚀
 
-A modern, responsive CV website built with React, TypeScript, and Tailwind CSS, showcasing David Nekovář's professional experience as a Full Stack Developer and Product Owner. Features a beautiful animated background, dark/light theme support, and professional print-to-PDF functionality.
+A modern, responsive CV website built with React.js/Next.js, TypeScript, and Tailwind CSS, showcasing David Nekovář's professional experience as a Full Stack Developer and Product Owner. Features a beautiful animated background, dark/light theme support, and professional print-to-PDF functionality.
 
 ## ✨ Features
 

@@ -2,16 +2,17 @@
 
 This document collects gaps and action items to move the CV website from MVP to production quality. It’s split into: content, UX, print/PDF, SEO/analytics, performance, accessibility, QA, and deployment.
 
-## 1) Content & Links
-- Buttons: wire all CTAs to real actions
-  - Header: Contact (mailto), CV (print to PDF)
-  - Hero: Get in Touch (mailto), Download CV (print)
-  - Contact: Email, Phone already link; verify tel/mailto open correctly on mobile
-- Social links: verify targets and add 
-- Project links: add UTM params
-  - Smarlify: https://www.smarlify.co/?utm_source=website&utm_medium=external&utm_campaign=dave
-  - Improvee: https://app.improvee.io/onboarding?utm_source=website&utm_medium=external&utm_campaign=dave
-  - Koinly: keep affiliate plus utm ()
+## 1) Content & Links ✅ COMPLETED
+- Buttons: wire all CTAs to real actions ✅
+  - Header: Contact (mailto), CV (print to PDF) ✅
+  - Hero: Get in Touch (mailto), Download CV (print) ✅
+  - Contact: Email, Phone already link; verify tel/mailto open correctly on mobile ✅
+- Social links: verify targets and add ✅
+- Project links: add UTM params ✅
+  - Smarlify: https://smarlify.co/?utm_source=website&utm_medium=external&utm_campaign=dave ✅
+  - Improvee: https://app.improvee.io/onboarding?utm_source=website&utm_medium=external&utm_campaign=dave ✅
+  - Koinly: keep affiliate plus utm ✅
+  - Designeo, DreamArts, Lovable: all have UTM params ✅
 - Skills: optionally add small tech logos (Rails, Vue, React, TS, Tailwind, Postgres, Docker)
 - Contact block for print: keep concise single-line variants
 
@@ -53,11 +54,12 @@ Current: 18 A4 pages due to full-website layout being printed. Strategy: provide
   - 
   - Avoid page breaks inside experience items ()
 
-## 4) SEO & Analytics
-- Add canonical + OpenGraph/Twitter tags (done) → verify image asset hosted
-- Add structured data (JSON-LD Person + WebSite)
-- Add  and meaningful 
-- Install analytics (Plausible/GA4) with anonymized IP
+## 4) SEO & Analytics ✅ COMPLETED
+- Add canonical + OpenGraph/Twitter tags ✅ DONE
+- Verify image asset hosted ✅ DONE (og-image.jpg)
+- Add structured data (JSON-LD Person + WebSite) ✅ DONE
+- Add meaningful meta descriptions ✅ DONE
+- Install analytics (Umami + GA4) with anonymized IP ✅ DONE
 
 ## 5) Performance
 - Preload fonts; self-host if possible to avoid FOUT

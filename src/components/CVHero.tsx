@@ -42,7 +42,7 @@ const CVHero = () => {
 
               {/* Tagline */}
               <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 leading-relaxed max-w-lg">
-                Building innovative solutions for global brands with {YEARS_OF_EXPERIENCE_STRING} years of experience in Ruby on Rails, Vue.js, and React.
+                Building innovative solutions for global brands with {YEARS_OF_EXPERIENCE_STRING} years of experience in Ruby on Rails, Vue.js and React.
               </p>
 
               {/* CTA Buttons */}
