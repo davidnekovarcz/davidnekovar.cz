@@ -41,12 +41,25 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
-            <Button className="btn-hero group">
+            <Button className="btn-hero group" onClick={() => {
+              if (typeof window !== 'undefined' && window.trackEvent) {
+                window.trackEvent('hero_cta_click', {
+                  cta_text: 'Start Your Journey',
+                  event_category: 'cta_interaction'
+                });
+              }
+            }}>
               Start Your Journey
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
-            <Button variant="ghost" className="btn-luxury group">
+            <Button variant="ghost" className="btn-luxury group" onClick={() => {
+              if (typeof window !== 'undefined' && window.trackEvent) {
+                window.trackEvent('hero_video_click', {
+                  event_category: 'cta_interaction'
+                });
+              }
+            }}>
               <Play className="mr-2 w-5 h-5" />
               Watch Our Story
             </Button>

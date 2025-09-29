@@ -88,7 +88,13 @@ const Footer = () => {
                 placeholder="Enter your email"
                 className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-primary"
               />
-              <Button className="btn-hero group whitespace-nowrap">
+              <Button className="btn-hero group whitespace-nowrap" onClick={() => {
+                if (typeof window !== 'undefined' && window.trackEvent) {
+                  window.trackEvent('newsletter_subscribe_click', {
+                    event_category: 'newsletter_interaction'
+                  });
+                }
+              }}>
                 Subscribe
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -145,6 +151,14 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   aria-label={social.label}
                   className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-primary/20 transition-colors duration-300"
+                  onClick={() => {
+                    if (typeof window !== 'undefined' && window.trackEvent) {
+                      window.trackEvent('footer_social_click', {
+                        platform: social.label,
+                        event_category: 'social_interaction'
+                      });
+                    }
+                  }}
                 >
                   {social.icon}
                 </a>
@@ -162,6 +176,15 @@ const Footer = () => {
                     <a 
                       href={link.href}
                       className="text-white/70 hover:text-white transition-colors duration-300"
+                      onClick={() => {
+                        if (typeof window !== 'undefined' && window.trackEvent) {
+                          window.trackEvent('footer_link_click', {
+                            link_label: link.label,
+                            link_section: section.title,
+                            event_category: 'footer_interaction'
+                          });
+                        }
+                      }}
                     >
                       {link.label}
                     </a>
@@ -179,9 +202,30 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-between text-white/70 text-sm">
             <p>© {currentYear} Smarlify.co. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
-              <a href="/cookies" className="hover:text-white transition-colors">Cookie Policy</a>
+              <a href="/privacy" className="hover:text-white transition-colors" onClick={() => {
+                if (typeof window !== 'undefined' && window.trackEvent) {
+                  window.trackEvent('footer_legal_click', {
+                    link_type: 'privacy_policy',
+                    event_category: 'legal_interaction'
+                  });
+                }
+              }}>Privacy Policy</a>
+              <a href="/terms" className="hover:text-white transition-colors" onClick={() => {
+                if (typeof window !== 'undefined' && window.trackEvent) {
+                  window.trackEvent('footer_legal_click', {
+                    link_type: 'terms_of_service',
+                    event_category: 'legal_interaction'
+                  });
+                }
+              }}>Terms of Service</a>
+              <a href="/cookies" className="hover:text-white transition-colors" onClick={() => {
+                if (typeof window !== 'undefined' && window.trackEvent) {
+                  window.trackEvent('footer_legal_click', {
+                    link_type: 'cookie_policy',
+                    event_category: 'legal_interaction'
+                  });
+                }
+              }}>Cookie Policy</a>
             </div>
           </div>
         </div>

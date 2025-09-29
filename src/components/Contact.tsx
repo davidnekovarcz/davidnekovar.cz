@@ -125,6 +125,14 @@ const Contact = () => {
                         target={contact.href?.startsWith('http') ? '_blank' : undefined}
                         rel={contact.href?.startsWith('http') ? 'noopener noreferrer' : undefined}
                         className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-muted/50 rounded-lg hover:bg-muted/70 transition-colors group cursor-pointer"
+                        onClick={() => {
+                          if (typeof window !== 'undefined' && window.trackEvent) {
+                            window.trackEvent('contact_method_click', {
+                              contact_type: contact.label,
+                              event_category: 'contact_interaction'
+                            });
+                          }
+                        }}
                       >
                         <contact.icon className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
                         <div className="flex-1 min-w-0">
@@ -146,6 +154,14 @@ const Contact = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center gap-3 sm:gap-4 p-3 bg-muted/50 rounded-lg hover:bg-muted/70 transition-colors group"
+                          onClick={() => {
+                            if (typeof window !== 'undefined' && window.trackEvent) {
+                              window.trackEvent('contact_social_click', {
+                                platform: social.label,
+                                event_category: 'social_interaction'
+                              });
+                            }
+                          }}
                         >
                           <social.icon className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
                           <div className="flex-1 min-w-0">
@@ -188,6 +204,14 @@ const Contact = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="block p-3 sm:p-4 bg-muted/50 rounded-lg hover:bg-muted/70 transition-colors group"
+                          onClick={() => {
+                            if (typeof window !== 'undefined' && window.trackEvent) {
+                              window.trackEvent('project_click', {
+                                project_name: project.name,
+                                event_category: 'external_link'
+                              });
+                            }
+                          }}
                         >
                           <div className="flex items-start justify-between gap-3 sm:gap-4">
                             <div className="flex-1 min-w-0">

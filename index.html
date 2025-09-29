@@ -161,6 +161,13 @@
       gtag('js', new Date());
 
       gtag('config', 'G-PVJHW3FCFK');
+      
+      // Global GA event tracking function
+      window.trackEvent = function(eventName, parameters = {}) {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', eventName, parameters);
+        }
+      };
     </script>
   </head>
 

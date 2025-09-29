@@ -33,6 +33,15 @@ const CVDownload = ({ variant = "default", showAllFormats = true }: CVDownloadPr
   const defaultCV = cvFiles[0]; // PDF is default
   
   const downloadCV = (filename: string) => {
+    // Track CV download event
+    if (typeof window !== 'undefined' && window.trackEvent) {
+      window.trackEvent('cv_download', {
+        filename: filename,
+        format: filename.split('.').pop(),
+        event_category: 'download_interaction'
+      });
+    }
+    
     const link = document.createElement('a');
     link.href = `/_CV/${filename}`;
     link.download = filename;

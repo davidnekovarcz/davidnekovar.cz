@@ -53,6 +53,14 @@ const Header = () => {
                 key={item.label}
                 href={item.href}
                 className="text-white/90 hover:text-white transition-colors duration-300 font-medium"
+                onClick={() => {
+                  if (typeof window !== 'undefined' && window.trackEvent) {
+                    window.trackEvent('nav_click', {
+                      nav_item: item.label,
+                      event_category: 'navigation'
+                    });
+                  }
+                }}
               >
                 {item.label}
               </a>
@@ -61,13 +69,26 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className="btn-luxury">Get Started</Button>
+            <Button className="btn-luxury" onClick={() => {
+              if (typeof window !== 'undefined' && window.trackEvent) {
+                window.trackEvent('header_cta_click', {
+                  event_category: 'cta_interaction'
+                });
+              }
+            }}>Get Started</Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             className="md:hidden text-white"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={() => {
+              if (typeof window !== 'undefined' && window.trackEvent) {
+                window.trackEvent('mobile_menu_toggle', {
+                  event_category: 'navigation'
+                });
+              }
+              setIsMenuOpen(!isMenuOpen);
+            }}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -84,12 +105,26 @@ const Header = () => {
                   key={item.label}
                   href={item.href}
                   className="text-white/90 hover:text-white transition-colors duration-300 font-medium"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => {
+                    if (typeof window !== 'undefined' && window.trackEvent) {
+                      window.trackEvent('mobile_nav_click', {
+                        nav_item: item.label,
+                        event_category: 'navigation'
+                      });
+                    }
+                    setIsMenuOpen(false);
+                  }}
                 >
                   {item.label}
                 </a>
               ))}
-              <Button className="btn-luxury w-fit">Get Started</Button>
+              <Button className="btn-luxury w-fit" onClick={() => {
+                if (typeof window !== 'undefined' && window.trackEvent) {
+                  window.trackEvent('mobile_header_cta_click', {
+                    event_category: 'cta_interaction'
+                  });
+                }
+              }}>Get Started</Button>
             </div>
           </div>
         )}
