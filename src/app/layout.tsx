@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         url: DAVID_SEO.ogImage,
         width: 1200,
         height: 630,
-        alt: "David Nekovar - Full-Stack Developer Portfolio",
+        alt: "David Nekovář - Product Owner & Full Stack Developer Portfolio",
         type: "image/svg+xml",
       },
     ],
