@@ -204,8 +204,8 @@ export const SEO_CONFIGS: Record<string, SEOConfig> = {
     author: "David Nekovář",
     creator: "David Nekovář",
     publisher: "David Nekovář",
-    url: "https://davidnekovar.cz",
-    canonical: "https://davidnekovar.cz",
+    url: "https://www.davidnekovar.cz",
+    canonical: "https://www.davidnekovar.cz",
     siteName: "David Nekovář",
     twitter: {
       site: "@davidnekovar",
@@ -225,7 +225,7 @@ export const SEO_CONFIGS: Record<string, SEOConfig> = {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "David Nekovář",
-        "url": "https://davidnekovar.cz",
+        "url": "https://www.davidnekovar.cz",
         "jobTitle": "Product Owner & Full Stack Developer & AI Solutions Architect",
         "description": "Experienced Product Owner & Full Stack Developer with 12+ years building innovative solutions for global brands. Specializing in Ruby on Rails, Vue.js, React, Nuxt.js, Next.js, PWA, Three.js, and AI Solutions Architecture.",
         "sameAs": [
@@ -279,7 +279,7 @@ export const SEO_CONFIGS: Record<string, SEOConfig> = {
         "@type": "WebSite",
         "name": "David Nekovář Portfolio",
         "description": "Product Owner & Full Stack Developer portfolio and CV",
-        "url": "https://davidnekovar.cz",
+        "url": "https://www.davidnekovar.cz",
         "author": {
           "@type": "Person",
           "name": "David Nekovář"

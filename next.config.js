@@ -4,7 +4,7 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ['davidnekovar.cz'],
+    domains: ['www.davidnekovar.cz'],
   },
   async rewrites() {
     return [
