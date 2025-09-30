@@ -1,0 +1,352 @@
+/* Cookie Animation Styles */
+.cookies-page-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e1b4b, #7c3aed, #1e1b4b);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+/* Animated Stars Background */
+.stars, .stars2, .stars3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.stars {
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.6), transparent),
+    radial-gradient(2px 2px at 160px 30px, #ddd, transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  animation: sparkle 3s linear infinite;
+}
+
+.stars2 {
+  background-image: 
+    radial-gradient(1px 1px at 50px 20px, #fff, transparent),
+    radial-gradient(1px 1px at 100px 60px, rgba(255,255,255,0.7), transparent),
+    radial-gradient(2px 2px at 150px 10px, #eee, transparent);
+  background-repeat: repeat;
+  background-size: 150px 80px;
+  animation: sparkle 4s linear infinite reverse;
+}
+
+.stars3 {
+  background-image: 
+    radial-gradient(1px 1px at 30px 50px, rgba(255,255,255,0.5), transparent),
+    radial-gradient(2px 2px at 80px 20px, #ddd, transparent);
+  background-repeat: repeat;
+  background-size: 100px 60px;
+  animation: sparkle 5s linear infinite;
+}
+
+@keyframes sparkle {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-100px); }
+}
+
+/* Robot Container */
+.robot-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Robot Styles */
+.robot {
+  position: relative;
+  width: 120px;
+  height: 160px;
+}
+
+.robot .head {
+  width: 80px;
+  height: 80px;
+  background: #4a5568;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto 10px;
+  border: 3px solid #2d3748;
+}
+
+.robot .eye {
+  width: 12px;
+  height: 12px;
+  background: #00ff00;
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+  animation: blink 3s infinite;
+}
+
+.robot .eye.left {
+  left: 20px;
+}
+
+.robot .eye.right {
+  right: 20px;
+}
+
+.robot .mouth {
+  width: 20px;
+  height: 10px;
+  background: #2d3748;
+  border-radius: 0 0 20px 20px;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.robot .body {
+  width: 100px;
+  height: 80px;
+  background: #4a5568;
+  border-radius: 20px;
+  margin: 0 auto;
+  border: 3px solid #2d3748;
+}
+
+.robot .arm {
+  width: 20px;
+  height: 60px;
+  background: #4a5568;
+  border-radius: 10px;
+  position: absolute;
+  top: 90px;
+  border: 2px solid #2d3748;
+}
+
+.robot .arm.left {
+  left: 10px;
+  animation: wave-left 2s ease-in-out infinite;
+}
+
+.robot .arm.right {
+  right: 10px;
+  animation: wave-right 2s ease-in-out infinite;
+}
+
+.robot .leg {
+  width: 25px;
+  height: 50px;
+  background: #4a5568;
+  border-radius: 12px;
+  position: absolute;
+  top: 170px;
+  border: 2px solid #2d3748;
+}
+
+.robot .leg.left {
+  left: 25px;
+}
+
+.robot .leg.right {
+  right: 25px;
+}
+
+/* Cookie Styles */
+.cookie-container {
+  position: relative;
+}
+
+.cookie {
+  width: 100px;
+  height: 100px;
+  background: #d4a574;
+  border-radius: 50%;
+  position: relative;
+  border: 4px solid #8b4513;
+  animation: float 3s ease-in-out infinite;
+}
+
+.cookie.chip {
+  width: 8px;
+  height: 8px;
+  background: #8b4513;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.cookie .chip-1 {
+  top: 20px;
+  left: 20px;
+}
+
+.cookie .chip-2 {
+  top: 30px;
+  right: 25px;
+}
+
+.cookie .chip-3 {
+  bottom: 25px;
+  left: 30px;
+}
+
+.cookie .chip-4 {
+  bottom: 20px;
+  right: 20px;
+}
+
+.cookie .chip-5 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Cookie Bite Animations */
+.cookie.bite-1 {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%, 20% 0%);
+}
+
+.cookie.bite-2 {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 40%, 40% 0%);
+}
+
+.cookie.bite-3 {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 60%, 60% 0%);
+}
+
+/* Cookie Crumbs */
+.crumb {
+  width: 8px;
+  height: 8px;
+  background: #d4a574;
+  border-radius: 50%;
+  position: absolute;
+  animation: crumb-fall 2s ease-out forwards;
+}
+
+.crumb-1 {
+  top: 120px;
+  left: 20px;
+  animation-delay: 0s;
+}
+
+.crumb-2 {
+  top: 130px;
+  left: 40px;
+  animation-delay: 0.2s;
+}
+
+.crumb-3 {
+  top: 140px;
+  left: 60px;
+  animation-delay: 0.4s;
+}
+
+.crumb-4 {
+  top: 150px;
+  left: 80px;
+  animation-delay: 0.6s;
+}
+
+/* Message Box */
+.message-box {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  border: 2px solid #7c3aed;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  animation: message-pulse 2s ease-in-out infinite;
+}
+
+.message-box p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+  text-shadow: 0 0 10px #7c3aed;
+}
+
+/* Animations */
+@keyframes blink {
+  0%, 90%, 100% { opacity: 1; }
+  95% { opacity: 0; }
+}
+
+@keyframes wave-left {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-20deg); }
+}
+
+@keyframes wave-right {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(20deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes crumb-fall {
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(50px) rotate(180deg);
+  }
+}
+
+@keyframes message-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .robot-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .robot {
+    width: 100px;
+    height: 140px;
+  }
+  
+  .robot .head {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .robot .body {
+    width: 80px;
+    height: 60px;
+  }
+  
+  .cookie {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .message-box {
+    padding: 0.8rem 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .message-box p {
+    font-size: 1.2rem;
+  }
+}
