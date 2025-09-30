@@ -211,8 +211,8 @@ export const SEO_CONFIGS: Record<string, SEOConfig> = {
       site: "@davidnekovar",
       creator: "@davidnekovar"
     },
-    ogImage: "/og-image.svg",
-    twitterImage: "/og-image.svg",
+    ogImage: "/dave.jpg",
+    twitterImage: "/dave.jpg",
     googleVerification: "your-google-verification-code",
     hero: {
       headline: "Product Owner & Full Stack Developer",
