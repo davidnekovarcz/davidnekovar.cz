@@ -190,15 +190,16 @@ export const SEO_CONFIGS: Record<string, SEOConfig> = {
   },
 
   davidnekovar: {
-    title: "David Nekovář - Product Owner & Full Stack Developer | Ruby on Rails, Vue.js, React Expert",
-    description: "Experienced Product Owner & Full Stack Developer with 12+ years building innovative solutions for global brands. Specializing in Ruby on Rails, Vue.js, React, and investment portfolio management. Available for new opportunities in Prague, Czech Republic.",
+    title: "David Nekovář - Product Owner & Full Stack Developer | Ruby on Rails, Vue.js, React, AI Solutions Architect",
+    description: "Experienced Product Owner & Full Stack Developer with 12+ years building innovative solutions for global brands. Specializing in Ruby on Rails, Vue.js, React, Nuxt.js, Next.js, PWA, Three.js, and AI Solutions Architecture. Available for new opportunities in Prague, Czech Republic.",
     keywords: [
-      "David Nekovář", "Product Owner", "Full Stack Developer", "Ruby on Rails developer", "Vue.js developer", "React developer",
-      "Ruby on Rails expert", "Vue.js expert", "React expert", "TypeScript developer", "PostgreSQL developer",
+      "David Nekovář", "Product Owner", "Full Stack Developer", "AI Solutions Architect", "Ruby on Rails developer", "Vue.js developer", "React developer",
+      "Ruby on Rails expert", "Vue.js expert", "React expert", "Nuxt.js developer", "Next.js developer", "PWA developer", "Three.js developer",
+      "TypeScript developer", "PostgreSQL developer", "Node.js developer", "Nest.js developer", "Web Game Development",
       "Product Manager", "Project Manager", "Scrum Master", "CTO", "Co-Founder", "Startup Developer",
       "Investment Portfolio Manager", "Crypto Trading", "Startup Funding", "MVP Development",
       "Prague developer", "Czech Republic developer", "Remote developer", "Freelance developer",
-      "Web Development", "Mobile Development", "PWA Development", "Japanese Market", "Global Brands"
+      "Web Development", "Mobile Development", "PWA Development", "Japanese Market", "Global Brands", "AI Solutions"
     ],
     author: "David Nekovář",
     creator: "David Nekovář",
@@ -215,7 +216,7 @@ export const SEO_CONFIGS: Record<string, SEOConfig> = {
     googleVerification: "your-google-verification-code",
     hero: {
       headline: "Product Owner & Full Stack Developer",
-      subheadline: "Building innovative solutions for global brands with 12+ years of experience in Ruby on Rails, Vue.js and React. Available for new opportunities.",
+      subheadline: "Building innovative solutions for global brands with 12+ years of experience in Ruby on Rails, Vue.js, React, Nuxt.js, Next.js, PWA, Three.js, and AI Solutions Architecture. Available for new opportunities.",
       cta: "Get in Touch",
       badge: "Available for New Opportunities"
     },
@@ -225,21 +226,22 @@ export const SEO_CONFIGS: Record<string, SEOConfig> = {
         "@type": "Person",
         "name": "David Nekovář",
         "url": "https://davidnekovar.cz",
-        "jobTitle": "Product Owner & Full Stack Developer",
-        "description": "Experienced Product Owner & Full Stack Developer with 12+ years building innovative solutions for global brands",
+        "jobTitle": "Product Owner & Full Stack Developer & AI Solutions Architect",
+        "description": "Experienced Product Owner & Full Stack Developer with 12+ years building innovative solutions for global brands. Specializing in Ruby on Rails, Vue.js, React, Nuxt.js, Next.js, PWA, Three.js, and AI Solutions Architecture.",
         "sameAs": [
           "https://github.com/davidnekovarcz",
           "https://linkedin.com/in/dave-nekovar",
           "https://twitter.com/davidnekovar"
         ],
         "knowsAbout": [
-          "Ruby on Rails", "Vue.js", "React", "TypeScript", "PostgreSQL", "Product Management",
+          "Ruby on Rails", "Vue.js", "Nuxt.js", "React", "Next.js", "TypeScript", "PostgreSQL", "Node.js", "Nest.js",
+          "PWA Development", "Three.js", "Web Game Development", "AI Solutions Architecture", "Product Management",
           "Project Management", "Scrum Master", "Investment Portfolio Management", "Crypto Trading",
-          "Startup Development", "MVP Development", "Mobile Development", "PWA Development"
+          "Startup Development", "MVP Development", "Mobile Development", "Japanese Market", "Global Brands"
         ],
         "hasOccupation": {
           "@type": "Occupation",
-          "name": "Product Owner & Full Stack Developer",
+          "name": "Product Owner & Full Stack Developer & AI Solutions Architect",
           "occupationLocation": {
             "@type": "City",
             "name": "Prague, Czech Republic"
