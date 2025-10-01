@@ -119,7 +119,7 @@ const Services = () => {
                 {service.image ? (
                   <div className="relative">
                     <img
-                      src={service.image.src}
+                      src={service.image}
                       alt={service.title}
                       className="w-full h-96 object-cover rounded-2xl shadow-elegant"
                     />

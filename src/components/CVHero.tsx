@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
 import PrintInstructions from "./PrintInstructions";
