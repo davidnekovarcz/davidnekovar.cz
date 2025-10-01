@@ -29,8 +29,8 @@ export const downloadCV = () => {
  * Alternative download method using browser's print with better error handling
  */
 export const printCV = () => {
-  // Check if print is supported
-  if (typeof window !== 'undefined' && window.print) {
+  // Check if we're in browser environment
+  if (typeof window !== 'undefined') {
     try {
       // Ensure page is fully loaded
       if (document.readyState === 'complete') {
