@@ -223,7 +223,7 @@ export const SEO_CONFIGS: Record<string, SEOConfig> = {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "David Nekovar",
-        "url": "https://davidnekovar.cz",
+        "url": "https://www.davidnekovar.cz",
         "jobTitle": "Full-Stack Developer & Tech Entrepreneur",
         "description": "Experienced full-stack developer specializing in modern web technologies and software engineering",
         "sameAs": [
@@ -254,7 +254,7 @@ export const SEO_CONFIGS: Record<string, SEOConfig> = {
         "@type": "WebSite",
         "name": "David Nekovar Portfolio",
         "description": "Full-stack developer portfolio and services",
-        "url": "https://davidnekovar.cz",
+        "url": "https://www.davidnekovar.cz",
         "author": {
           "@type": "Person",
           "name": "David Nekovar"
