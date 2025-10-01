@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import { DAVID_SEO, SEOHelpers } from '@/lib/seo';
+import { ThemeProvider } from '@/contexts/ThemeContext';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -86,7 +87,9 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white antialiased">
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
         
         {/* Google Analytics */}
         <Script
