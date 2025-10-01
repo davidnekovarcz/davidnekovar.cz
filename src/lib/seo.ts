@@ -39,9 +39,9 @@ export interface SEOConfig {
   
   // Structured Data
   structuredData: {
-    organization: any;
-    website: any;
-    breadcrumb?: any;
+    organization: unknown;
+    website: unknown;
+    breadcrumb?: unknown;
   };
 }
 
@@ -190,103 +190,78 @@ export const SEO_CONFIGS: Record<string, SEOConfig> = {
   },
 
   davidnekovar: {
-    title: "David Nekovář - Product Owner & Full Stack Developer | Ruby on Rails, Vue.js, React, AI Solutions Architect",
-    description: "Experienced Product Owner & Full Stack Developer with 12+ years building innovative solutions for global brands. Specializing in Ruby on Rails, Vue.js, React, Nuxt.js, Next.js, PWA, Three.js, and AI Solutions Architecture. Available for new opportunities in Prague, Czech Republic.",
+    title: "David Nekovar - Full-Stack Developer & Tech Entrepreneur | React, Node.js, TypeScript Expert",
+    description: "Experienced full-stack developer specializing in React, Node.js, TypeScript, and modern web technologies. Building innovative solutions for startups and enterprises. Available for freelance projects and consulting.",
     keywords: [
-      "David Nekovář", "Product Owner", "Full Stack Developer", "AI Solutions Architect", "Ruby on Rails developer", "Vue.js developer", "React developer",
-      "Ruby on Rails expert", "Vue.js expert", "React expert", "Nuxt.js developer", "Next.js developer", "PWA developer", "Three.js developer",
-      "TypeScript developer", "PostgreSQL developer", "Node.js developer", "Nest.js developer", "Web Game Development",
-      "Product Manager", "Project Manager", "Scrum Master", "CTO", "Co-Founder", "Startup Developer",
-      "Investment Portfolio Manager", "Crypto Trading", "Startup Funding", "MVP Development",
-      "Prague developer", "Czech Republic developer", "Remote developer", "Freelance developer",
-      "Web Development", "Mobile Development", "PWA Development", "Japanese Market", "Global Brands", "AI Solutions"
+      "full-stack developer", "React developer", "Node.js developer", "TypeScript developer", "JavaScript expert",
+      "web developer", "frontend developer", "backend developer", "software engineer", "tech entrepreneur",
+      "freelance developer", "startup developer", "enterprise developer", "web technologies", "modern development",
+      "responsive design", "API development", "database design", "cloud solutions", "software consulting",
+      "web application development", "mobile app development", "e-commerce development", "SaaS development"
     ],
-    author: "David Nekovář",
-    creator: "David Nekovář",
-    publisher: "David Nekovář",
-    url: "https://www.davidnekovar.cz",
-    canonical: "https://www.davidnekovar.cz",
-    siteName: "David Nekovář",
+    author: "David Nekovar",
+    creator: "David Nekovar",
+    publisher: "David Nekovar",
+    url: "https://davidnekovar.cz",
+    canonical: "https://davidnekovar.cz",
+    siteName: "David Nekovar",
     twitter: {
       site: "@davidnekovar",
       creator: "@davidnekovar"
     },
-    ogImage: "/dave.jpg",
-    twitterImage: "/dave.jpg",
+    ogImage: "/og-image.svg",
+    twitterImage: "/og-image.svg",
     googleVerification: "your-google-verification-code",
     hero: {
-      headline: "Product Owner & Full Stack Developer",
-      subheadline: "Building innovative solutions for global brands with 12+ years of experience in Ruby on Rails, Vue.js, React, Nuxt.js, Next.js, PWA, Three.js, and AI Solutions Architecture. Available for new opportunities.",
-      cta: "Get in Touch",
-      badge: "Available for New Opportunities"
+      headline: "Full-Stack Developer & Tech Entrepreneur",
+      subheadline: "Building innovative web solutions with React, Node.js, TypeScript, and modern technologies. Available for freelance projects and consulting.",
+      cta: "Get Started",
+      badge: "Smart Life for Yourself! 🏝️"
     },
     structuredData: {
       organization: {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "David Nekovář",
-        "url": "https://www.davidnekovar.cz",
-        "jobTitle": "Product Owner & Full Stack Developer & AI Solutions Architect",
-        "description": "Experienced Product Owner & Full Stack Developer with 12+ years building innovative solutions for global brands. Specializing in Ruby on Rails, Vue.js, React, Nuxt.js, Next.js, PWA, Three.js, and AI Solutions Architecture.",
+        "name": "David Nekovar",
+        "url": "https://davidnekovar.cz",
+        "jobTitle": "Full-Stack Developer & Tech Entrepreneur",
+        "description": "Experienced full-stack developer specializing in modern web technologies and software engineering",
         "sameAs": [
           "https://github.com/davidnekovarcz",
-          "https://linkedin.com/in/dave-nekovar",
+          "https://linkedin.com/in/davidnekovar",
           "https://twitter.com/davidnekovar"
         ],
         "knowsAbout": [
-          "Ruby on Rails", "Vue.js", "Nuxt.js", "React", "Next.js", "TypeScript", "PostgreSQL", "Node.js", "Nest.js",
-          "PWA Development", "Three.js", "Web Game Development", "AI Solutions Architecture", "Product Management",
-          "Project Management", "Scrum Master", "Investment Portfolio Management", "Crypto Trading",
-          "Startup Development", "MVP Development", "Mobile Development", "Japanese Market", "Global Brands"
+          "React", "Node.js", "TypeScript", "JavaScript", "Web Development",
+          "Full-Stack Development", "Software Engineering", "Tech Entrepreneurship",
+          "API Development", "Database Design", "Cloud Computing", "Mobile Development"
         ],
         "hasOccupation": {
           "@type": "Occupation",
-          "name": "Product Owner & Full Stack Developer & AI Solutions Architect",
+          "name": "Software Developer",
           "occupationLocation": {
-            "@type": "City",
-            "name": "Prague, Czech Republic"
+            "@type": "Country",
+            "name": "Czech Republic"
           }
         },
         "alumniOf": {
           "@type": "EducationalOrganization",
           "name": "Technical University"
-        },
-        "workHistory": [
-          {
-            "@type": "OrganizationRole",
-            "roleName": "Investment Portfolio Manager",
-            "startDate": "2014-01-01",
-            "description": "Portfolio management, risk management, crypto trading, startup funding"
-          },
-          {
-            "@type": "OrganizationRole", 
-            "roleName": "Lead Vue.js & Ruby on Rails Developer",
-            "startDate": "2012-07-01",
-            "endDate": "2025-01-01",
-            "description": "Built high-tech solutions for global brands like Yves Saint-Laurent, Dior, British American Tobacco"
-          },
-          {
-            "@type": "OrganizationRole",
-            "roleName": "Co-Founder & Product Owner",
-            "startDate": "2019-06-01", 
-            "endDate": "2024-05-01",
-            "description": "Co-founded Improvee.io, helping people unleash their true potential following kaizen principles"
-          }
-        ]
+        }
       },
       website: {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "David Nekovář Portfolio",
-        "description": "Product Owner & Full Stack Developer portfolio and CV",
-        "url": "https://www.davidnekovar.cz",
+        "name": "David Nekovar Portfolio",
+        "description": "Full-stack developer portfolio and services",
+        "url": "https://davidnekovar.cz",
         "author": {
           "@type": "Person",
-          "name": "David Nekovář"
+          "name": "David Nekovar"
         },
         "about": {
           "@type": "Thing",
-          "name": "Professional Portfolio and CV"
+          "name": "Web Development Services"
         }
       }
     }
@@ -318,7 +293,7 @@ export class AIContentGenerator {
     return longTailKeywords;
   }
 
-  static generateFAQContent(questions: string[], answers: string[]): any[] {
+  static generateFAQContent(questions: string[], answers: string[]): unknown[] {
     return questions.map((question, index) => ({
       "@type": "Question",
       "name": question,
@@ -359,7 +334,7 @@ export class SEOHelpers {
     };
   }
 
-  static generateStructuredData(config: SEOConfig, additionalData: any[] = []) {
+  static generateStructuredData(config: SEOConfig, additionalData: unknown[] = []) {
     return [
       config.structuredData.organization,
       config.structuredData.website,
@@ -372,19 +347,19 @@ export class SEOHelpers {
       {
         url: config.url,
         lastModified: new Date().toISOString(),
-        changeFrequency: 'weekly',
+        changeFrequency: 'weekly' as const,
         priority: 1
       },
       ...additionalUrls.map(url => ({
         url: `${config.url}${url}`,
         lastModified: new Date().toISOString(),
-        changeFrequency: 'monthly',
+        changeFrequency: 'monthly' as const,
         priority: 0.8
       }))
     ];
   }
 
-  static generateBreadcrumbStructuredData(items: Array<{name: string, url: string}>): any {
+  static generateBreadcrumbStructuredData(items: Array<{name: string, url: string}>): unknown {
     return {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
