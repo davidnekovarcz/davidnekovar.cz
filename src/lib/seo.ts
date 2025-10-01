@@ -202,15 +202,15 @@ export const SEO_CONFIGS: Record<string, SEOConfig> = {
     author: "David Nekovar",
     creator: "David Nekovar",
     publisher: "David Nekovar",
-    url: "https://davidnekovar.cz",
-    canonical: "https://davidnekovar.cz",
+    url: "https://www.davidnekovar.cz",
+    canonical: "https://www.davidnekovar.cz",
     siteName: "David Nekovar",
     twitter: {
       site: "@davidnekovar",
       creator: "@davidnekovar"
     },
-    ogImage: "/og-image.svg",
-    twitterImage: "/og-image.svg",
+    ogImage: "/dave.jpg",
+    twitterImage: "/dave.jpg",
     googleVerification: "your-google-verification-code",
     hero: {
       headline: "Full-Stack Developer & Tech Entrepreneur",
