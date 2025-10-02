@@ -190,21 +190,23 @@ export const SEO_CONFIGS: Record<string, SEOConfig> = {
   },
 
   davidnekovar: {
-    title: "David Nekovar - Full-Stack Developer & Tech Entrepreneur | React, Node.js, TypeScript Expert",
-    description: "Experienced full-stack developer specializing in React, Node.js, TypeScript, and modern web technologies. Building innovative solutions for startups and enterprises. Available for freelance projects and consulting.",
+    title: "David Nekovář - Product Owner & Full Stack Developer | Ruby on Rails, Vue.js, React, AI Solutions Architect",
+    description: "Experienced Product Owner & Full Stack Developer with 12+ years building innovative solutions for global brands. Specializing in Ruby on Rails, Vue.js, React, Nuxt.js, Next.js, PWA, Three.js, and AI Solutions Architecture. Available for new opportunities in Prague, Czech Republic.",
     keywords: [
-      "full-stack developer", "React developer", "Node.js developer", "TypeScript developer", "JavaScript expert",
-      "web developer", "frontend developer", "backend developer", "software engineer", "tech entrepreneur",
-      "freelance developer", "startup developer", "enterprise developer", "web technologies", "modern development",
-      "responsive design", "API development", "database design", "cloud solutions", "software consulting",
-      "web application development", "mobile app development", "e-commerce development", "SaaS development"
+      "David Nekovář", "Product Owner", "Full Stack Developer", "AI Solutions Architect", "Ruby on Rails developer", "Vue.js developer", "React developer",
+      "Ruby on Rails expert", "Vue.js expert", "React expert", "Nuxt.js developer", "Next.js developer", "PWA developer", "Three.js developer",
+      "TypeScript developer", "PostgreSQL developer", "Node.js developer", "Nest.js developer", "Web Game Development",
+      "Product Manager", "Project Manager", "Scrum Master", "CTO", "Co-Founder", "Startup Developer",
+      "Investment Portfolio Manager", "Crypto Trading", "Startup Funding", "MVP Development",
+      "Prague developer", "Czech Republic developer", "Remote developer", "Freelance developer",
+      "Web Development", "Mobile Development", "PWA Development", "Japanese Market", "Global Brands", "AI Solutions"
     ],
-    author: "David Nekovar",
-    creator: "David Nekovar",
-    publisher: "David Nekovar",
+    author: "David Nekovář",
+    creator: "David Nekovář",
+    publisher: "David Nekovář",
     url: "https://www.davidnekovar.cz",
     canonical: "https://www.davidnekovar.cz",
-    siteName: "David Nekovar",
+    siteName: "David Nekovář",
     twitter: {
       site: "@davidnekovar",
       creator: "@davidnekovar"
@@ -213,10 +215,10 @@ export const SEO_CONFIGS: Record<string, SEOConfig> = {
     twitterImage: "/dave.jpg",
     googleVerification: "your-google-verification-code",
     hero: {
-      headline: "Full-Stack Developer & Tech Entrepreneur",
-      subheadline: "Building innovative web solutions with React, Node.js, TypeScript, and modern technologies. Available for freelance projects and consulting.",
-      cta: "Get Started",
-      badge: "Smart Life for Yourself! 🏝️"
+      headline: "Product Owner & Full Stack Developer",
+      subheadline: "Building innovative solutions for global brands with 12+ years of experience in Ruby on Rails, Vue.js, React, Nuxt.js, Next.js, PWA, Three.js, and AI Solutions Architecture. Available for new opportunities.",
+      cta: "Get in Touch",
+      badge: "Available for New Opportunities"
     },
     structuredData: {
       organization: {

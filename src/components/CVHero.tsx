@@ -7,6 +7,7 @@ import { printCV } from "@/utils/print";
 import { scrollToSection } from "@/utils/scroll";
 import { YEARS_OF_EXPERIENCE_STRING } from "@/utils/experience";
 import CVDownload from "./CVDownload";
+import { DAVID_SEO } from "@/lib/seo";
 
 const availableForHire = true;
 
@@ -28,7 +29,7 @@ const CVHero = () => {
               { availableForHire && (
                 <div className="inline-flex items-center px-3 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6 sm:mb-8">
                   <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse mr-2" />
-                  <span className="text-muted-foreground font-medium text-sm sm:text-base">Available for New Opportunities</span>
+                  <span className="text-muted-foreground font-medium text-sm sm:text-base">{DAVID_SEO.hero?.badge || "Available for New Opportunities"}</span>
                 </div>
               ) }
 
@@ -39,12 +40,12 @@ const CVHero = () => {
               </h1>
 
               <h2 className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
-                Product Owner & Full Stack Developer
+                {DAVID_SEO.hero?.subheadline || "Product Owner & Full Stack Developer"}
               </h2>
 
               {/* Tagline */}
               <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 leading-relaxed max-w-lg">
-                Building innovative solutions for global brands with {YEARS_OF_EXPERIENCE_STRING} years of experience in Ruby on Rails, Vue.js and React.
+                {DAVID_SEO.description}
               </p>
 
               {/* CTA Buttons */}
@@ -54,7 +55,7 @@ const CVHero = () => {
                   onClick={() => scrollToSection('contact')}
                 >
                   <Mail className="mr-2 w-4 h-4" />
-                  Get in Touch
+                  {DAVID_SEO.hero?.cta || "Get in Touch"}
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <CVDownload variant="hero" />
@@ -106,7 +107,7 @@ const CVHero = () => {
                   <div className="space-y-3 sm:space-y-4">
                     <h4 className="font-medium text-foreground text-sm sm:text-base">Core Technologies</h4>
                     <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                      {['Ruby on Rails', 'Vue.js', 'React', 'TypeScript', 'PostgreSQL'].map((skill) => (
+                      {['Ruby on Rails', 'Vue.js', 'Nuxt.js', 'React', 'Next.js', 'TypeScript', 'PWA', 'Three.js', 'PostgreSQL'].map((skill) => (
                         <span key={skill} className="px-2 sm:px-3 py-1 bg-primary/10 text-primary rounded-full text-xs sm:text-sm font-medium">
                           {skill}
                         </span>
