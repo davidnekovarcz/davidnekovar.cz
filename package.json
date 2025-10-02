@@ -1,14 +1,14 @@
 {
-  "name": "davidnekovar-cz",
+  "name": "cv-davidnekovar-cz",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "preview": "next build && next start",
-    "postinstall": "npm run build"
+    "tsc": "tsc --noEmit",
+    "preview": "next build && next start"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
