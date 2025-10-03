@@ -4,17 +4,12 @@ import "./globals.css";
 import Script from "next/script";
 import { DAVID_SEO, SEOHelpers } from '@/lib/seo';
 import { ThemeProvider } from '@/contexts/ThemeContext';
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Providers from '@/components/Providers';
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });
-
-const queryClient = new QueryClient();
 
 export const metadata: Metadata = {
   title: DAVID_SEO.title,
@@ -93,15 +88,11 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen antialiased">
-        <QueryClientProvider client={queryClient}>
-          <ThemeProvider>
-            <TooltipProvider>
-              {children}
-              <Toaster />
-              <Sonner />
-            </TooltipProvider>
-          </ThemeProvider>
-        </QueryClientProvider>
+        <ThemeProvider>
+          <Providers>
+            {children}
+          </Providers>
+        </ThemeProvider>
         
         {/* Google Analytics */}
         <Script
