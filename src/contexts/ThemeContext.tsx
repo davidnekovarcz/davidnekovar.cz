@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState, useCallback } from 'react';
 
 type Theme = 'light' | 'dark' | 'system';
 
@@ -37,7 +37,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   };
 
   // Update actual theme based on current theme setting
-  const updateActualTheme = (currentTheme: Theme) => {
+  const updateActualTheme = useCallback((currentTheme: Theme) => {
     let newActualTheme: 'light' | 'dark';
     
     if (currentTheme === 'system') {
@@ -53,7 +53,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
       document.documentElement.classList.remove('light', 'dark');
       document.documentElement.classList.add(newActualTheme);
     }
-  };
+  }, []);
 
   // Initialize theme from localStorage or default to system
   useEffect(() => {
@@ -61,7 +61,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     const initialTheme = savedTheme || 'system';
     setTheme(initialTheme);
     updateActualTheme(initialTheme);
-  }, []);
+  }, [updateActualTheme]);
 
   // Listen for system theme changes
   useEffect(() => {
@@ -74,7 +74,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
     mediaQuery.addEventListener('change', handleChange);
     return () => mediaQuery.removeEventListener('change', handleChange);
-  }, [theme]);
+  }, [theme, updateActualTheme]);
 
   // Handle theme changes
   const handleSetTheme = (newTheme: Theme) => {
