@@ -2,6 +2,108 @@
 // This module centralizes all SEO-related content to ensure DRY principles
 // and easy maintenance across all projects with AI-optimized content
 
+// Structured Data Type Definitions
+export interface OrganizationSchema {
+  "@context": string;
+  "@type": "Organization";
+  name: string;
+  url: string;
+  logo?: string;
+  description?: string;
+  sameAs?: string[];
+  foundingDate?: string;
+  jobTitle?: string;
+  knowsAbout?: string[];
+  hasOccupation?: {
+    "@type": "Occupation";
+    name: string;
+    occupationLocation?: {
+      "@type": "Country";
+      name: string;
+    };
+  };
+  alumniOf?: {
+    "@type": "EducationalOrganization";
+    name: string;
+  };
+  founder?: {
+    "@type": "Person";
+    name: string;
+    url?: string;
+  };
+  contactPoint?: {
+    "@type": "ContactPoint";
+    telephone?: string;
+    contactType?: string;
+    email?: string;
+  };
+}
+
+export interface WebSiteSchema {
+  "@context": string;
+  "@type": "WebSite";
+  name: string;
+  url: string;
+  description?: string;
+  publisher?: {
+    "@type": "Organization";
+    name: string;
+    url?: string;
+  };
+  author?: {
+    "@type": "Person";
+    name: string;
+  };
+  about?: {
+    "@type": "Thing";
+    name: string;
+  };
+  offers?: {
+    "@type": "Offer";
+    name: string;
+    description: string;
+    price?: string;
+    priceCurrency?: string;
+  };
+  potentialAction?: {
+    "@type": "SearchAction";
+    target: string;
+    "query-input": string;
+  };
+}
+
+export interface BreadcrumbListSchema {
+  "@context": string;
+  "@type": "BreadcrumbList";
+  itemListElement: Array<{
+    "@type": "ListItem";
+    position: number;
+    name: string;
+    item: string;
+  }>;
+}
+
+export interface PersonSchema {
+  "@context": string;
+  "@type": "Person";
+  name: string;
+  url?: string;
+  image?: string;
+  jobTitle?: string;
+  worksFor?: {
+    "@type": "Organization";
+    name: string;
+  };
+  sameAs?: string[];
+}
+
+export interface StructuredDataConfig {
+  organization: OrganizationSchema;
+  website: WebSiteSchema;
+  breadcrumb?: BreadcrumbListSchema;
+  person?: PersonSchema;
+}
+
 export interface SEOConfig {
   // Basic Meta Information
   title: string;
@@ -38,11 +140,7 @@ export interface SEOConfig {
   };
   
   // Structured Data
-  structuredData: {
-    organization: unknown;
-    website: unknown;
-    breadcrumb?: unknown;
-  };
+  structuredData: StructuredDataConfig;
 }
 
 // Enhanced SEO configurations for each project
@@ -111,6 +209,7 @@ export const SEO_CONFIGS: Record<string, SEOConfig> = {
         },
         "offers": {
           "@type": "Offer",
+          "name": "Free Browser Games",
           "price": "0",
           "priceCurrency": "USD",
           "description": "Free browser games"
@@ -223,7 +322,7 @@ export const SEO_CONFIGS: Record<string, SEOConfig> = {
     structuredData: {
       organization: {
         "@context": "https://schema.org",
-        "@type": "Person",
+        "@type": "Organization",
         "name": "David Nekovar",
         "url": "https://www.davidnekovar.cz",
         "jobTitle": "Full-Stack Developer & Tech Entrepreneur",
@@ -295,7 +394,14 @@ export class AIContentGenerator {
     return longTailKeywords;
   }
 
-  static generateFAQContent(questions: string[], answers: string[]): unknown[] {
+  static generateFAQContent(questions: string[], answers: string[]): Array<{
+    "@type": "Question";
+    "name": string;
+    "acceptedAnswer": {
+      "@type": "Answer";
+      "text": string;
+    };
+  }> {
     return questions.map((question, index) => ({
       "@type": "Question",
       "name": question,
@@ -336,12 +442,21 @@ export class SEOHelpers {
     };
   }
 
-  static generateStructuredData(config: SEOConfig, additionalData: unknown[] = []) {
-    return [
+  static generateStructuredData(config: SEOConfig, additionalData: unknown[] = []): unknown[] {
+    const structuredData: unknown[] = [
       config.structuredData.organization,
       config.structuredData.website,
-      ...additionalData
     ];
+    
+    if (config.structuredData.breadcrumb) {
+      structuredData.push(config.structuredData.breadcrumb);
+    }
+    
+    if (config.structuredData.person) {
+      structuredData.push(config.structuredData.person);
+    }
+    
+    return [...structuredData, ...additionalData];
   }
 
   static generateSitemapUrls(config: SEOConfig, additionalUrls: string[] = []) {

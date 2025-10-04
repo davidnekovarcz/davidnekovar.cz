@@ -5,6 +5,7 @@ import Script from "next/script";
 import { DAVID_SEO, SEOHelpers } from '@/lib/seo';
 import { ThemeProvider } from '@/contexts/ThemeContext';
 import Providers from '@/components/Providers';
+import ErrorBoundary from '@/components/ErrorBoundary';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -88,11 +89,13 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen antialiased">
-        <ThemeProvider>
-          <Providers>
-            {children}
-          </Providers>
-        </ThemeProvider>
+        <ErrorBoundary>
+          <ThemeProvider>
+            <Providers>
+              {children}
+            </Providers>
+          </ThemeProvider>
+        </ErrorBoundary>
         
         {/* Google Analytics */}
         <Script

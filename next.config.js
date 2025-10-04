@@ -1,15 +1,24 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['www.davidnekovar.cz'],
-  },
-  async rewrites() {
-    return [
+    remotePatterns: [
       {
-        source: '/api/:path*',
-        destination: '/api/:path*',
+        protocol: 'https',
+        hostname: 'www.davidnekovar.cz',
       },
-    ]
+      {
+        protocol: 'https',
+        hostname: 'github.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
   },
 }
 
