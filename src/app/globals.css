@@ -1,0 +1,406 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Smarlify Brand Colors - Beach & Luxury Theme */
+    --background: 198 100% 98%;
+    --foreground: 221 84% 5%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 221 84% 5%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 221 84% 5%;
+
+    /* Signature Pink Brand */
+    --primary: 330 91% 65%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Tropical Ocean Blues */
+    --secondary: 193 82% 31%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Soft Beach Tones */
+    --muted: 43 47% 94%;
+    --muted-foreground: 221 39% 41%;
+
+    /* Luxury Gold Accent */
+    --accent: 45 93% 58%;
+    --accent-foreground: 221 84% 5%;
+
+    /* Success Green for Investments */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 330 91% 65%;
+
+    --radius: 0.75rem;
+
+    /* Custom Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(330 91% 65%), hsl(340 82% 52%));
+    --gradient-ocean: linear-gradient(135deg, hsl(193 82% 31%), hsl(199 89% 48%));
+    --gradient-sunset: linear-gradient(135deg, hsl(45 93% 58%), hsl(330 91% 65%));
+    --gradient-luxury: linear-gradient(135deg, hsl(221 84% 5% / 0.95), hsl(221 84% 5% / 0.8));
+
+    /* Shadows */
+    --shadow-luxury: 0 25px 50px -12px hsl(330 91% 65% / 0.25);
+    --shadow-ocean: 0 25px 50px -12px hsl(193 82% 31% / 0.25);
+    --shadow-elegant: 0 10px 30px -5px hsl(221 84% 5% / 0.1);
+
+    /* Animation Variables */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Theme - Luxury Night Vibes */
+    --background: 221 84% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 221 39% 11%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 221 39% 11%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 330 91% 65%;
+    --primary-foreground: 221 84% 5%;
+
+    --secondary: 193 82% 31%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 221 39% 11%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 45 93% 58%;
+    --accent-foreground: 221 84% 5%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 221 39% 11%;
+    --input: 221 39% 11%;
+    --ring: 330 91% 65%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-weight: 300;
+  }
+}
+
+@layer components {
+  /* Animated Background Enhancement */
+  .animated-bg-overlay {
+    background: radial-gradient(circle at 20% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
+    animation: morphing 20s ease-in-out infinite;
+  }
+
+  @keyframes morphing {
+    0%, 100% { 
+      background: radial-gradient(circle at 20% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 40% 40%, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
+    }
+    33% { 
+      background: radial-gradient(circle at 70% 30%, rgba(236, 72, 153, 0.15) 0%, transparent 50%),
+                  radial-gradient(circle at 30% 70%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 60% 60%, rgba(245, 158, 11, 0.08) 0%, transparent 50%);
+    }
+    66% { 
+      background: radial-gradient(circle at 40% 20%, rgba(236, 72, 153, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 60% 80%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
+                  radial-gradient(circle at 20% 30%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+    }
+  }
+
+  /* Custom Button Variants */
+  .btn-hero {
+    @apply bg-gradient-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg shadow-luxury hover:shadow-ocean transition-all duration-300 hover:scale-105;
+  }
+  
+  .btn-luxury {
+    @apply bg-gradient-luxury text-white border border-white/20 px-6 py-3 rounded-lg font-medium backdrop-blur-sm hover:bg-white/10 transition-all duration-300;
+  }
+
+  /* Hero Section Styles */
+  .hero-bg {
+    background: linear-gradient(135deg, hsl(221 84% 5% / 0.7), hsl(221 84% 5% / 0.4)), 
+                linear-gradient(45deg, hsl(330 91% 65% / 0.1), transparent);
+  }
+
+  /* Card Styles */
+  .luxury-card {
+    @apply bg-card/80 backdrop-blur-md border border-white/10 rounded-2xl shadow-elegant hover:shadow-luxury transition-all duration-500 hover:-translate-y-2;
+  }
+
+  /* Text Effects */
+  .text-gradient {
+    @apply bg-gradient-primary bg-clip-text text-transparent;
+  }
+
+  .text-luxury {
+    @apply text-white/90 leading-relaxed;
+  }
+}
+
+/* Print Styles */
+@media print {
+  /* Hide elements that shouldn't appear in PDF */
+  .no-print,
+  header[class*="fixed"],
+  .fixed,
+  button,
+  .btn-hero,
+  .btn-luxury,
+  [role="button"],
+  .animate-float,
+  .floating-elements,
+  .newsletter-section,
+  nav {
+    display: none !important;
+  }
+  
+  /* Ensure print styles are applied */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Reset page margins and setup */
+  @page {
+    margin: 0.75in;
+    size: A4;
+  }
+
+  /* Body adjustments for print */
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 11pt;
+    line-height: 1.4;
+  }
+
+  /* Remove animations and transitions */
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+
+  /* Ensure proper page breaks */
+  section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .luxury-card {
+    background: white !important;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: none !important;
+    margin-bottom: 1rem;
+    page-break-inside: avoid;
+  }
+
+  /* Typography adjustments */
+  h1 { 
+    font-size: 24pt !important; 
+    color: black !important;
+    margin-bottom: 0.5rem;
+  }
+  
+  h2 { 
+    font-size: 18pt !important; 
+    color: black !important;
+    margin-bottom: 0.5rem;
+    page-break-after: avoid;
+  }
+  
+  h3 { 
+    font-size: 14pt !important; 
+    color: black !important;
+    margin-bottom: 0.3rem;
+  }
+
+  h4 { 
+    font-size: 12pt !important; 
+    color: black !important;
+    margin-bottom: 0.3rem;
+  }
+
+  /* Remove gradients and make text readable */
+  .text-gradient {
+    background: none !important;
+    color: #e91e63 !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+  }
+
+  /* Contact information styling */
+  .contact-info {
+    border: 1px solid #e5e7eb;
+    padding: 1rem;
+    margin: 1rem 0;
+    background: #f9fafb;
+  }
+
+  /* Skills and badges */
+  .badge,
+  [class*="badge"] {
+    border: 1px solid #d1d5db !important;
+    background: #f3f4f6 !important;
+    color: black !important;
+    padding: 0.2rem 0.5rem;
+    margin: 0.1rem;
+    display: inline-block;
+  }
+
+  /* Progress bars for print */
+  .progress-bar {
+    border: 1px solid #d1d5db;
+    height: 8px;
+    background: #f3f4f6;
+  }
+
+  .progress-fill {
+    background: #e91e63 !important;
+    height: 100%;
+  }
+
+  /* Timeline adjustments */
+  .timeline-dot {
+    background: #e91e63 !important;
+    border: 2px solid white !important;
+  }
+
+  .timeline-line {
+    background: #d1d5db !important;
+  }
+
+  /* Links styling for print */
+  a {
+    color: black !important;
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #666;
+  }
+
+  /* Hide external link icons in print */
+  .no-print svg,
+  button svg,
+  a[href] svg {
+    display: none !important;
+  }
+
+  /* Compact spacing for print */
+  .container {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  section {
+    padding: 1rem 0 !important;
+  }
+
+  /* Footer adjustments */
+  footer {
+    border-top: 1px solid #e5e7eb !important;
+    background: white !important;
+    padding: 1rem 0 !important;
+  }
+
+  /* Ensure proper text contrast */
+  .text-muted-foreground,
+  .text-white\/70,
+  .text-white\/80 {
+    color: #4b5563 !important;
+  }
+
+  .text-foreground,
+  .text-white {
+    color: black !important;
+  }
+
+  .text-primary {
+    color: #e91e63 !important;
+  }
+
+  /* Grid adjustments for print */
+  .grid {
+    display: block !important;
+  }
+
+  .grid > * {
+    margin-bottom: 1rem;
+  }
+
+  /* Stats section */
+  .stats-grid {
+    display: flex !important;
+    justify-content: space-around;
+    margin: 1rem 0;
+  }
+
+  .stats-grid > * {
+    text-align: center;
+    flex: 1;
+  }
+
+  /* Print-specific contact info */
+  .print-contact-info {
+    display: block !important;
+  }
+}

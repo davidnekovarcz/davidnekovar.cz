@@ -12,6 +12,7 @@ import {
   ArrowRight 
 } from "lucide-react";
 import smarlifyWhiteLogo from "@/assets/smarlify-white.svg";
+import Image from "next/image";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -109,9 +110,11 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <img 
+              <Image 
                 src={smarlifyWhiteLogo}
                 alt="Smarlify Logo" 
+                width={48}
+                height={48}
                 className="h-12 w-auto"
               />
               <div>

@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import investmentsImage from "@/assets/investments.jpg";
 import healthyLifestyleImage from "@/assets/healthy-lifestyle.jpg";
+import Image from "next/image";
 
 const Services = () => {
   const services = [
@@ -118,9 +119,11 @@ const Services = () => {
               <div className="flex-1">
                 {service.image ? (
                   <div className="relative">
-                    <img
-                      src={service.image}
+                    <Image
+                      src={service.image.src}
                       alt={service.title}
+                      width={600}
+                      height={384}
                       className="w-full h-96 object-cover rounded-2xl shadow-elegant"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl" />
