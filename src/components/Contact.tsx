@@ -64,29 +64,35 @@ const socialLinks = [
 
 const projects = [
   {
-    name: "Smarlify.co",
-    tagline: "Live smarter, invest wiser, be free",
-    url: "https://smarlify.co/?utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave",
-    description: "Smart lifestyle and investment platform"
-  },
-  {
     name: "Improvee.io",
     tagline: "Become the designer of your life",
     url: "https://app.improvee.io/onboarding?utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave",
     description: "Personal development and kaizen platform"
   },
   {
+    name: "Smarlify.co",
+    tagline: "Live smarter, invest wiser, be free",
+    url: "https://smarlify.co/?utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave",
+    description: "Smart lifestyle and investment platform"
+  },
+  {
+    name: "Playful.Smarlify.co",
+    tagline: "Free online games - play, have fun!",
+    url: "https://playful.smarlify.co/?utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave",
+    description: "Free online gaming hub with Traffic Run, Crossy Road, Space Shooter and more"
+  },
+  {
     name: "Koinly.io",
     tagline: "Make crypto less taxing",
     url: "https://koinly.io/?via=B2E92FE3&utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave",
     description: "Crypto tax and accounting solution"
-  },
-  {
-    name: "Lovable.dev",
-    tagline: "Build apps with AI, not code",
-    url: "https://lovable.dev?via=david-nekovar&utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave",
-    description: "AI-powered app development platform"
-  }
+  } //,
+  // {
+  //   name: "Lovable.dev",
+  //   tagline: "Build apps with AI, not code",
+  //   url: "https://lovable.dev?via=david-nekovar&utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave",
+  //   description: "AI-powered app development platform"
+  // }
 ];
 
 const Contact = () => {
@@ -97,11 +103,11 @@ const Contact = () => {
           {/* Section Header */}
           <div className="text-center mb-12 sm:mb-16 animate-fade-in">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
-              Let's
+              Let&apos;s
               <span className="text-gradient mx-2 sm:mx-3">Connect</span>
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
-              Ready to discuss your next project or explore collaboration opportunities? I'd love to hear from you.
+              Ready to discuss your next project or explore collaboration opportunities? I&apos;d love to hear from you.
             </p>
           </div>
 
@@ -193,7 +199,7 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <p className="text-sm sm:text-base text-muted-foreground">
-                    Check out some of the projects I've founded, co-founded, or actively support:
+                    Check out some of the projects I&apos;ve founded, co-founded, or actively support:
                   </p>
 
                   <div className="space-y-4">
@@ -219,7 +225,7 @@ const Contact = () => {
                                 {project.name}
                               </h4>
                               <p className="text-xs sm:text-sm text-muted-foreground group-hover:text-primary transition-colors font-medium mb-2 italic">
-                                "{project.tagline}"
+                                &ldquo;{project.tagline}&rdquo;
                               </p>
                               <p className="text-xs sm:text-sm text-muted-foreground">
                                 {project.description}
@@ -240,7 +246,7 @@ const Contact = () => {
           {/* Bottom Quote */}
           <div className="text-center mt-12 sm:mt-16 animate-fade-in px-4">
             <blockquote className="text-lg sm:text-xl md:text-2xl font-display text-muted-foreground italic max-w-2xl mx-auto mb-3 sm:mb-4">
-"Live smarter, invest wiser, be free"
+&ldquo;Live smarter, invest wiser, be free&rdquo;
             </blockquote>
             <p className="text-sm sm:text-base text-muted-foreground">
               — My personal philosophy and approach to life and work

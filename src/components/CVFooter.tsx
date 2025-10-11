@@ -1,6 +1,7 @@
 import { Separator } from "@/components/ui/separator";
 import { Mail, Phone, MapPin, Linkedin, Github, Heart, Code } from "lucide-react";
 import { YEARS_OF_EXPERIENCE_STRING, CURRENT_YEAR } from "@/utils/experience";
+import Image from "next/image";
 
 const CVFooter = () => {
   return (
@@ -103,7 +104,7 @@ const CVFooter = () => {
               rel="noopener noreferrer" 
               className="flex items-center gap-1 mr-3 px-2 py-1 bg-muted dark:bg-gray-700/50 dark:hover:bg-gray-700/70 hover:bg-muted/30 rounded-full transition-colors group"
             >
-              <img src="/lovable-logo.ico" alt="Lovable" className="w-3 h-3 sm:w-4 sm:h-4" />
+              <Image src="/lovable-logo.ico" alt="Lovable" width={16} height={16} className="w-3 h-3 sm:w-4 sm:h-4" />
               <span className="group-hover:text-primary transition-colors text-xs sm:text-sm">Lovable</span>
             </a>
             <span>Fine-tuned with</span>
@@ -113,7 +114,7 @@ const CVFooter = () => {
               rel="noopener noreferrer" 
               className="flex items-center gap-1 mr-3 px-2 py-1 bg-muted dark:bg-gray-700/50 dark:hover:bg-gray-700/70 hover:bg-muted/30 rounded-full transition-colors group"
             >
-              <img src="/cursor-logo.ico" alt="Cursor" className="w-3 h-3 sm:w-4 sm:h-4" />
+              <Image src="/cursor-logo.ico" alt="Cursor" width={16} height={16} className="w-3 h-3 sm:w-4 sm:h-4" />
               <span className="group-hover:text-primary transition-colors text-xs sm:text-sm">Cursor</span>
             </a>
             <span>Powered by</span>
@@ -123,7 +124,7 @@ const CVFooter = () => {
               rel="noopener noreferrer" 
               className="flex items-center gap-1 px-2 py-1 bg-muted dark:bg-gray-700/50 dark:hover:bg-gray-700/70 hover:bg-muted/30 rounded-full transition-colors group"
             >
-              <img src="/heroku-logo.svg" alt="Heroku" className="w-3 h-3 sm:w-4 sm:h-4" />
+              <Image src="/heroku-logo.svg" alt="Heroku" width={16} height={16} className="w-3 h-3 sm:w-4 sm:h-4" />
               <span className="group-hover:text-primary transition-colors text-xs sm:text-sm">Heroku</span>
             </a>
           </div>

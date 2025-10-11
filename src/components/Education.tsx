@@ -217,7 +217,7 @@ const Education = () => {
           {/* Quote */}
           <div className="text-center mt-16 animate-fade-in">
             <blockquote className="text-xl md:text-2xl font-display text-muted-foreground italic max-w-3xl mx-auto">
-              "People over-estimate what they can do in a single day and under-estimate what they can do in their whole lives."
+              &ldquo;People over-estimate what they can do in a single day and under-estimate what they can do in their whole lives.&rdquo;
             </blockquote>
             <p className="text-sm text-muted-foreground mt-4">
               — Philosophy behind Improvee.io and personal growth approach

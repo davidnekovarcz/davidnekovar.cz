@@ -5,6 +5,18 @@ import { YEARS_OF_EXPERIENCE_STRING } from "@/utils/experience";
 
 const experiences = [
   {
+    title: "Product Owner & Full Stack Developer",
+    company: "DavidNekovar.cz",
+    type: "Freelance / Consulting",
+    period: "2025/01 - now",
+    duration: "Current",
+    location: "Prague, Czech Republic / Remote",
+    description: "Building innovative web solutions for clients using modern technologies. Specializing in Ruby on Rails, Vue.js, React, Next.js, and AI-powered applications. Available for new opportunities and consulting projects.",
+    skills: ["Ruby on Rails", "Vue.js", "React", "Next.js", "TypeScript", "Product Management", "AI Solutions"],
+    current: true,
+    url: "https://davidnekovar.cz"
+  },
+  {
     title: "Investment Portfolio Manager",
     company: "Cryptocurrencies, Precious Metals & Startups",
     type: "Portfolio Manager & Value Investor & Trader",

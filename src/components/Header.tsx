@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import smarlifyPinkLogo from "@/assets/smarlify-pink.svg";
 import smarlifyWhiteLogo from "@/assets/smarlify-white.svg";
+import Image from "next/image";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,9 +37,11 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <img 
+            <Image 
               src={smarlifyPinkLogo}
               alt="Smarlify Logo" 
+              width={40}
+              height={40}
               className="h-10 w-auto transition-all duration-300"
             />
             <div>

@@ -1,8 +1,10 @@
+"use client";
+
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 
 const CookiesPage = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   const [animationPhase, setAnimationPhase] = useState(0);
   const [showRedirectMessage, setShowRedirectMessage] = useState(false);
 
@@ -24,7 +26,7 @@ const CookiesPage = () => {
     }, 7000);
 
     const redirectTimer = setTimeout(() => {
-      navigate('/');
+      router.push('/');
     }, 10000);
 
     return () => {
@@ -34,7 +36,7 @@ const CookiesPage = () => {
       clearTimeout(timer4);
       clearTimeout(redirectTimer);
     };
-  }, [navigate]);
+  }, [router]);
 
   useEffect(() => {
     // Track cookies page visit
