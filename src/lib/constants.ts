@@ -7,9 +7,8 @@ export const SITE_CONFIG = {
   // Social Media URLs
   SOCIAL: {
     LINKEDIN: 'https://www.linkedin.com/in/dave-nekovar/',
-    GITHUB: 'https://github.com/smarlify',
-    CODEPEN: 'https://codepen.io/smarlify',
-    CODERWARS: 'https://www.codewars.com/users/smarlify',
+    GITHUB: 'https://github.com/davidnekovarcz',
+    CODERWARS: 'https://www.codewars.com/users/davidnekovarcz',
   },
   
   // Contact Information
@@ -23,7 +22,7 @@ export const SITE_CONFIG = {
   SEO: {
     SITE_NAME: 'David Nekovář',
     DEFAULT_TITLE: 'David Nekovář - Product Owner & Full Stack Developer',
-    DEFAULT_DESCRIPTION: 'Experienced Product Owner & Full Stack Developer with 12+ years building innovative solutions for global brands. Specializing in Ruby on Rails, Vue.js, React, Nuxt.js, Next.js, PWA, Three.js, and AI Solutions Architecture.',
+    DEFAULT_DESCRIPTION: 'Experienced Product Owner & Full Stack Developer with 15+ years building innovative solutions for global brands. Specializing in Ruby on Rails, Vue.js, React, Nuxt.js, Next.js, PWA, Three.js, and AI Solutions Architecture.',
     AUTHOR: 'David Nekovář',
     CREATOR: 'David Nekovář',
     PUBLISHER: 'David Nekovář',

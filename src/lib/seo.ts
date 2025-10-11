@@ -290,7 +290,7 @@ export const SEO_CONFIGS: Record<string, SEOConfig> = {
 
   davidnekovar: {
     title: "David Nekovář - Product Owner & Full Stack Developer | Ruby on Rails, Vue.js, React, AI Solutions Architect",
-    description: "Experienced Product Owner & Full Stack Developer with 12+ years building innovative solutions for global brands. Specializing in Ruby on Rails, Vue.js, React, Nuxt.js, Next.js, PWA, Three.js, and AI Solutions Architecture. Available for new opportunities in Prague, Czech Republic.",
+    description: "Building innovative solutions for global brands with 15+ years of experience in Ruby on Rails, Vue.js, React.js, Three.js and more.",
     keywords: [
       "David Nekovář", "Product Owner", "Full Stack Developer", "AI Solutions Architect", "Ruby on Rails developer", "Vue.js developer", "React developer",
       "Ruby on Rails expert", "Vue.js expert", "React expert", "Nuxt.js developer", "Next.js developer", "PWA developer", "Three.js developer",
@@ -315,7 +315,7 @@ export const SEO_CONFIGS: Record<string, SEOConfig> = {
     googleVerification: "your-google-verification-code",
     hero: {
       headline: "Product Owner & Full Stack Developer",
-      subheadline: "Building innovative solutions for global brands with 12+ years of experience in Ruby on Rails, Vue.js, React, Nuxt.js, Next.js, PWA, Three.js, and AI Solutions Architecture. Available for new opportunities.",
+      subheadline: "Building innovative solutions for global brands with 15+ years of experience in Ruby on Rails, Vue.js, React and more.",
       cta: "Get in Touch",
       badge: "Available for New Opportunities"
     },

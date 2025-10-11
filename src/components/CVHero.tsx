@@ -107,7 +107,7 @@ const CVHero = () => {
                   <div className="space-y-3 sm:space-y-4">
                     <h4 className="font-medium text-foreground text-sm sm:text-base">Core Technologies</h4>
                     <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                      {['Ruby on Rails', 'Vue.js', 'Nuxt.js', 'React', 'Next.js', 'TypeScript', 'PWA', 'Three.js', 'PostgreSQL'].map((skill) => (
+                      {['Ruby on Rails', 'Vue.js', 'Nuxt.js', 'React.js', 'Next.js', 'TypeScript', 'PWA', 'Three.js', 'PostgreSQL', 'Firebase'].map((skill) => (
                         <span key={skill} className="px-2 sm:px-3 py-1 bg-primary/10 text-primary rounded-full text-xs sm:text-sm font-medium">
                           {skill}
                         </span>
