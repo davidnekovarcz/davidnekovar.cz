@@ -64,6 +64,12 @@ const socialLinks = [
 
 const projects = [
   {
+    name: "Playful.Smarlify.co",
+    tagline: "Free online games - play, have fun!",
+    url: "https://playful.smarlify.co/?utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave",
+    description: "Free online gaming hub with Traffic Run, Crossy Road, Space Shooter and more"
+  },
+  {
     name: "Smarlify.co",
     tagline: "Live smarter, invest wiser, be free",
     url: "https://smarlify.co/?utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave",
