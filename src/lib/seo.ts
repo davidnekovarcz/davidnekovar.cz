@@ -290,7 +290,7 @@ export const SEO_CONFIGS: Record<string, SEOConfig> = {
 
   davidnekovar: {
     title: "David Nekovář - Product Owner & Full Stack Developer | Ruby on Rails, Vue.js, React, AI Solutions Architect",
-    description: "Building innovative solutions for global brands with 15+ years of experience in Ruby on Rails, Vue.js, React.js, Three.js and more.",
+    description: "Building innovative solutions for global brands with 15+ years of experience in Ruby on Rails, Vue.js, React, and more.",
     keywords: [
       "David Nekovář", "Product Owner", "Full Stack Developer", "AI Solutions Architect", "Ruby on Rails developer", "Vue.js developer", "React developer",
       "Ruby on Rails expert", "Vue.js expert", "React expert", "Nuxt.js developer", "Next.js developer", "PWA developer", "Three.js developer",
@@ -315,7 +315,7 @@ export const SEO_CONFIGS: Record<string, SEOConfig> = {
     googleVerification: "your-google-verification-code",
     hero: {
       headline: "Product Owner & Full Stack Developer",
-      subheadline: "Building innovative solutions for global brands with 15+ years of experience in Ruby on Rails, Vue.js, React and more.",
+      subheadline: "Building innovative solutions for global brands with 15+ years of experience in Ruby on Rails, Vue.js, React, and more.",
       cta: "Get in Touch",
       badge: "Available for New Opportunities"
     },
@@ -329,7 +329,7 @@ export const SEO_CONFIGS: Record<string, SEOConfig> = {
         "description": "Experienced full-stack developer specializing in modern web technologies and software engineering",
         "sameAs": [
           "https://github.com/davidnekovarcz",
-          "https://linkedin.com/in/davidnekovar",
+          "https://www.linkedin.com/in/dave-nekovar/",
           "https://twitter.com/davidnekovar"
         ],
         "knowsAbout": [
