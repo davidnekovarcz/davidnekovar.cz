@@ -40,7 +40,7 @@ const CVHero = () => {
               </h1>
 
               <h2 className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
-                {DAVID_SEO.hero?.subheadline || "Product Owner & Full Stack Developer"}
+                {DAVID_SEO.hero?.role}
               </h2>
 
               {/* Tagline */}

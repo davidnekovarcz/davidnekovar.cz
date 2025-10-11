@@ -64,10 +64,10 @@ const socialLinks = [
 
 const projects = [
   {
-    name: "Playful.Smarlify.co",
-    tagline: "Free online games - play, have fun!",
-    url: "https://playful.smarlify.co/?utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave",
-    description: "Free online gaming hub with Traffic Run, Crossy Road, Space Shooter and more"
+    name: "Improvee.io",
+    tagline: "Become the designer of your life",
+    url: "https://app.improvee.io/onboarding?utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave",
+    description: "Personal development and kaizen platform"
   },
   {
     name: "Smarlify.co",
@@ -76,23 +76,23 @@ const projects = [
     description: "Smart lifestyle and investment platform"
   },
   {
-    name: "Improvee.io",
-    tagline: "Become the designer of your life",
-    url: "https://app.improvee.io/onboarding?utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave",
-    description: "Personal development and kaizen platform"
+    name: "Playful.Smarlify.co",
+    tagline: "Free online games - play, have fun!",
+    url: "https://playful.smarlify.co/?utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave",
+    description: "Free online gaming hub with Traffic Run, Crossy Road, Space Shooter and more"
   },
   {
     name: "Koinly.io",
     tagline: "Make crypto less taxing",
     url: "https://koinly.io/?via=B2E92FE3&utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave",
     description: "Crypto tax and accounting solution"
-  },
-  {
-    name: "Lovable.dev",
-    tagline: "Build apps with AI, not code",
-    url: "https://lovable.dev?via=david-nekovar&utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave",
-    description: "AI-powered app development platform"
-  }
+  } //,
+  // {
+  //   name: "Lovable.dev",
+  //   tagline: "Build apps with AI, not code",
+  //   url: "https://lovable.dev?via=david-nekovar&utm_source=davidnekovar.cz&utm_medium=external&utm_campaign=dave",
+  //   description: "AI-powered app development platform"
+  // }
 ];
 
 const Contact = () => {

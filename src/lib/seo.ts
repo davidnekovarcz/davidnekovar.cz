@@ -135,6 +135,7 @@ export interface SEOConfig {
   hero: {
     headline: string;
     subheadline: string;
+    role?: string;
     cta: string;
     badge: string;
   };
@@ -218,76 +219,6 @@ export const SEO_CONFIGS: Record<string, SEOConfig> = {
     }
   },
 
-  smarlify: {
-    title: "Smarlify.co - Smart Living & Crypto Investment Guide | Financial Freedom Tips",
-    description: "Discover smart living strategies combining crypto investments, precious metals, healthy lifestyle, and technology. Join 10,000+ smart investors building wealth and achieving financial freedom through strategic investments.",
-    keywords: [
-      "smart living", "crypto investment guide", "bitcoin investment", "ethereum investment", "cryptocurrency portfolio",
-      "gold investment", "silver investment", "precious metals investing", "financial freedom", "wealth building strategies",
-      "healthy lifestyle", "technology solutions", "investment strategies", "portfolio management", "digital assets",
-      "blockchain technology", "decentralized finance", "alternative investments", "wealth preservation", "financial independence",
-      "smart money management", "investment education", "crypto trading", "long-term investing", "passive income"
-    ],
-    author: "Smarlify.co",
-    creator: "Smarlify",
-    publisher: "Smarlify",
-    url: "https://smarlify.co",
-    canonical: "https://smarlify.co",
-    siteName: "Smarlify.co",
-    twitter: {
-      site: "@smarlify",
-      creator: "@smarlify"
-    },
-    ogImage: "/og-image.jpg",
-    twitterImage: "/og-image.jpg",
-    googleVerification: "your-google-verification-code",
-    hero: {
-      headline: "Live Smarter, Invest Wiser",
-      subheadline: "Combine freedom, healthy lifestyle, growing investment portfolios in crypto & precious metals, and cutting-edge technology to transform your life.",
-      cta: "Start Your Journey",
-      badge: "Freedom Through Smart Living 🏝️"
-    },
-    structuredData: {
-      organization: {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Smarlify",
-        "url": "https://smarlify.co",
-        "logo": "https://smarlify.co/smarlify-white.svg",
-        "description": "Smart living and investment education platform focusing on crypto, precious metals, and lifestyle optimization",
-        "sameAs": [
-          "https://github.com/smarlify",
-          "https://twitter.com/smarlify"
-        ],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "customer service",
-          "email": "hello@smarlify.co"
-        },
-        "foundingDate": "2020",
-        "founder": {
-          "@type": "Person",
-          "name": "David Nekovar"
-        }
-      },
-      website: {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Smarlify.co",
-        "description": "Smart living and investment education platform",
-        "url": "https://smarlify.co",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Smarlify"
-        },
-        "about": {
-          "@type": "Thing",
-          "name": "Smart Living and Investment Education"
-        }
-      }
-    }
-  },
-
   davidnekovar: {
     title: "David Nekovář - Product Owner & Full Stack Developer | Ruby on Rails, Vue.js, React, AI Solutions Architect",
     description: "Building innovative solutions for global brands with 15+ years of experience in Ruby on Rails, Vue.js, React, and more.",
@@ -315,6 +246,7 @@ export const SEO_CONFIGS: Record<string, SEOConfig> = {
     googleVerification: "your-google-verification-code",
     hero: {
       headline: "Product Owner & Full Stack Developer",
+      role: "Product Owner & Full Stack Developer",
       subheadline: "Building innovative solutions for global brands with 15+ years of experience in Ruby on Rails, Vue.js, React, and more.",
       cta: "Get in Touch",
       badge: "Available for New Opportunities"
